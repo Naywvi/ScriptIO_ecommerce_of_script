@@ -1,3 +1,9 @@
+body{
+    background-color: #571845 !important;
+}
+.container-color{
+    background-color: #acbeed;
+}
 .nav-flex{
     display: flex;
     justify-content: space-between;
@@ -13,4 +19,12 @@
 .nav-trans:hover{
     background-color: rgba(174, 201, 224, 0.548) !important;
     color: rgb(25, 24, 24) !important;
+}
+.fixed {
+    position: fixed;
+    width: 25%;
+}
+.scrollit {
+    float: left;
+    width: 71%
 }
