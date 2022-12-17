@@ -1,0 +1,16 @@
+.nav-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.navicon{
+    margin-top: 8px;
+    margin-right: 25px;
+}
+.navfree{
+    color: white !important;
+}
+
+.nav-trans:hover{
+    background-color: rgba(174, 201, 224, 0.548) !important;
+    color: rgb(25, 24, 24) !important;
+}

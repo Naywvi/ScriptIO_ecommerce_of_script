@@ -1,0 +1,118 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Script'io</a>
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Best Seller</a>
+                </li>
+                <li class="nav-item dropdown">                
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Items
+                      </a>                        
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        
+                        <div class="bg-danger navfree nav-flex">
+                            <h6 class="dropdown-header navfree">FREE</h6>
+                            <i class='fas fa-euro-sign navicon'></i>
+                        </div>
+                        <a class="dropdown-item nav-trans nav-trans" href="#">Free</a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <div class="nav-flex">
+                            <h6 class="dropdown-header">Fun </h6>
+                            <i class='far fa-hand-lizard navicon'></i>
+                        </div>
+                        <a class="dropdown-item nav-trans" href="#">Social networks</a>
+                        <a class="dropdown-item nav-trans" href="#">Scrapping</a>
+             
+                        <div class="dropdown-divider"></div>
+                        
+                        <div class="nav-flex">
+                            <h6 class="dropdown-header">Automating</h6>
+                            <i class='fas fa-list navicon' ></i>
+                        </div>
+                        <a class="dropdown-item nav-trans" href="#">Emailing</a>
+                        <a class="dropdown-item nav-trans" href="#">Macro</a>
+                        <a class="dropdown-item nav-trans" href="#">Web</a>
+
+                        <div class="dropdown-divider"></div>
+                        
+                        <div class="nav-flex">
+                            <h6 class="dropdown-header">OS  </h6>
+                            <i class='fas fa-desktop navicon' ></i>
+                        </div>
+                        <a class="dropdown-item nav-trans" href="#">Windows</a>
+                        <a class="dropdown-item nav-trans" href="#">Linux</a>
+                        <a class="dropdown-item nav-trans" href="#">MacOS</a>
+                        <a class="dropdown-item nav-trans" href="#">Mobile</a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <div class="nav-flex">
+                            <h6 class="dropdown-header">Another </h6>
+                            <i class='fas fa-glasses navicon'></i>
+                        </div>
+                        <a class="dropdown-item nav-trans" href="#">Another</a>
+                      </div>                           
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Policy privacy</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav my-2 my-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sign in</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<headerScroll>
+    <div id="header" style="margin-top: 100px;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand">Script'io</a>
+            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <ul class="navbar-nav my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">connection <i class='fas fa-user-circle'></i></a>
+                    </li>
+                </ul>
+            </button>
+            <div id="my-nav" class="collapse navbar-collapse fixed-top">
+                <ul class="navbar-nav mr-auto">
+                 
+                </ul>
+                <ul class="navbar-nav my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</headerScroll>
+
+<script>
+    document.getElementById("header").hidden = true
+    $(window).bind('scroll', function() {
+        if($(window).scrollTop() >= 70){
+            document.getElementById("header").hidden = false
+        }else{
+            document.getElementById("header").hidden = true
+        }
+    }); 
+</script>
