@@ -1,0 +1,38 @@
+@media screen and (max-width: 1050px) {
+    .slid-r{
+        margin-top: -4rem;
+    }
+    
+    .btn-slid{
+        font-size: 2rem;
+    }
+    .btn-slid:hover{
+        top: -25px;
+    }
+  }
+  @media screen and (max-width: 580px) {
+    .slid-r{
+        margin-top: -2.5rem;
+    }
+    
+    .btn-slid{
+        font-size: 1.5rem;
+    }
+    .btn-slid:hover{
+        top: -15px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .slid-r{
+        margin-top: -2.5rem;
+    }
+    .slid-r p{
+        margin-top: .5rem;
+    }
+    .btn-slid{
+        font-size: 0.8rem;
+    }
+    .btn-slid:hover{
+        top: -7px;
+    }
+  }
