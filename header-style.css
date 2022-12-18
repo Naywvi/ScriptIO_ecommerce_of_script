@@ -2,11 +2,10 @@ body {
     background-color: #ffffff !important;
 
 }
-
-.container-color {
-    background-color: #acbeed;
+.spacebtw{
+    padding-top: 15rem;
+    padding-bottom: 15rem;
 }
-
 .nav-flex {
     display: flex;
     justify-content: space-between;
@@ -62,3 +61,14 @@ body {
 .ft{
     font-family: Impact;
 }
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
