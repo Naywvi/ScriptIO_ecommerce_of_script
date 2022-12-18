@@ -6,6 +6,9 @@
     .btn-slid{
         font-size: 1rem;
     }
+    .btn-slid:hover{
+        margin-top: -15px;
+    }
   }
   @media screen and (max-width: 350px) {
     .slid-r{
@@ -14,5 +17,8 @@
     
     .btn-slid{
         font-size: 0.5rem;
+    }
+    .btn-slid:hover{
+        margin-top: -5px;
     }
   }
