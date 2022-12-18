@@ -1,5 +1,5 @@
 body {
-    background-color: #571845 !important;
+    background-color: #ffffff !important;
 
 }
 
@@ -34,6 +34,8 @@ body {
     color: rgb(51, 183, 195) !important;
 }
 .slid-r{
+    margin-left: -1px !important;
+    margin-right: -1px !important;
     margin-top: -7rem;
     flex-wrap: nowrap;
 }
@@ -55,8 +57,7 @@ body {
     font-weight: bold;
 }
 .cp{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+
 }
 .ft{
     font-family: Impact;
