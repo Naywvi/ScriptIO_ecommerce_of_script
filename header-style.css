@@ -1,5 +1,6 @@
 body {
     background-color: #571845 !important;
+
 }
 
 .container-color {
@@ -32,16 +33,32 @@ body {
     background-color: rgba(174, 201, 224, 0.548) !important;
     color: rgb(25, 24, 24) !important;
 }
-
-.slid-c {
-    background-color: rgba(0, 0, 0, 0.483);
+.slid-r{
+    margin-top: -7rem;
+    flex-wrap: nowrap;
 }
 
-.slid-t {
-    left: 0% !important;
-    right: 0% !important;
+.btn-slid{
+    font-size: 2rem;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 1rem 1rem 0rem 0rem;
+    cursor: pointer;
+    margin-left: 1px;
+    margin-right: 1px;
 }
-
-.slid-t-b {
-    bottom: 0% !important;
+.btn-slid:hover{
+    padding-top: 15px;
+    margin-top: -55px;
+    border-radius: 2rem 2rem 0rem 0rem;
 }
+.bold{
+    font-weight: bold;
+}
+.cp{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.ft {
+    font-family: Impact;
+  }
