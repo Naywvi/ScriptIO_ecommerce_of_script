@@ -1,118 +1,199 @@
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand">Script'io</a>
-        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="my-nav" class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Best Seller</a>
-                </li>
-                <li class="nav-item dropdown">                
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Items
-                      </a>                        
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        
-                        <div class="bg-danger navfree nav-flex">
-                            <h6 class="dropdown-header navfree">FREE</h6>
-                            <i class='fas fa-euro-sign navicon'></i>
-                        </div>
-                        <a class="dropdown-item nav-trans nav-trans" href="#">Free</a>
+<!DOCTYPE html>
+<html>
 
-                        <div class="dropdown-divider"></div>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>ScriptIO</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./main-media.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
 
-                        <div class="nav-flex">
-                            <h6 class="dropdown-header">Fun </h6>
-                            <i class='far fa-hand-lizard navicon'></i>
-                        </div>
-                        <a class="dropdown-item nav-trans" href="#">Social networks</a>
-                        <a class="dropdown-item nav-trans" href="#">Scrapping</a>
-             
-                        <div class="dropdown-divider"></div>
-                        
-                        <div class="nav-flex">
-                            <h6 class="dropdown-header">Automating</h6>
-                            <i class='fas fa-list navicon' ></i>
-                        </div>
-                        <a class="dropdown-item nav-trans" href="#">Emailing</a>
-                        <a class="dropdown-item nav-trans" href="#">Macro</a>
-                        <a class="dropdown-item nav-trans" href="#">Web</a>
-
-                        <div class="dropdown-divider"></div>
-                        
-                        <div class="nav-flex">
-                            <h6 class="dropdown-header">OS  </h6>
-                            <i class='fas fa-desktop navicon' ></i>
-                        </div>
-                        <a class="dropdown-item nav-trans" href="#">Windows</a>
-                        <a class="dropdown-item nav-trans" href="#">Linux</a>
-                        <a class="dropdown-item nav-trans" href="#">MacOS</a>
-                        <a class="dropdown-item nav-trans" href="#">Mobile</a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <div class="nav-flex">
-                            <h6 class="dropdown-header">Another </h6>
-                            <i class='fas fa-glasses navicon'></i>
-                        </div>
-                        <a class="dropdown-item nav-trans" href="#">Another</a>
-                      </div>                           
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Policy privacy</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav my-2 my-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sign in</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sign Up</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
-<headerScroll>
-    <div id="header" style="margin-top: 100px;">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand">Script'io</a>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-back-color">
+            <a class="navbar-brand nav-color">Script'io</a>
             <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <ul class="navbar-nav my-2 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">connection <i class='fas fa-user-circle'></i></a>
-                    </li>
-                </ul>
-            </button>
-            <div id="my-nav" class="collapse navbar-collapse fixed-top">
-                <ul class="navbar-nav mr-auto">
-                 
-                </ul>
-                <ul class="navbar-nav my-2 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sign in</a>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div id="my-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto nav-color">
+                    <li class="nav-item active ">
+                        <a class="nav-link nav-color" href="#">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sign up</a>
+                        <a class="nav-link nav-color" href="#" tabindex="-1" aria-disabled="true">Best Seller</a>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link nav-color dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Items
+                              </a>
+                        <div class="dropdown-menu navtab-back-color nav-color" aria-labelledby="navbarDropdown">
+
+                            <div class="bg-danger nav-color nav-flex">
+                                <h6 class="dropdown-header nav-color bold">FREE</h6>
+                                <i class='fas fa-euro-sign navicon'></i>
+                            </div>
+                            <a class="dropdown-item nav-trans nav-trans nav-color" href="#">Free</a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <div class="nav-flex">
+                                <h6 class="dropdown-header nav-color nav-color">Fun </h6>
+                                <i class='far fa-hand-lizard navicon'></i>
+                            </div>
+                            <a class="dropdown-item nav-trans nav-color" href="#">Social networks</a>
+                            <a class="dropdown-item nav-trans nav-color" href="#">Scrapping</a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <div class="nav-flex">
+                                <h6 class="dropdown-header nav-color">Automating</h6>
+                                <i class='fas fa-list navicon'></i>
+                            </div>
+                            <a class="dropdown-item nav-trans nav-color" href="#">Emailing</a>
+                            <a class="dropdown-item nav-trans nav-color" href="#">Macro</a>
+                            <a class="dropdown-item nav-trans nav-color" href="#">Web</a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <div class="nav-flex">
+                                <h6 class="dropdown-header nav-color">OS </h6>
+                                <i class='fas fa-desktop navicon'></i>
+                            </div>
+                            <a class="dropdown-item nav-trans nav-color" href="#">Windows</a>
+                            <a class="dropdown-item nav-trans nav-color" href="#">Linux</a>
+                            <a class="dropdown-item nav-trans nav-color" href="#">MacOS</a>
+                            <a class="dropdown-item nav-trans nav-color" href="#">Mobile</a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <div class="nav-flex">
+                                <h6 class="dropdown-header nav-color">Another </h6>
+                                <i class='fas fa-glasses navicon'></i>
+                            </div>
+                            <a class="dropdown-item nav-trans nav-color" href="#">Another</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-color" href="#" tabindex="-1" aria-disabled="true">Policy privacy</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-color disabled" href="#" tabindex="-1" aria-disabled="true">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-color disabled" href="#" tabindex="-1" aria-disabled="true">Sign Up</a>
                     </li>
                 </ul>
             </div>
         </nav>
-    </div>
-</headerScroll>
+    </header>
 
-<script>
-    document.getElementById("header").hidden = true
-    $(window).bind('scroll', function() {
-        if($(window).scrollTop() >= 70){
-            document.getElementById("header").hidden = false
-        }else{
-            document.getElementById("header").hidden = true
-        }
-    }); 
-</script>
+    <div class="container-fluid container-reset cp">
+        <div class="row-">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="./src/assets/img/top-view-abstract-innovation-composition_23-2148909051.webp" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./src/assets/img/top-view-abstract-innovation-composition_23-2148909055.webp" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./src/assets/img/top-view-assortment-with-innovation-elements_23-2148909041.webp" alt="Third slide">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row slid-r">
+            <div class="col btn-slid nav-shadow bg-presentation">
+                <p class="ft ">Presentation</p>
+            </div>
+            <div class="col btn-slid nav-shadow bg-objectif">
+                <p class="ft ">objectif</p>
+            </div>
+            <div class="col btn-slid nav-shadow bg-secure">
+                <p class="ft ">secure </p>
+            </div>
+            <div class="col btn-slid bg-danger nav-color bold nav-shadow bg-free">
+                <p class="ft">FREE <i class='fas fa-piggy-bank'></i></p>
+            </div>
+        </div>
+    </div>
+<div class="container-fluid">
+    <div class="container-fluid spacebtw">
+        
+        <div class="row reveal space-presentation">
+            <div class="col">
+                <p class="h1 title title-blue">Script'io what is that ?</p>
+                <img src="./src/assets/img/3135686-service-client-business-startup-illustration-scene-vectoriel.jpg" class="w-100 box-shadow"/>
+            </div>
+            <div class="col text-lg-right modal-dialog-centered h5">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make a<br> type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,<br> remaining essentially unchanged. It was popularised in the 1960s with the release <br>of Letraset sheets containing Lorem Ipsum passages, and more <br>recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            </div>
+        </div>
+        <img src="./src/assets/img/PngItem_2136449.png" alt="Desk, HD Png Download@kindpng.com" class="w-100">
+        <div class="row reveal space-presentation">
+            <div class="col text-lg-right modal-dialog-centered h5">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make a<br> type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,<br> remaining essentially unchanged. It was popularised in the 1960s with the release <br>of Letraset sheets containing Lorem Ipsum passages, and more <br>recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            </div>
+            <div class="col">
+                <p class="h1 title title-bluelight">What is our goal ? 🎯</p>
+                <img src="./src/assets/img/social-media-crisis-management-2.jpg" class="w-100 box-shadow"/>
+            </div>
+        </div>
+        <img src="./src/assets/img/PngItem_2136449.png" alt="Desk, HD Png Download@kindpng.com" class="w-100">
+        <div class="row reveal space-presentation">
+            <div class="col">
+                <p class="h1 title title-secure">Safety, our golden word !</p>
+                <img src="./src/assets/img/global-data-security-personal-data-security-cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37375.webp" class="w-100 box-shadow"/>
+            </div>
+            <div class="col text-lg-right modal-dialog-centered h5">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make a<br> type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,<br> remaining essentially unchanged. It was popularised in the 1960s with the release <br>of Letraset sheets containing Lorem Ipsum passages, and more <br>recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            </div>
+        </div>
+        <img src="./src/assets/img/PngItem_2136449.png" alt="Desk, HD Png Download@kindpng.com" class="w-100">
+        <div class="row reveal space-presentation">
+           
+            <div class="col text-lg-right modal-dialog-centered h5">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make a<br> type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,<br> remaining essentially unchanged. It was popularised in the 1960s with the release <br>of Letraset sheets containing Lorem Ipsum passages, and more <br>recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            </div>
+            <div class="col">
+                <p class="h1 title title-gold">But don't forget it's free 💰</p>
+                <img src="./src/assets/img/epayment-process-concept-with-people-scene-flat-cartoon-design-man-transfers-money-bank-account-pays-purchases-online-website-using-laptop-vector-illustration-visual-story-web_9209-9356.jpg" class="w-100 box-shadow"/>
+            </div>
+        </div>
+        <img src="./src/assets/img/PngItem_2136449.png" alt="Desk, HD Png Download@kindpng.com" class="w-100">
+      </div>
+</div>
+  <script>
+    function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+  </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+<!-- https://www.google.com/search?q=separator+png+shadow&tbm=isch&ved=2ahUKEwiL3-zypoT8AhWK_4UKHSCODR8Q2-cCegQIABAA&oq=separator+png+shadow&gs_lcp=CgNpbWcQAzIGCAAQCBAeOgcIABCABBATOgYIABAeEBM6CAgAEAUQHhATUABYuAhglgloAHAAeACAAS-IAYQCkgEBN5gBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=8p-fY4ueI4r_lwSgnLb4AQ&bih=955&biw=1920&client=firefox-b-d#imgrc=X_PPLZtv2QrTuM -->
