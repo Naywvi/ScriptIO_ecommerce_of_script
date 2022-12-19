@@ -11,18 +11,6 @@ body {
     font-weight: bold;
 }
 
-.reveal{
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
-}
-  
-.reveal.active{
-    transform: translateY(0);
-    opacity: 1;
-}
-
 .title {
     --s: 0.1em!important;   
     --c: #1675A9 !important; 

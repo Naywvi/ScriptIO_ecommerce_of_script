@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="./assets/css/home_page.css" />
 <link rel="stylesheet" href="./assets/css/home_page-media.css" />
+<link rel="stylesheet" href="./assets/css/script.css" />
     <section class="vh-100 ">
         <video autoplay="" muted="" loop="" id="" class="video">
             <source src="./assets/video/Source Code - 4733.webm" type="video/webm">
@@ -50,19 +51,4 @@
     </section>
 <p class="text-center h1">Ne sais pas quoi mettre ici ?</p><br>
 
-<script>
-    function reveal() {
-        var reveals = document.querySelectorAll(".reveal");
-        for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        } else {
-          reveals[i].classList.remove("active");
-        }
-      }
-    }
-    window.addEventListener("scroll", reveal);
-</script>
+<script src="./assets/js/reveal.js"></script>
