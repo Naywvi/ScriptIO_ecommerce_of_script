@@ -1,0 +1,44 @@
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .box {
+        height: 200px;
+    }
+    .img-information {
+        width: 8% !important;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+    .img-information {
+        width: 6% !important;
+        margin-top: -10px;
+    }
+}
+
+@media (min-width: 950px) {
+    .row1-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .row2-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-down {
+        position: relative;
+        top: 150px;
+    }
+    .box {
+        width: 20%;
+     
+    }
+}

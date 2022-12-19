@@ -1,0 +1,32 @@
+@media (max-width: 1000px) and (min-width: 450px) {
+    .notification{
+        text-align: center;
+        margin-top:0%;
+        margin-bottom: 0%;
+    }
+    .icon-shop{
+        margin-top: 0% !important;
+    }
+    .nav-item{
+        text-align: center;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        background-color: rgba(124, 124, 124, 0.067);
+        color: white;
+        text-decoration: none;
+        padding: 15px 26px;
+        position: relative;
+        display: inline-block;
+        border-radius: 2px;
+        border-radius: 1rem;
+    }
+    .navbar-collapse {
+        max-height: 280px;
+        overflow-y: auto;
+    }
+}
+@media (min-width: 950px) {
+    .header p {
+        width: 30%;
+    }
+}

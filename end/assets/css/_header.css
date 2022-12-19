@@ -1,0 +1,54 @@
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.navicon {
+    margin-top: 8px;
+    margin-right: 25px;
+}
+.nav-color {
+    color: white !important;
+}
+.nav-back-color {
+    background-color: rgba(0, 0, 0, 0.615) !important;
+}
+
+.navtab-back-color {
+    background-color: rgba(31, 31, 31, 0.588) !important;
+}
+
+.nav-trans:hover {
+    background-color: rgba(249, 249, 151, 0.377) !important;
+    color: rgb(51, 183, 195) !important;
+}
+
+.nav-shadow{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+.logo-header{
+    height: 5%;
+    width: 5%;
+}
+.notification {
+    background-color: rgb(181, 181, 181);
+    color: white;
+    text-decoration: none;
+    padding: 15px 26px;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+}
+  
+.notification:hover {
+    background: rgb(103, 103, 103);
+}
+  
+.notification .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: rgb(28, 133, 209);
+    color: white;
+}
