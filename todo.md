@@ -4,18 +4,20 @@ Trouver un logo
 
 -----
 Designer:
+- Main page
+
 - page panier
 - profil utilisateur
 - historique des commandes
 - product page
 - contact page
 - admin panel
-- Main page
 - Best-seller (contenant les scripts les plus vendues)
-- une page wrap (listant les scripts de la rubrique selectionner + user)  + fonction de recherche + filtre même style que amazon
-- Policy privacy !!!!! - un vrais 
+- page liste scripts
+- Policy privacy
 - popup cookie
 - Login / register
+- page ajout de produit (que pour les marchands)
 
 -----
 Développeur:
