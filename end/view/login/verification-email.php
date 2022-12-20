@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html>
 <head>
     <title>ScriptiO - Email Confirmation</title>
   <meta charset="utf-8">

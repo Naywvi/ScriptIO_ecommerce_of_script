@@ -51,7 +51,7 @@
                 <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="" class="img-information">
               </div>
             </div>
-            <img src="./src/assets/img/PngItem_2136449.png" alt="" class="w-100">
+            <img src="./assets/img/PngItem_2136449.png" alt="" class="w-100">
       </section>
   <p class="text-center h1">Ne sais pas quoi mettre ici ?</p><br>
 

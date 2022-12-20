@@ -1,0 +1,49 @@
+.spacebtw{
+    margin-top: 10%;
+}
+.center-tab{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.header-informations {
+    font-size: 15px;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--veryLightGray);
+    text-align: center;
+    line-height: 0.8;
+    margin-bottom: 50px;
+    background-color: rgba(227, 227, 227, 0.116);
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    border-radius: 1rem;
+}
+
+.header-informations p {
+    margin: 0 auto;
+    line-height: 2;
+    color: var(--grayishBlue);
+}
+.title {
+    --s: 0.1em!important;   
+    --c: #1675A9 !important; 
+
+    color: rgba(12, 12, 12, 0.695)!important;
+    padding-bottom: var(--s)!important;
+    background: 
+        linear-gradient(90deg,var(--c) 50%,rgb(255, 255, 255) 0) calc(100% - var(--_p,0%))/200% 100%,
+        linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: 0.5s;
+}
+
+.title:hover {--_p: 100%}
+
+.title {
+    text-align: center;
+    font-size: 4.5rem !important;
+    font-family: system-ui, sans-serif!important;
+    cursor: pointer;
+}
