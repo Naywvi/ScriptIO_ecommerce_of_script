@@ -34,7 +34,8 @@ button.btn.btn-hide {
     padding-left: 40px;
     padding-right: 40px;
     border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px
+    border-bottom-right-radius: 0px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .btn:focus {
@@ -114,7 +115,8 @@ select {
     background-color: #fff;
     border: 1px solid #ddd;
     /* border-radius: 15px; */
-    float: left
+    float: left;
+    margin-right: 1%;
 }
 
 #filterbar input[type="radio"] {
@@ -281,6 +283,8 @@ label {
 }
 
 .card {
+    margin-right: 10%;
+    margin-left: 10%;
     padding: 10px;
     cursor: pointer;
     transition: .3s all ease-in-out;
@@ -489,7 +493,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .spacebtw{
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 10%;
 }
 
@@ -558,4 +562,19 @@ textarea {
 .search-bar{
     left: 84%;
     bottom: 50%;
+}
+.mid-column{
+    padding-bottom: 5%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.shadow{
+
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
+}
+.end-page{
+    margin-top: 3%;
+}
+.result{
+    color: rgb(120, 120, 120);
+    font-size: 1rem;
 }
