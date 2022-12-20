@@ -73,21 +73,21 @@
                     <ul class="navbar-nav my-2 my-lg-0">
                         <li class="nav-item">
                             <a class="nav-link nav-color" href="/admin">Admin panel<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/profile" class="notification nav-link nav-color disabled">
-                                <span>Username</span>
-                                <span class="badge">3</span>
-                            </a> 
                         </li>     
-                        <li class="nav-item shop">
-                            <a href="my-script"><i class="fas fa-shopping-cart nav-link icon-shop nav-color disabled"></i></a>
+                        <li class="nav-item shop notification-shop">
+                            <a href="my-script"><i class="fa fa-shopping-cart nav-link icon-shop nav-color disabled"><span class="badge">3</span></i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link nav-color disabled" href="/singin" tabindex="-1" aria-disabled="true">Sign in</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link nav-color disabled" href="/singup" tabindex="-1" aria-disabled="true">Sign Up</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/profile" class="notification nav-link nav-color disabled">
+                                <span>Username</span>
+                                <span class="badge">3</span>
+                            </a> 
                         </li>
                     </ul>
                 </div>

@@ -46,3 +46,9 @@
 .reset-space{
     margin-top: 6% !important;
 }
+#radius-shape-1{
+    background: radial-gradient(#44006b, #ff9d1f);
+}
+#radius-shape-2{
+    background: radial-gradient(#44006b, #ff9d1f);
+}
