@@ -1,6 +1,6 @@
 <head>
-    <title>ScriptiO - Login</title>
-    <link rel="stylesheet" href="./assets/css/login.css" />
+    <title>ScriptiO - Sing in</title>
+    <link rel="stylesheet" href="./assets/css/reset-password.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
 </head>
@@ -39,12 +39,15 @@
                 <label class="form-label" for="form3Example4"></label>
               </div>
 
+              <!-- Forgot pass -->
+                <a href="/reset-password"><p class="text-left italic">Forgot password</p></a>
+
               <!-- Submit button -->
               <button type="submit" class="btn btn-primary btn-block mb-2">
                 Sign in
               </button>
 
-              <!-- Register buttons -->
+              <!-- login buttons -->
               <div class="text-center">
                 <p>or sign in with:</p>
                 <button type="button" class="btn btn-link btn-floating mx-1">
@@ -70,4 +73,3 @@
     </div>
   </div>
 </section>
-<!-- Section: Design Block -->

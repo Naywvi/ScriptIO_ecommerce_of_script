@@ -1,5 +1,5 @@
 <head>
-    <title>ScriptiO - Login</title>
+    <title>ScriptiO - Sing up</title>
     <link rel="stylesheet" href="./assets/css/register.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
@@ -38,6 +38,18 @@
                 <div class="col-md-6 mb-2">
                   <div class="form-outline">
                     <input type="text" id="form3Example2" class="form-control" placeholder="Last name"/>
+                    <label class="form-label" for="form3Example2"></label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-2">
+                  <div class="form-outline">
+                    <input type="text" id="form3Example2" class="form-control" placeholder="Username"/>
+                    <label class="form-label" for="form3Example2"></label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-2">
+                  <div class="form-outline">
+                    <input type="date" id="form3Example2" class="form-control" placeholder="Anniversary"/>
                     <label class="form-label" for="form3Example2"></label>
                   </div>
                 </div>
@@ -94,4 +106,3 @@
     </div>
   </div>
 </section>
-<!-- Section: Design Block -->
