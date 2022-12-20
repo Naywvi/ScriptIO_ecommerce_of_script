@@ -29,7 +29,11 @@
                 <!-- end fitler -->
                 <li class="nav-item d-inline-flex align-items-center justify-content-between mb-lg-0 mb-3">
                     <!-- start lenght items -->
-                    <div class="font-weight-bold mx-2 result">18 from 200</div>+
+                    <div class="font-weight-bold mx-2 result">18 from 200</div>
+                    <div class="font-weight-bold mx-2 result">/</div>
+                    <div class="font-weight-bold mx-2 result">item list</div>
+                    <div class="font-weight-bold mx-2 result">/</div>
+                    <div class="font-weight-bold mx-2 result">rubrique</div>
                      <!-- end lenght items -->
                 </li>
 
