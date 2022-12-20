@@ -1,10 +1,11 @@
 <head>
   <title>ScriptIO</title>
-</head>
-<body>
   <link rel="stylesheet" href="./assets/css/home_page.css" />
   <link rel="stylesheet" href="./assets/css/home_page-media.css" />
   <link rel="stylesheet" href="./assets/css/script.css" />
+</head>
+<body>
+
       <section class="vh-100 ">
           <video autoplay="" muted="" loop="" id="" class="video">
               <source src="./assets/video/Source Code - 4733.webm" type="video/webm">
