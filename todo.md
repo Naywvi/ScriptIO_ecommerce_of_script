@@ -41,3 +41,5 @@ Optionnelles:
 - notation de produit/utilisateur
 - coupon de réduction
 - points de fidélité
+- 
+- php -S localhost:port -t your_folder/

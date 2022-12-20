@@ -19,10 +19,10 @@
                 <div id="my-nav" class="collapse navbar-collapse">
                     <ul class="navbar-nav mr-auto nav-color">
                         <li class="nav-item active ">
-                            <a class="nav-link nav-color" href="#">Home<span class="sr-only">(current)</span></a>
+                            <a class="nav-link nav-color" href="/">Home<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color" href="#" tabindex="-1" aria-disabled="true">Best Seller</a>
+                            <a class="nav-link nav-color" href="/best-seller" tabindex="-1" aria-disabled="true">Best Seller</a>
                         </li>
                         <li class="nav-item dropdown ">
                             <a class="nav-link nav-color dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -67,29 +67,30 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color" href="#" tabindex="-1" aria-disabled="true">Policy privacy</a>
+                            <a class="nav-link nav-color" href="/policy-privacy" tabindex="-1" aria-disabled="true">Policy privacy</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav my-2 my-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link nav-color" href="#">Admin panel<span class="sr-only">(current)</span></a>
+                            <a class="nav-link nav-color" href="/admin">Admin panel<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="notification nav-link nav-color disabled">
+                            <a href="/profile" class="notification nav-link nav-color disabled">
                                 <span>Username</span>
                                 <span class="badge">3</span>
                             </a> 
                         </li>     
                         <li class="nav-item shop">
-                            <i class="fas fa-shopping-cart nav-link icon-shop nav-color disabled"></i>
+                            <a href="my-script"><i class="fas fa-shopping-cart nav-link icon-shop nav-color disabled"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color disabled" href="#" tabindex="-1" aria-disabled="true">Sign in</a>
+                            <a class="nav-link nav-color disabled" href="/singin" tabindex="-1" aria-disabled="true">Sign in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color disabled" href="#" tabindex="-1" aria-disabled="true">Sign Up</a>
+                            <a class="nav-link nav-color disabled" href="/singup" tabindex="-1" aria-disabled="true">Sign Up</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
+    <body>

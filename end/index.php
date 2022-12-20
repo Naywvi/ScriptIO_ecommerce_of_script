@@ -2,7 +2,7 @@
     include_once('./view/_header.php');
 
     $request = "$_SERVER[REQUEST_URI]";
-
+    
     if($request == '/admin'){include_once('./view/admin/panel-home.php');}
 
     if($request == '/audit'){include_once('./view/audit/audit-script.php');}
@@ -13,6 +13,7 @@
     }
     if($request == '/manage-item'){include_once('./view/items/manage-item.php');}
     if($request == '/wrap-item'){include_once('./view/items/wrap-item.php');}
+    if($request == '/wrap-item-theme'){include_once('./view/items/wrap-item-theme.php');}
 
     if($request == '/singin'){include_once('./view/login/login.php');}
     if($request == '/singup'){include_once('./view/login/register.php');}
@@ -32,7 +33,8 @@
     if($request == '/best-seller'){include_once('./view/best-seller.php');}
     if($request == '/policy-privacy'){include_once('./view/policy-privacy.php');}
 
-    else{include_once('./view/home.php');};
+    if($request == '/'){include_once('./view/home.php');}
+    //else{include_once('./view/home.php');};
     include_once('./view/_footer.php');
     include_once('./view/_script.php');
     include_once('./view/_end-page.php');
