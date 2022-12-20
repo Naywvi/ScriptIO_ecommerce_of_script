@@ -2,6 +2,7 @@
     <title>ScriptiO - Policy privacy</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="./assets/css/policy-privacy.css" />
+  <link rel="stylesheet" href="./assets/css/policy-privacy-media.css" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
