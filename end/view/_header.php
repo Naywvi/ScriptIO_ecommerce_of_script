@@ -75,7 +75,11 @@
                             <a class="nav-link nav-color" href="/admin">Admin panel<span class="sr-only">(current)</span></a>
                         </li>     
                         <li class="nav-item shop notification-shop">
-                            <a href="my-script"><i class="fa fa-shopping-cart nav-link icon-shop nav-color disabled"><span class="badge">3</span></i></a>
+                            <a href="my-script">
+                                <i class="fa fa-shopping-cart nav-link icon-shop nav-color disabled">
+                                    <span class="badge">3</span>
+                                </i>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link nav-color disabled" href="/singin" tabindex="-1" aria-disabled="true">Sign in</a>
