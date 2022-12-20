@@ -73,7 +73,6 @@ button.btn.btn-hide {
 }
 
 .navbar {
-    left: 2% !important;
     display: inline-flex
 }
 
@@ -493,11 +492,12 @@ input[type=range]::-webkit-slider-thumb {
     color: red
 }
 
-.spacebtw{
+.spacebtop{
     margin-top: 5%;
-    margin-bottom: 10%;
 }
-
+.spacebbot{
+    margin-bottom: 5%;
+}
 .trust{
     display: flex;
     width: 100%;
@@ -566,11 +566,11 @@ textarea {
 }
 .mid-column{
     padding-bottom: 5%;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px, rgba(0, 0, 0, 0.14) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .shadow{
 
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px, rgba(0, 0, 0, 0.14) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
 }
 .end-page{
     margin-top: 3%;
@@ -579,6 +579,54 @@ textarea {
     color: rgb(120, 120, 120);
     font-size: 1rem;
 }
+.emplacement{
+    position: relative !important;
+    left: 5% !important;
+}
+.container{
+    display: flex !important;
+    justify-content: center !important;
+}
+.themes{
+    padding-top: 3% !important;
+    padding-bottom: 3% !important;
+    padding-left: 2% !important;
+    padding-right: 2% !important;
+    width: 69rem;
+    height: 50rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
 a:hover{
     text-decoration: none;
+}
+
+.inside-rubrique{
+    padding-left: 5% !important;
+}
+li{
+    list-style: none;
+}
+.title{
+    padding-bottom: 2%;
+    text-align: center;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-radius: 0px 0px 10px 10px;
+    border-bottom-color: #47474740;
+}
+.rubrics{
+    margin-left: 25% !important;
+    margin-right: 25% !important;
+    padding-bottom: 2%;
+    text-align: center;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-radius: 0px 0px 10px 10px;
+    border-bottom-color: #47474740;
+}
+.free-title{
+    box-shadow: rgba(255, 3, 3, 0.07) 0px 19px 38px, rgba(0, 0, 0, 0.1) 0px 15px 12px;
+}
+.free{
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }

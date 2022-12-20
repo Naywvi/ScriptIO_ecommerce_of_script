@@ -4,6 +4,7 @@
     $request = "$_SERVER[REQUEST_URI]";
     
     if($request == '/admin'){include_once('./view/admin/panel-home.php');}
+    if($request == '/admin-manage-item'){include_once('./view/admin/admin-manage-item.php');}
 
     if($request == '/audit'){include_once('./view/audit/audit-script.php');}
 
@@ -11,9 +12,8 @@
         include_once('./view/items/item-profil.php');
         include_once('./view/comment/comment.php');
     }
-    if($request == '/manage-item'){include_once('./view/items/manage-item.php');}
     if($request == '/wrap-item'){include_once('./view/items/wrap-item.php');}
-    if($request == '/wrap-item-theme'){include_once('./view/items/wrap-item-theme.php');}
+    //if($request == '/wrap-item-theme'){include_once('./view/items/wrap-item-theme.php');}
 
     if($request == '/singin'){include_once('./view/login/login.php');}
     if($request == '/singup'){include_once('./view/login/register.php');}
@@ -22,7 +22,6 @@
 
     if($request == '/payment'){include_once('./view/payment/payment.php');}
     if($request == '/payment-validation'){include_once('./view/payment/validation.php');}
-    if($request == '/payment-verification'){include_once('./view/payment/verification.php');}
 
     if($request == '/my-script'){include_once('./view/shop/basket.php');}
     if($request == '/my-wish-script'){include_once('./view/shop/wish-list.php');}
