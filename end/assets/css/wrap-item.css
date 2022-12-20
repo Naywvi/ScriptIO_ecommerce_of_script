@@ -286,7 +286,6 @@ label {
     transition: .3s all ease-in-out;
     height: 350px
 }
-
 .card:hover {
     box-shadow: 2px 2px 15px #444444e5;
     transform: scale(1.02)

@@ -207,7 +207,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <!-- end product -->
             </div>
         </div>
