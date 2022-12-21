@@ -3,498 +3,250 @@
   <link rel="stylesheet" href="./assets/css/wrap-item.css" />
   <link rel="stylesheet" href="./assets/css/wrap-item-media.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+    <div class="container-fluid space geek-font">
+        <div class="row align-self-center center-col">
 
-    <div class="container spacebtw">
-
-    <div class="bg-white rounded d-flex align-items-center justify-content-between shadow" id="header">
-
-        <button class="btn btn-hide text-uppercase" type="button" data-toggle="collapse" data-target="#filterbar" aria-expanded="false" aria-controls="filterbar" id="filter-btn" onclick="changeBtnTxt()"> <span class="fas fa-angle-left" id="filter-angle"></span> <span id="btn-txt">Hide filters</span> </button> 
-        
-        <nav class="navbar navbar-expand-lg navbar-light pl-lg-0 pl-auto">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav" aria-controls="mynav" aria-expanded="false" aria-label="Toggle navigation" onclick="chnageIcon()" id="icon"> <span class="navbar-toggler-icon"></span> </button> 
-            <div class="collapse navbar-collapse" id="mynav">
-                <ul class="navbar-nav d-lg-flex align-items-lg-center">
-                <!-- start fitler -->
-                <li class="nav-item active">
-                    <select name="sort" id="sort">
-                        <option value="" hidden selected>Sort by</option>
-                        <option value="price">Increasing</option>
-                        <option value="price">Descending</option>
-                        <option value="popularity">Popularity</option>
-                        <option value="rating">Rating</option>
-                    </select>
-                </li>
-                <!-- end fitler -->
-                <li class="nav-item d-inline-flex align-items-center justify-content-between mb-lg-0 mb-3">
-                    <!-- start lenght items -->
-                    <div class="font-weight-bold mx-2 result"><a href="/">home</a></div>
-                    <div class="font-weight-bold mx-2 result">/</div>
-                    <div class="font-weight-bold mx-2 result"><a href="#">rubrics</a></div>
-                    <div class="font-weight-bold mx-2 result"> - </div>
-                    <div class="font-weight-bold mx-2 result">18 from 200</div>
-                     <!-- end lenght items -->
-                </li>
-
-                <li class="nav-item d-lg-none d-inline-flex"> </li>
-                </ul>
-            </div>
-        </nav>
-
-        <div class="ml-auto mt-3 mr-2">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true" class="font-weight-bold">&lt;</span> <span class="sr-only">Previous</span> </a> </li>
-                <!-- start lenght pages -->
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">..</a></li>
-                <li class="page-item"><a class="page-link" href="#">24</a></li>
-                <!-- end lenght pages -->
-                <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true" class="font-weight-bold">&gt;</span> <span class="sr-only">Next</span> </a> </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-
-    <div id="content" class="my-5">
-        <div id="filterbar" class="collapse">
-
-            <div class="box border-bottom">
-                <div class="form-group text-center">
-                    <div class="btn-group" data-toggle="buttons"> <label class="btn btn-success form-check-label"> <input class="form-check-input" type="radio"> Reset </label> <label class="btn btn-success form-check-label active"> <input class="form-check-input" type="radio" checked> Apply </label> </div>
+            <div class="col shadow header-wrap ">
+                <div class="hide-filter">
+                    <a href="#filters" data-toggle="collapse" aria-expanded="false" aria-controls="#filters" >Hide filters</a>
                 </div>
-                
-                <div>
-                    <label class="tick">New <input type="checkbox" checked="checked"> <span class="check"></span> </label>
-                </div>
-                
-                <div>
-                    <label class="tick">Sale <input type="checkbox"> <span class="check"></span> </label>
+                <div class="header-card">
+                    <div>
+                        <span class="code">RUBRIC</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="box border-bottom">
-                <div class="box-label text-uppercase d-flex align-items-center">Complexity  <i class='fa fa-code'></i></i> <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box" aria-expanded="false" aria-controls="inner-box" id="out" onclick="outerFilter()"> <span class="fas fa-plus"></span> </button> </div>
-                <div id="inner-box" class="collapse mt-2 mr-1">
-                <div class="my-1"> <label class="tick">Easy <input type="checkbox" checked="checked"> <span class="check"></span> </label> </div>
-                <div class="my-1"> <label class="tick">Average <input type="checkbox"> <span class="check"></span> </label> </div>
-                <div class="my-1"> <label class="tick">Complicated <input type="checkbox"> <span class="check"></span> </label> </div>
-                <div class="my-1"> <label class="tick">Very complicated <input type="checkbox"> <span class="check"></span> </label> </div>
-                </div>
-            </div>
+            <div class="w-100"></div>
 
-            <div class="box border-bottom">
-                <div class="box-label text-uppercase d-flex align-items-center">Merchant rating  <i class="fa fa-star"></i><button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box2" aria-expanded="false" aria-controls="inner-box2"><span class="fas fa-plus"></span></button> </div>
-                <div id="inner-box2" class="collapse mt-2 mr-1">
+            <div class="col-3 shadow space-expand column-wrap collapse multi-collapse filters-space background-code-font space-code-font" id="filters">
 
-                    <div class="my-1"> 
-                            <label class="tick"> 
-                                <i class="fa fa-star text-success"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                            <input type="checkbox"> <span class="check"></span> </label>
-                        </label> 
-                    </div>
+                <section class="section background-code code">
+                    <a href="#price" data-toggle="collapse" aria-expanded="false" aria-controls="#price" class="c-code">1 <span class="text-warning">Price</span></a>
+                </section>
+                <section class="section background-code code filter-center collapse multi-collapse" id="price">
+                    <ul class="ul-space">
+                        <li class="item">
+                            <a>2 <span class="green">increasing</span></a>
+                            <input type="radio" name="selection-price"class="item-checkbox">
+                        </li>
+                        <li class="item">
+                            <a>3 <span class="red">descending</span></a>
+                            <input type="radio" name="selection-price" class="item-checkbox">
+                        </li>
+                        <li class="slider">
+                            <a>4 <span class="white">Custom price</span> <span class="cyan">- 150 $</span></a>
+                            <input type="range" class="form-range" id="customRange1">
+                            
+                        </li>
+                    </ul>
+                </section>
 
-                    <div class="my-1"> 
-                        <label class="tick">
-                                <i class="fa fa-star text-success"></i>
-                                <i class="fa fa-star text-success"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                            <input type="checkbox"> <span class="check"></span> </label>
-                        </label> 
-                    </div>
+                <section class="section background-code code space-rubric">
+                    <a href="#rubrics" data-toggle="collapse" aria-expanded="false" aria-controls="#rubrics" class="c-code">5 <span class="cyan">Rubrics</span></a>
+                </section>
+                <section class="section background-code code filter-center collapse multi-collapse " id="rubrics">
+                    <ul class="ul-space">
+                        <li class="item">
+                            <a>6 <span class="red  bold">FREE</span></a>
+                            <input type="checkbox" class="item-checkbox">
+                        </li>
+                        <li class="item">
+                            <a>7 <span class="white">Fun</span></a>
+                            <input type="checkbox" class="item-checkbox">
+                        </li>
+                        <li class="item">
+                            <a>8 <span class="white">Automating</span></a>
+                                <input type="checkbox" class="item-checkbox">
+                        </li>
+                        <li class="item">
+                            <a>8 <span class="white">Os</span></a>
+                                <input type="checkbox" class="item-checkbox">
+                        </li>
+                        <li class="item">
+                            <a>8 <span class="white">Other</span></a>
+                                <input type="checkbox" class="item-checkbox">
+                        </li>
+                    </ul>
+                </section>
 
-                    <div class="my-1"> 
-                        <label class="tick">
-                                <i class="fa fa-star text-success"></i>
-                                <i class="fa fa-star text-success"></i>
-                                <i class="fa fa-star text-success"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                            <input type="checkbox"> <span class="check"></span> </label>
-                        </label> 
-                    </div>
+                <section class="section background-code code space-rubric">
+                    <a href="#trust" data-toggle="collapse" aria-expanded="false" aria-controls="#trust" class="c-code">9 <span class="cyan-light">Trust</span></a>
+                </section>
+                <section class="section background-code code filter-center collapse multi-collapse " id="trust">
+                    <ul class="ul-space">
+                        <li class="item">
+                            <a>10 <span class="red  bold">
+                                <i class="fa fa-star yellow"></i>
+                                <i class="fa fa-star c-code"></i>
+                                <i class="fa fa-star c-code"></i>
+                                <i class="fa fa-star c-code"></i>
+                                <i class="fa fa-star c-code"></i>
+                            </span></a>
+                            <input type="radio" name="selection-trust" class="item-checkbox">
+                        </li>
+                        <li class="item">
+                            <a>11 <span class="red  bold">
+                                <i class="fa fa-star yellow"></i>
+                                <i class="fa fa-star yellow"></i>
+                                <i class="fa fa-star c-code"></i>
+                                <i class="fa fa-star c-code"></i>
+                                <i class="fa fa-star c-code"></i>
+                            </span></a>
+                            <input type="radio" name="selection-trust" class="item-checkbox">
+                        </li>
+                        <li class="item">
+                            <a>12 <span class="red  bold">
+                                <i class="fa fa-star yellow"></i>
+                                <i class="fa fa-star yellow"></i>
+                                <i class="fa fa-star yellow"></i>
+                                <i class="fa fa-star c-code"></i>
+                                <i class="fa fa-star c-code"></i>
+                            </span></a>
+                            <input type="radio" name="selection-trust" class="item-checkbox">
+                        </li>
+                        <li class="item">
+                            <a>13 <span class="red  bold">
+                                <i class="fa fa-star yellow"></i>
+                                <i class="fa fa-star yellow"></i>
+                                <i class="fa fa-star yellow"></i>
+                                <i class="fa fa-star yellow"></i>
+                                <i class="fa fa-star c-code"></i>
+                            </span></a>
+                            <input type="radio" name="selection-trust" class="item-checkbox">
+                        </li>
+                        <li class="item">
+                            <a>14 <span class="red  bold">
+                                <i class="fa fa-star yellow"></i>
+                                <i class="fa fa-star yellow"></i>
+                                <i class="fa fa-star yellow"></i>
+                                <i class="fa fa-star yellow"></i>
+                                <i class="fa fa-star yellow"></i>
+                            </span></a>
+                            <input type="radio" name="selection-trust" class="item-checkbox">
+                        </li>
+                    </ul>
+                </section>
 
-                    <div class="my-1"> 
-                        <label class="tick">
-                                <i class="fa fa-star text-success"></i>
-                                <i class="fa fa-star text-success"></i>
-                                <i class="fa fa-star text-success"></i>
-                                <i class="fa fa-star text-success"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                            <input type="checkbox"> <span class="check"></span> </label>
-                            <span class="check"></span> 
-                        </label> 
-                    </div>
+                <section class="section background-code code space-rubric">
+                    <a href="#difficulty-installation" data-toggle="collapse" aria-expanded="false" aria-controls="#difficulty-installation" class="c-code">15 <span class="green">Difficulty installation</span></a>
+                </section>
+                <section class="section background-code code filter-center collapse multi-collapse" id="difficulty-installation">
+                    <ul class="ul-space">
+                        <li class="item">
+                            <a>16 <span class="green">Easy</span></a>
+                            <input type="radio" name="selection-price"class="item-checkbox">
+                        </li>
+                        <li class="item">
+                            <a>17 <span class="text-warning">Average</span></a>
+                            <input type="radio" name="selection-price" class="item-checkbox">
+                        </li>
+                        <li class="item">
+                            <a>18 <span class="red">Difficult</span></a>
+                            <input type="radio" name="selection-price" class="item-checkbox">
+                        </li>
+                        <li class="item">
+                            <a>19 <span class="red-hard">Very difficult</span></a>
+                            <input type="radio" name="selection-price" class="item-checkbox">
+                        </li>
+                    </ul>
+                </section>
 
-                    <div class="my-1"> 
-                        <label class="tick">
-                                <i class="fa fa-star text-success"></i>
-                                <i class="fa fa-star text-success"></i>
-                                <i class="fa fa-star text-success"></i>
-                                <i class="fa fa-star text-success"></i>
-                                <i class="fa fa-star text-success"></i>
-                            <input type="checkbox"> <span class="check"></span> </label> 
-                            <span class="check"></span> 
-                        </label> 
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="box border-bottom">
-                <div class="input-group">
+                <div class="input-group search ">
                     <div class="form-outline">
-                        <input type="search" id="username-develloper" class="form-control" placeholder="Search by develloper"/>
+                        <input type="search" id="form1" class="form-control" placeholder="Research by developer"/>
                     </div>
-                </div>
-            </div>
-            
-            <div class="box border-bottom">
-                <div class="input-group">
-                    
-                    <input type="search" id="tag" class="form-control" placeholder="Search by tag"/>
-                    <button onclick="newtag()" id="search-button" type="button" class="btn btn-primary search-bar">
+                    <button type="button" class="btn btn-primary space-rubric">
                         <i class="fas fa-search"></i>
                     </button>
-                    <iframe id="tag-searched" class="tag-seached"></iframe>
-              
                 </div>
+                <a class="c-code code">20 <span class="comment italic ">// Our scripts published on the platform are completely verified, secure, and functional. Good research <span class="green bold">:-)</span></span></a>
+            </div>
+            <div class="col w-auto shadow column-wrap space-card-col">
+
+            <div class="card space-card background-code-font code">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card-body">
+                                    <h5 class="card-title white"><span class="cc-code">1 </span>Title</h5>
+                                    <p class="card-text white"><span class="cc-code">2 </span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ...</p>
+                                    <span class="cc-code">3 </span>
+                                    <i class="fa fa-star yellow"></i> 
+                                    <i class="fa fa-star yellow"></i> 
+                                    <i class="fa fa-star yellow"></i> 
+                                    <i class="fa fa-star yellow"></i> 
+                                    <i class="fa fa-star text-secondary"></i>
+                                    <span class="green bold">- 150 $</span>
+                                </div>
+                                <figure>
+                                    <figcaption class="blockquote-footer code motz" style="color: #e5ce75 !important;">
+                                        Someone famous in <cite title="Source Title">Source Title</cite>
+                                    </figcaption>
+                                </figure>
+                                    <icon class="icon">
+                                        <a href="#">
+                                            <span class="material-symbols-outlined white icon-">shopping_basket</span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="material-symbols-outlined white icon-">heart_plus</span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="material-symbols-outlined white icon-">share</span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="material-symbols-outlined red icon-">flag</span>
+                                        </a>
+                                    </icon>
+                            </div>
+                            <div class="col col-3 img-card">
+                                <div class="img-card">
+                                    <img src="https://www.getquanty.com/wp-content/uploads/2017/09/emailing-1.jpg"></img>
+                                </div>
+                            </div>
+                            <div class="col col-1 retracte">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col w-100 background-code shadow-separator separator"></div>
+                    
+                    
+
+                    
+                    
             </div>
 
-        </div>
+            <div class="w-100"></div>
 
-        <div id="products">
-             
-            <div class="row mx-0 mid-column">
-                <!-- start product -->
-                <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
-                    <div class="card d-flex flex-column align-items-center">
-                        <div class="product-name">Item 01</div>
-                        <div class="card-img">
-                            <img src="https://mailrelay.com/wp-content/uploads/2016/12/mailing.png" alt="">
-                        </div>
-                        <div class="card-body pt-4">
-                            <div class="text-muted text-center mt-auto">Rating</div>
-                            <div class="d-flex align-items-center justify-content-center colors my-2">
-                                <div class="btn-group" data-toggle="buttons" data-tooltip="tooltip" data-placement="right" title="choose color"> 
-                                    <label for="stars-rating-4"><i class="fa fa-star text-success"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center price">
-                                <div class="del mr-2"><span class="text-dark">5500 $</span></div>
-                                <div class="font-weight-bold">4500 $</div>
-                            </div>
-                        </div>
-                        <div class="trust">
-                            <a href="#like">
-                                <i class='fas fa-hand-holding-heart'></i>
-                            </a>
-                            <p class="trust-number bold">1</p>
-                        </div>
-                        <div class="wish-list">
-                            <a href="#add-wish-list">
-                                <i class="material-icons">control_point_duplicate</i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end product -->
-                                <!-- start product -->
-                                <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
-                    <div class="card d-flex flex-column align-items-center">
-                        <div class="product-name">Item 01</div>
-                        <div class="card-img">
-                            <img src="https://mailrelay.com/wp-content/uploads/2016/12/mailing.png" alt="">
-                        </div>
-                        <div class="card-body pt-4">
-                            <div class="text-muted text-center mt-auto">Rating</div>
-                            <div class="d-flex align-items-center justify-content-center colors my-2">
-                                <div class="btn-group" data-toggle="buttons" data-tooltip="tooltip" data-placement="right" title="choose color"> 
-                                    <label for="stars-rating-4"><i class="fa fa-star text-success"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center price">
-                                <div class="del mr-2"><span class="text-dark">5500 $</span></div>
-                                <div class="font-weight-bold">4500 $</div>
-                            </div>
-                        </div>
-                        <div class="trust">
-                            <a href="#like">
-                                <i class='fas fa-hand-holding-heart'></i>
-                            </a>
-                            <p class="trust-number bold">1</p>
-                        </div>
-                        <div class="wish-list">
-                            <a href="#add-wish-list">
-                                <i class="material-icons">control_point_duplicate</i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end product -->
-                                <!-- start product -->
-                                <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
-                    <div class="card d-flex flex-column align-items-center">
-                        <div class="product-name">Item 01</div>
-                        <div class="card-img">
-                            <img src="https://mailrelay.com/wp-content/uploads/2016/12/mailing.png" alt="">
-                        </div>
-                        <div class="card-body pt-4">
-                            <div class="text-muted text-center mt-auto">Rating</div>
-                            <div class="d-flex align-items-center justify-content-center colors my-2">
-                                <div class="btn-group" data-toggle="buttons" data-tooltip="tooltip" data-placement="right" title="choose color"> 
-                                    <label for="stars-rating-4"><i class="fa fa-star text-success"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center price">
-                                <div class="del mr-2"><span class="text-dark">5500 $</span></div>
-                                <div class="font-weight-bold">4500 $</div>
-                            </div>
-                        </div>
-                        <div class="trust">
-                            <a href="#like">
-                                <i class='fas fa-hand-holding-heart'></i>
-                            </a>
-                            <p class="trust-number bold">1</p>
-                        </div>
-                        <div class="wish-list">
-                            <a href="#add-wish-list">
-                                <i class="material-icons">control_point_duplicate</i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end product -->
-                                <!-- end product -->
-                                <!-- start product -->
-                                <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
-                    <div class="card d-flex flex-column align-items-center">
-                        <div class="product-name">Item 01</div>
-                        <div class="card-img">
-                            <img src="https://mailrelay.com/wp-content/uploads/2016/12/mailing.png" alt="">
-                        </div>
-                        <div class="card-body pt-4">
-                            <div class="text-muted text-center mt-auto">Rating</div>
-                            <div class="d-flex align-items-center justify-content-center colors my-2">
-                                <div class="btn-group" data-toggle="buttons" data-tooltip="tooltip" data-placement="right" title="choose color"> 
-                                    <label for="stars-rating-4"><i class="fa fa-star text-success"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center price">
-                                <div class="del mr-2"><span class="text-dark">5500 $</span></div>
-                                <div class="font-weight-bold">4500 $</div>
-                            </div>
-                        </div>
-                        <div class="trust">
-                            <a href="#like">
-                                <i class='fas fa-hand-holding-heart'></i>
-                            </a>
-                            <p class="trust-number bold">1</p>
-                        </div>
-                        <div class="wish-list">
-                            <a href="#add-wish-list">
-                                <i class="material-icons">control_point_duplicate</i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end product -->
-                                <!-- end product -->
-                                <!-- start product -->
-                                <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
-                    <div class="card d-flex flex-column align-items-center">
-                        <div class="product-name">Item 01</div>
-                        <div class="card-img">
-                            <img src="https://mailrelay.com/wp-content/uploads/2016/12/mailing.png" alt="">
-                        </div>
-                        <div class="card-body pt-4">
-                            <div class="text-muted text-center mt-auto">Rating</div>
-                            <div class="d-flex align-items-center justify-content-center colors my-2">
-                                <div class="btn-group" data-toggle="buttons" data-tooltip="tooltip" data-placement="right" title="choose color"> 
-                                    <label for="stars-rating-4"><i class="fa fa-star text-success"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center price">
-                                <div class="del mr-2"><span class="text-dark">5500 $</span></div>
-                                <div class="font-weight-bold">4500 $</div>
-                            </div>
-                        </div>
-                        <div class="trust">
-                            <a href="#like">
-                                <i class='fas fa-hand-holding-heart'></i>
-                            </a>
-                            <p class="trust-number bold">1</p>
-                        </div>
-                        <div class="wish-list">
-                            <a href="#add-wish-list">
-                                <i class="material-icons">control_point_duplicate</i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end product -->
-                                <!-- end product -->
-                                <!-- start product -->
-                                <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
-                    <div class="card d-flex flex-column align-items-center">
-                        <div class="product-name">Item 01</div>
-                        <div class="card-img">
-                            <img src="https://mailrelay.com/wp-content/uploads/2016/12/mailing.png" alt="">
-                        </div>
-                        <div class="card-body pt-4">
-                            <div class="text-muted text-center mt-auto">Rating</div>
-                            <div class="d-flex align-items-center justify-content-center colors my-2">
-                                <div class="btn-group" data-toggle="buttons" data-tooltip="tooltip" data-placement="right" title="choose color"> 
-                                    <label for="stars-rating-4"><i class="fa fa-star text-success"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center price">
-                                <div class="del mr-2"><span class="text-dark">5500 $</span></div>
-                                <div class="font-weight-bold">4500 $</div>
-                            </div>
-                        </div>
-                        <div class="trust">
-                            <a href="#like">
-                                <i class='fas fa-hand-holding-heart'></i>
-                            </a>
-                            <p class="trust-number bold">1</p>
-                        </div>
-                        <div class="wish-list">
-                            <a href="#add-wish-list">
-                                <i class="material-icons">control_point_duplicate</i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end product -->
-                                <!-- end product -->
-                                <!-- start product -->
-                                <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
-                    <div class="card d-flex flex-column align-items-center">
-                        <div class="product-name">Item 01</div>
-                        <div class="card-img">
-                            <img src="https://mailrelay.com/wp-content/uploads/2016/12/mailing.png" alt="">
-                        </div>
-                        <div class="card-body pt-4">
-                            <div class="text-muted text-center mt-auto">Rating</div>
-                            <div class="d-flex align-items-center justify-content-center colors my-2">
-                                <div class="btn-group" data-toggle="buttons" data-tooltip="tooltip" data-placement="right" title="choose color"> 
-                                    <label for="stars-rating-4"><i class="fa fa-star text-success"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center price">
-                                <div class="del mr-2"><span class="text-dark">5500 $</span></div>
-                                <div class="font-weight-bold">4500 $</div>
-                            </div>
-                        </div>
-                        <div class="trust">
-                            <a href="#like">
-                                <i class='fas fa-hand-holding-heart'></i>
-                            </a>
-                            <p class="trust-number bold">1</p>
-                        </div>
-                        <div class="wish-list">
-                            <a href="#add-wish-list">
-                                <i class="material-icons">control_point_duplicate</i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end product -->
-                                <!-- end product -->
-                                <!-- start product -->
-                                <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
-                    <div class="card d-flex flex-column align-items-center">
-                        <div class="product-name">Item 01</div>
-                        <div class="card-img">
-                            <img src="https://mailrelay.com/wp-content/uploads/2016/12/mailing.png" alt="">
-                        </div>
-                        <div class="card-body pt-4">
-                            <div class="text-muted text-center mt-auto">Rating</div>
-                            <div class="d-flex align-items-center justify-content-center colors my-2">
-                                <div class="btn-group" data-toggle="buttons" data-tooltip="tooltip" data-placement="right" title="choose color"> 
-                                    <label for="stars-rating-4"><i class="fa fa-star text-success"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                    <label for="stars-rating-1"><i class="fa fa-star text-secondary"></i></label>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center price">
-                                <div class="del mr-2"><span class="text-dark">5500 $</span></div>
-                                <div class="font-weight-bold">4500 $</div>
-                            </div>
-                        </div>
-                        <div class="trust">
-                            <a href="#like">
-                                <i class='fas fa-hand-holding-heart'></i>
-                            </a>
-                            <p class="trust-number bold">1</p>
-                        </div>
-                        <div class="wish-list">
-                            <a href="#add-wish-list">
-                                <i class="material-icons">control_point_duplicate</i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end product -->
-            </div>
-            <!--end âge -->
-            <div class="bg-white rounded d-flex align-items-center justify-content-between shadow end-page" id="header">
-                <div class="ml-auto mt-3 mr-2">
-                    <nav aria-label="Page navigation example">
+            <div class="col shadow footer-wrap code ">
+                    <nav aria-label="...">
                         <ul class="pagination">
-                        <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true" class="font-weight-bold">&lt;</span> <span class="sr-only">Previous</span> </a> </li>
-                        <!-- start lenght pages -->
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">..</a></li>
-                        <li class="page-item"><a class="page-link" href="#">24</a></li>
-                        <!-- end lenght pages -->
-                        <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true" class="font-weight-bold">&gt;</span> <span class="sr-only">Next</span> </a> </li>
+                            <li class="page-item disabled">
+                                <span class="page-link">Previous</span>
+                            </li>
+                            <li class="page-item active">
+                                <span class="page-link">
+                                    1
+                                </span>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">
+                                    2
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">
+                                3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link code" href="#">Next</a>
+                            </li>
                         </ul>
+                        <!-- Ne pas oublier de changer les class si changement de page >len(pages) != next -->
                     </nav>
-                </div>
             </div>
-            <!-- end âge -->
         </div>
-
     </div>
-    </div>
-    <script src="./assets/js/wrap-item.js"></script>
 </body>

@@ -60,10 +60,10 @@
                                 <a class="dropdown-item nav-trans nav-color" href="#">Mobile</a>
                                 <div class="dropdown-divider"></div>
                                 <div class="nav-flex">
-                                    <h6 class="dropdown-header nav-color">Another </h6>
+                                    <h6 class="dropdown-header nav-color">Other </h6>
                                     <i class='fas fa-glasses navicon'></i>
                                 </div>
-                                <a class="dropdown-item nav-trans nav-color" href="#">Another</a>
+                                <a class="dropdown-item nav-trans nav-color" href="#">Other</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -75,21 +75,21 @@
                             <a class="nav-link nav-color" href="/admin">Admin panel<span class="sr-only">(current)</span></a>
                         </li>     
                         <li class="nav-item shop notification-shop">
-                            <a href="my-script">
+                            <a href="payment">
                                 <i class="fa fa-shopping-cart nav-link icon-shop nav-color disabled">
                                     <span class="badge">3</span>
                                 </i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color disabled" href="/singin" tabindex="-1" aria-disabled="true">Sign in</a>
+                            <a class="nav-link nav-color disabled" href="/signin" tabindex="-1" aria-disabled="true">Sign in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color disabled" href="/singup" tabindex="-1" aria-disabled="true">Sign Up</a>
+                            <a class="nav-link nav-color disabled" href="/signup" tabindex="-1" aria-disabled="true">Sign Up</a>
                         </li>
                                                 <li class="nav-item">
                             <a href="/profile" class="notification nav-link nav-color disabled">
-                                <span>Username</span>
+                                <span>Profile</span>
                                 <span class="badge">3</span>
                             </a> 
                         </li>

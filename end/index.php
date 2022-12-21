@@ -15,8 +15,8 @@
     if($request == '/wrap-item'){include_once('./view/items/wrap-item.php');}
     //if($request == '/wrap-item-theme'){include_once('./view/items/wrap-item-theme.php');}
 
-    if($request == '/singin'){include_once('./view/login/login.php');}
-    if($request == '/singup'){include_once('./view/login/register.php');}
+    if($request == '/signin'){include_once('./view/login/login.php');}
+    if($request == '/signup'){include_once('./view/login/register.php');}
     if($request == '/reset-password'){include_once('./view/login/reset-password.php');}
     if($request == '/link-verification-email'){include_once('./view/login/verification-email.php');}
 
@@ -33,6 +33,7 @@
     if($request == '/policy-privacy'){include_once('./view/policy-privacy.php');}
 
     if($request == '/'){include_once('./view/home.php');}
+    if ($request == '/contact'){include_once('./view/contact.php');}
     //else{include_once('./view/home.php');};
     include_once('./view/management-website-page/cookie.php');
     include_once('./view/_footer.php');

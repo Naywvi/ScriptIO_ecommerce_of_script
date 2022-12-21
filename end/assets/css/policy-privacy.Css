@@ -27,9 +27,9 @@
 }
 .title {
     --s: 0.1em!important;   
-    --c: #2d40ce !important; 
+    --c: rgba(0, 0, 0, 0.548)!important; 
 
-    color: #2d40ce!important;
+    color:rgba(0, 0, 0, 0.418)!important;
     padding-bottom: var(--s)!important;
     background: 
         linear-gradient(90deg,var(--c) 50%,rgb(255, 255, 255) 0) calc(100% - var(--_p,0%))/200% 100%,

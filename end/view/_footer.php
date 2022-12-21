@@ -7,11 +7,8 @@
     <div class="footer-left">
         <p class="footer-links">
             <a href="/">Home</a>
-            <a href="/best-seller">Best Seller</a>
-            <a href="/wrap-item-theme">Items</a>
             <a href="/policy-privacy">Policy privacy</a>
-            <a href="#">Faq</a>
-            <a href="#">Contact</a>
+            <a href="/contact">Contact</a>
         </p>
         <p>Script' io &copy; 2022</p>
     </div>
