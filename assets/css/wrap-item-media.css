@@ -1,11 +1,12 @@
 @media(max-height: 640px) {
-    .img-card{
+    .img-card {
         display: none;
     }
 }
+
 @media(max-height: 875px) {
-    .img-card{
-        width: 274px;
-        height: 210px;
+    .img-card img {
+        height: 100%;
+        height: auto;
     }
 }
