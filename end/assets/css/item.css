@@ -101,7 +101,7 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .description-seller-card{
-    margin-top: 30%;
+    margin-top: 10%;
     font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
 }
 .username{
@@ -115,11 +115,12 @@
 .trust{
     display: flex;
     justify-content: center;
+    margin-bottom: 10%;
 }
 
 .motz{
     font-style: italic;
-    margin-top: 44%;
+    margin-top: 10% !important;
 }
 .step-installation{
     margin-left: 16%;
@@ -143,3 +144,6 @@
     border-right-style: solid;
     border-right-color: #e28b57;
 } */
+.blockquote-footer{
+    margin-top: 0rem !important;
+}
