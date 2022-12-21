@@ -12,7 +12,7 @@
                 <div class="headings d-flex justify-content-between align-items-center mb-3">
                     <h5>Unread comments(6)</h5>
                     <div class="buttons">
-                    <span class="badge bg-white d-flex flex-row align-items-center">
+                    <span class="badge-b bg-white d-flex flex-row align-items-center">
                         <span class="text-primary">Comments "ON"</span>
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
@@ -110,4 +110,5 @@
             </div>
         </div>
     </div>
+</div>
 </body>

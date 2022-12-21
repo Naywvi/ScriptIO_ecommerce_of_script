@@ -206,9 +206,7 @@
                                     <img src="https://www.getquanty.com/wp-content/uploads/2017/09/emailing-1.jpg"></img>
                                 </div>
                             </div>
-                            <div class="col col-1 retracte">
-                                
-                            </div>
+                            <!-- <div class="col col-1 retracte"></div> -->
                         </div>
                     </div>
                     <div class="col w-100 background-code shadow-separator separator"></div>
