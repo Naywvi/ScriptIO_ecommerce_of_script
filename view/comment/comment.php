@@ -7,108 +7,117 @@
 </head>
 <body>  
     <div class="container-fluid space-comment">
-        <div class="row  d-flex justify-content-center">
-            <div class="col-md-8">
-                <div class="headings d-flex justify-content-between align-items-center mb-3">
-                    <h5>Unread comments(6)</h5>
-                    <div class="buttons">
-                    <span class="badge-b bg-white d-flex flex-row align-items-center">
-                        <span class="text-primary">Comments "ON"</span>
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                        </div>
-                    </span>
-                    </div>
-                </div>
-                <div class="card p-3">
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="user d-flex flex-row align-items-center">
-                        <img src="https://i.imgur.com/hczKIze.jpg" width="30" class="user-img rounded-circle mr-2">
-                        <span><small class="font-weight-bold text-primary">james_olesenn</small> <small class="font-weight-bold">Hmm, This poster looks cool</small></span>
-                    </div>
-                    <small>2 days ago</small>
-                    </div>
-                    <div class="action d-flex justify-content-between mt-2 align-items-center">
-                    <div class="reply px-4">
-                        <small>Remove</small>
-                        <span class="dots"></span>
-                        <small>Reply</small>
-                        <span class="dots"></span>
-                        <small>Translate</small>
-                    </div>
-                    <div class="icons align-items-center">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-check-circle-o check-icon"></i>
-                    </div>
-                    </div>
-                </div>
-                <div class="card p-3 mt-2">
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="user d-flex flex-row align-items-center">
-                        <img src="https://i.imgur.com/C4egmYM.jpg" width="30" class="user-img rounded-circle mr-2">
-                        <span><small class="font-weight-bold text-primary">olan_sams</small> <small class="font-weight-bold">Loving your work and profile! </small></span>
-                    </div>
-                    <small>3 days ago</small>
-                    </div>
-                    <div class="action d-flex justify-content-between mt-2 align-items-center">
-                    <div class="reply px-4">
-                        <small>Remove</small>
-                        <span class="dots"></span>
-                        <small>Reply</small>
-                        <span class="dots"></span>
-                        <small>Translate</small>
-                    </div>
-                    <div class="icons align-items-center">
-                        <i class="fa fa-check-circle-o check-icon text-primary"></i>
-                    </div>
-                    </div>
-                </div>
-                <div class="card p-3 mt-2">
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="user d-flex flex-row align-items-center">
-                        <img src="https://i.imgur.com/0LKZQYM.jpg" width="30" class="user-img rounded-circle mr-2">
-                        <span><small class="font-weight-bold text-primary">rashida_jones</small> <small class="font-weight-bold">Really cool Which filter are you using? </small></span>
-                    </div>
-                    <small>3 days ago</small>
-                    </div>
-                    <div class="action d-flex justify-content-between mt-2 align-items-center">
-                    <div class="reply px-4">
-                        <small>Remove</small>
-                        <span class="dots"></span>
-                        <small>Reply</small>
-                        <span class="dots"></span>
-                        <small>Translate</small>
-                    </div>
-                    <div class="icons align-items-center">
-                        <i class="fa fa-user-plus text-muted"></i>
-                        <i class="fa fa-star-o text-muted"></i>
-                        <i class="fa fa-check-circle-o check-icon text-primary"></i>
-                    </div>
-                    </div>
-                </div>
-                <div class="card p-3 mt-2">
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="user d-flex flex-row align-items-center">
-                        <img src="https://i.imgur.com/ZSkeqnd.jpg" width="30" class="user-img rounded-circle mr-2">
-                        <span><small class="font-weight-bold text-primary">simona_rnasi</small> <small class="font-weight-bold text-primary">@macky_lones</small> <small class="font-weight-bold text-primary">@rashida_jones</small> <small class="font-weight-bold">Thanks </small></span>
-                    </div>
-                    <small>3 days ago</small>
-                    </div>
-                    <div class="action d-flex justify-content-between mt-2 align-items-center">
-                    <div class="reply px-4">
-                        <small>Remove</small>
-                        <span class="dots"></span>
-                        <small>Reply</small>
-                        <span class="dots"></span>
-                        <small>Translate</small>
-                    </div>
-                    <div class="icons align-items-center">
-                        <i class="fa fa-check-circle-o check-icon text-primary"></i>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="container-fluid px-1 py-5 mx-auto">
+	<div class="row justify-content-center">
+		<div class="col-xl-6 col-lg-8 col-md-10 col-12 text-center mb-5">
+			<div class="card">
+				<div class="row justify-content-left d-flex">
+					<div class="col-md-4 d-flex flex-column">
+						<div class="rating-box">
+							<h1 class="pt-4">4.0</h1>
+							<p class="note">out of 5</p>
+						</div>
+						<div>
+							<span class="fa fa-star star-active mx-1"></span>
+							<span class="fa fa-star star-active mx-1"></span>
+							<span class="fa fa-star star-active mx-1"></span>
+							<span class="fa fa-star star-active mx-1"></span>
+							<span class="fa fa-star star-inactive mx-1"></span>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="rating-bar0 justify-content-center">
+							<table class="text-left mx-auto">
+								<tr>
+									<td class="rating-label">Excellent</td>
+									<td class="rating-bar">
+										<div class="bar-container">
+									      <div class="bar-5"></div>
+									    </div>
+									</td>
+									<td class="text-right">123</td>
+								</tr>
+								<tr>
+									<td class="rating-label">Good</td>
+									<td class="rating-bar">
+										<div class="bar-container">
+									      <div class="bar-4"></div>
+									    </div>
+									</td>
+									<td class="text-right">23</td>
+								</tr>
+								<tr>
+									<td class="rating-label">Average</td>
+									<td class="rating-bar">
+										<div class="bar-container">
+									      <div class="bar-3"></div>
+									    </div>
+									</td>
+									<td class="text-right">10</td>
+								</tr>
+								<tr>
+									<td class="rating-label">Poor</td>
+									<td class="rating-bar">
+										<div class="bar-container">
+									      <div class="bar-2"></div>
+									    </div>
+									</td>
+									<td class="text-right">3</td>
+								</tr>
+								<tr>
+									<td class="rating-label">Terrible</td>
+									<td class="rating-bar">
+										<div class="bar-container">
+									      <div class="bar-1"></div>
+									    </div>
+									</td>
+									<td class="text-right">0</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card card-comment">
+				<div class="row d-flex">
+					<div class="">
+						<img class="profile-pic" src="https://i.imgur.com/V3ICjlm.jpg">
+					</div>
+					<div class="d-flex flex-column">
+						<h3 class="mt-2 mb-0">Vikram jit Singh</h3>
+						<div>
+							<p class="text-left"><span class="text-muted">4.0</span>
+							<span class="fa fa-star star-active ml-3"></span>
+							<span class="fa fa-star star-active"></span>
+							<span class="fa fa-star star-active"></span>
+							<span class="fa fa-star star-active"></span>
+							<span class="fa fa-star star-inactive"></span></p>
+						</div>
+					</div>
+					<div class="ml-auto">
+						<p class="text-muted pt-5 pt-sm-3">10 Sept</p>
+					</div>
+				</div>
+				<div class="row text-left">
+					<h4 class="blue-text mt-3">"An awesome activity to experience"</h4>
+					<p class="content">If you really enjoy spending your vacation 'on water' or would like to try something new and exciting for the first time.</p>
+				</div>
+				
+				<div class="row text-left mt-4">
+					<div class="like mr-3 vote">
+						<a href="#like">
+                            <img src="https://i.imgur.com/mHSQOaX.png"><span class="blue-text pl-2">20</span>
+                        </a>
+					</div>
+					<div class="unlike vote">
+                        <a href="#dislike">
+						    <img src="https://i.imgur.com/bFBO3J7.png"><span class="text-muted pl-2">4</span>
+                        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+</div></div>
 </body>
