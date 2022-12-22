@@ -15,10 +15,10 @@
     if($request == '/wrap-item'){include_once('./view/items/wrap-item.php');}
     //if($request == '/wrap-item-theme'){include_once('./view/items/wrap-item-theme.php');}
 
-    if($request == '/singin'){include_once('./view/login/login.php');}
-    if($request == '/singup'){include_once('./view/login/register.php');}
-    if($request == '/reset-password'){include_once('./view/login/reset-password.php');}
-    if($request == '/link-verification-email'){include_once('./view/login/verification-email.php');}
+    if($request == '/singin'){include_once('./view/connexion/login.php');}
+    if($request == '/singup'){include_once('./view/connexion/register.php');}
+    if($request == '/reset-password'){include_once('./view/connexion/reset-password.php');}
+    if($request == '/link-verification-email'){include_once('./view/connexion/verification-email.php');}
 
     if($request == '/payment'){include_once('./view/payment/payment.php');}
     if($request == '/payment-validation'){include_once('./view/payment/validation.php');}
