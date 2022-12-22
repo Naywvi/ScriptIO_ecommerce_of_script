@@ -244,3 +244,44 @@ margin-bottom: 5% !important;
 li{
     list-style-type: none; 
  }
+ .code-00{
+    background-color: #4d5766 !important;
+    color: #E8E8E8;
+ }
+ .code-01{
+    background-color: #cad3db !important;
+ }
+ .white{
+    color: #B3B9C1 !important;
+ }
+ .blue{
+    color: #357BD8 !important;
+ }
+ .cyan{
+    color: #67b7ff !important;
+}
+.cyan-light{
+    color: #8bc8ff !important;
+}
+.green{
+    color: #6FC37D !important;
+}
+.red{
+    color: #E0645F !important;
+}
+.comment{
+    color: #727272 !important;
+}
+.yellow{
+    color: #ffcb00 !important;
+}
+.danger{
+    color: #E0645F !important;
+    font-weight: bold;
+}
+.text-dec{
+    text-decoration: none !important;
+}
+.pad-bot{
+    padding-bottom: 2%;
+}
