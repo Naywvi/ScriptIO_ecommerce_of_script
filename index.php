@@ -20,9 +20,6 @@
     if($request == '/reset-password'){include_once('./view/connexion/reset-password.php');}
     if($request == '/link-verification-email'){include_once('./view/connexion/verification-email.php');}
 
-    if($request == '/payment'){include_once('./view/payment/payment.php');}
-    if($request == '/payment-validation'){include_once('./view/payment/validation.php');}
-
     if($request == '/my-script'){include_once('./view/shop/cart-shopping.php');}
     if($request == '/my-wish-list'){include_once('./view/shop/wish-list.php');}
 

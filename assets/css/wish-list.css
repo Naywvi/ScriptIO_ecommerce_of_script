@@ -1,77 +1,28 @@
-.space{
-    margin-top: 8%;
-    margin-bottom: 5%;
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
 }
-.table>tbody>tr>td, .table>tfoot>tr>td{
-    vertical-align: middle;
+.ms-3{
+    margin-left: 10px;
 }
-
-@media screen and (max-width: 600px) {
-    table#cart tbody td .form-control{
-		width:20%;
-		display: inline !important;
-	}
-	.actions .btn{
-		width:36%;
-		margin:1.5em 0;
-	}
-	
-	.actions .btn-info{
-		float:left;
-	}
-	.actions .btn-danger{
-		float:right;
-	}
-	
-	table#cart thead { display: none; }
-	table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
-	table#cart tbody tr td:first-child { background: #333; color: #fff; }
-	table#cart tbody td:before {
-		content: attr(data-th); font-weight: bold;
-		display: inline-block; width: 8rem;
-	}
-	table#cart tfoot td{display:block; }
-	table#cart tfoot td .btn{display:block;}
-	
+.Space{
+    margin-top: 4% !important;
 }
-.background{
-    background-color: #363E4A !important;
+.icon-arrow{
+    margin-right: 10px;
 }
-.background p{
-    color: #d9d8d5;
+.code{
+    background-color: #363e4a !important;
+    color: #63686F !important;
 }
-.img{
-    color: #d9d8d5;
+.payment-background{
+    background-color: #7d92a8 !important;
 }
-.background h4{
-    color: #7daed6;
+.reduction-code{
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
-.column{
-    color: #d2d0cd;
-}
-.price{
-    color: #7cc88a !important;
-}
-.shadow{
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
-a{
-    text-decoration: none;
-}
-a:hover{
-    text-decoration: none;
-}
-.space02{
-    margin-top:5% !important;
-}
-.icon-150{
-    font-size: 150% !important;
-}
-
-.remove{
-    background-color: #e43e3e;
-}
-
-.add{
-    background-color: #43a030;
+.bin:hover{
+color: red !important;
 }
