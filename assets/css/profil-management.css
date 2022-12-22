@@ -1,0 +1,26 @@
+.disable{
+    pointer-events: none;
+    background-color: #8d929282;
+}
+.email{
+    display: flex !important;
+}
+.number{
+    display: flex !important;
+}
+.email-left{
+    margin-right: 10px;
+}
+.email-right{
+    margin-left: 10px;
+}
+.number-left{
+    margin-right: 10px;
+}
+.number-right{
+    margin-left: 10px;
+}
+.space{
+    margin-top: 8%;
+    margin-bottom: 5%;
+}

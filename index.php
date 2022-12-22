@@ -26,8 +26,8 @@
     if($request == '/my-script'){include_once('./view/shop/basket.php');}
     if($request == '/my-wish-script'){include_once('./view/shop/wish-list.php');}
 
-    if($request == '/profile-management'){include_once('./view/user/manage-profile.php');}
-    if($request == '/profile'){include_once('./view/user/profile.php');}
+    if($request == '/profil-management'){include_once('./view/user/manage-profil.php');}
+    if($request == '/profil'){include_once('./view/user/profil.php');}
 
     if($request == '/best-seller'){include_once('./view/best-seller.php');}
     if($request == '/policy-privacy'){include_once('./view/policy-privacy.php');}

@@ -2,7 +2,6 @@
     <html>
         <head>
             <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-            <title>ScriptIO</title>
             <link rel="stylesheet" href="./assets/css/_header.css" />
             <link rel="stylesheet" href="./assets/css/_header-media.css" />
             <link rel="stylesheet" href="./assets/css/_footer.css" />
