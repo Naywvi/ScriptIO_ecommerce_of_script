@@ -1,6 +1,6 @@
 <head>
     <title>Script'iO - Profil </title>
-    <link rel="stylesheet" href="./assets/css/profil.css"/>
+    <link rel="stylesheet" href="./assets/css/profile.css"/>
 </head>
 <body>
     <div class="container-fluid space">

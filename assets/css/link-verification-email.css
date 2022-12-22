@@ -89,11 +89,6 @@
     border: 0;
     outline: none;
   }
-
-body{
-    background-color: #e9ecef;
-}
-
 .preheader{
     display: none; 
     max-width: 0; 

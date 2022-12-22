@@ -1,9 +1,9 @@
 <head>
   <title>ScriptIO - #USERNAME profil management</title>
-  <link rel="stylesheet" href="./assets/css/profil-management.css" />
+  <link rel="stylesheet" href="./assets/css/profile-management.css" />
 </head>
 <body>
-<div class="container space">
+<div class="container space background-white">
 <form>
   <!-- 2 column grid layout with text inputs for the first and last names -->
   <div class="row mb-4">
@@ -61,6 +61,14 @@
     <label class="form-label" for="phone">Phone</label>
   </div>
 
+  <!-- Text input -->
+  <div class="form-outline mb-4">
+    
+    <input type="file" id="profil-picture" name="profil-picture" class="form-label">
+    <label for="profil-picture">Profil picture</label>
+
+  </div>
+
   <!-- Message input -->
   <div class="form-outline mb-4">
     <textarea class="form-control" id="additional" rows="4"></textarea>
@@ -68,7 +76,7 @@
   </div>
 
   <!-- Submit button -->
-  <button type="submit" class="btn btn-primary btn-block mb-4">Place order</button>
+  <button type="submit" class="btn btn-primary btn-block mb-4">Edit my profile</button>
 </form>
 </div>
 

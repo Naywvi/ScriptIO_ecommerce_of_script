@@ -18,7 +18,7 @@
         <table border="0" cellpadding="0" cellspacing="0" width="100%">
             <!-- start logo -->
             <tr>
-                <td align="center" bgcolor="#e9ecef">
+                <td align="center" >
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" class="table">
                     <tr>
                         <td align="center" valign="top" class="table-td">
@@ -33,7 +33,7 @@
             <!-- end logo -->
             <!-- start hero -->
             <tr>
-                <td align="center" bgcolor="#e9ecef">
+                <td align="center" >
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" class="table">
                     <tr>
                         <td align="left" bgcolor="#ffffff" class="confirm-email">
@@ -46,7 +46,7 @@
             <!-- end hero -->
             <!-- start copy block -->
             <tr>
-                <td align="center" bgcolor="#e9ecef">
+                <td align="center">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" class="table">
                     <!-- start copy -->
                     <tr>
@@ -95,18 +95,18 @@
             <!-- end copy block -->
             <!-- start footer -->
             <tr>
-                <td align="center" bgcolor="#e9ecef" class="td-24">
+                <td align="center" class="td-24">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" class="table">
                     <!-- start permission -->
                     <tr>
-                        <td align="center" bgcolor="#e9ecef" class="table-24-color">
+                        <td align="center" class="table-24-color">
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                         </td>
                     </tr>
                     <!-- end permission -->
                     <!-- start unsubscribe -->
                     <tr>
-                        <td align="center" bgcolor="#e9ecef" class="table-24-color">
+                        <td align="center" class="table-24-color">
                             <p>Lorem Ipsum is simply dummy text of the printing <a href="#" target="_blank">and typesetting</a> industry.</p>
                             <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                         </td>

@@ -9,7 +9,7 @@
     <div class="container-fluid space geek-font">
         <div class="row align-self-center center-col">
 
-            <div class="col shadow header-wrap ">
+            <div class="col shadow header-wrap background-white">
                 <div class="hide-filter">
                     <a href="#filters" data-toggle="collapse" aria-expanded="false" aria-controls="#filters" >Hide filters</a>
                 </div>
@@ -165,7 +165,7 @@
                 </div>
                 <a class="c-code code">20 <span class="comment italic ">// Our scripts published on the platform are completely verified, secure, and functional. Good research <span class="green bold">:-)</span></span></a>
             </div>
-            <div class="col w-auto shadow column-wrap space-card-col">
+            <div class="col w-auto shadow column-wrap space-card-col background-white">
 
             <div class="card space-card background-code-font code">
                         <div class="row">
@@ -219,7 +219,7 @@
 
             <div class="w-100"></div>
 
-            <div class="col shadow footer-wrap code ">
+            <div class="col shadow footer-wrap code background-white">
                     <nav aria-label="...">
                         <ul class="pagination">
                             <li class="page-item disabled">
