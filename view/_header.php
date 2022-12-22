@@ -81,18 +81,18 @@
                             </a>
                         </li>
                         <li class="nav-item shop notification-shop icon-header-space">
-                            <a href="payment">
+                            <a href="my-wish-list">
                                     <span class="material-symbols-outlined icon-wish-list badge-not-wish icon-header-space">heart_plus</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color disabled" href="/singin" tabindex="-1" aria-disabled="true">Sign in</a>
+                            <a class="nav-link nav-color disabled" href="singin" tabindex="-1" aria-disabled="true">Sign in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color disabled" href="/singup" tabindex="-1" aria-disabled="true">Sign Up</a>
+                            <a class="nav-link nav-color disabled" href="singup" tabindex="-1" aria-disabled="true">Sign Up</a>
                         </li>
                                                 <li class="nav-item">
-                            <a href="/profile" class="notification nav-link nav-color disabled">
+                            <a href="profile" class="notification nav-link nav-color disabled">
                                 <span>Profile</span>
                                 <span class="badge">3</span>
                             </a> 

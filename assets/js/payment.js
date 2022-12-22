@@ -5,7 +5,7 @@ $(function() {
 function errorPayment(){
     swal("Error occured !");
 }
-function validrPayment(){
+function validPayment(){
     swal({
         title: 'Congratulations!',
         text: 'You entered the correct answer',
