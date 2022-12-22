@@ -20,13 +20,12 @@
     if($request == '/reset-password'){include_once('./view/connexion/reset-password.php');}
     if($request == '/link-verification-email'){include_once('./view/connexion/verification-email.php');}
 
-    if($request == '/my-script'){include_once('./view/shop/cart-shopping.php');}
+    if($request == '/my-scripts'){include_once('./view/shop/cart-shopping.php');}
     if($request == '/my-wish-list'){include_once('./view/shop/wish-list.php');}
 
     if($request == '/profile-management'){include_once('./view/user/manage-profile.php');}
     if($request == '/profile'){include_once('./view/user/profile.php');}
 
-    if($request == '/best-seller'){include_once('./view/best-seller.php');}
     if($request == '/policy-privacy'){include_once('./view/policy-privacy.php');}
 
     if($request == '/'){include_once('./view/home.php');}
