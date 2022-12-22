@@ -81,10 +81,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color disabled" href="/signin" tabindex="-1" aria-disabled="true">Sign in</a>
+                            <a class="nav-link nav-color disabled" href="/singin" tabindex="-1" aria-disabled="true">Sign in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color disabled" href="/signup" tabindex="-1" aria-disabled="true">Sign Up</a>
+                            <a class="nav-link nav-color disabled" href="/singup" tabindex="-1" aria-disabled="true">Sign Up</a>
                         </li>
                                                 <li class="nav-item">
                             <a href="/profile" class="notification nav-link nav-color disabled">
