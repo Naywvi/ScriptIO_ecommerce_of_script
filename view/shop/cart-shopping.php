@@ -8,7 +8,7 @@
 <div class="container-fluid space">
     <div class="row justify-content-center ">
         <div class="col-xl-6 col-lg-8 col-md-10 col-12 mb-5 ">
-        <table id="cart" class="table table-hover table-condensed background shadow">
+        <table id="cart" class="table table-hover table-condensed background shadow space02">
     				<thead>
 						<tr>
 							<th class="column" style="width:50%">Product</th>

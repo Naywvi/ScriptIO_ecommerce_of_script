@@ -64,3 +64,14 @@ a:hover{
 .space02{
     margin-top:5% !important;
 }
+.icon-150{
+    font-size: 150% !important;
+}
+
+.remove{
+    background-color: #e43e3e;
+}
+
+.add{
+    background-color: #43a030;
+}

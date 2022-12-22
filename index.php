@@ -24,7 +24,7 @@
     if($request == '/payment-validation'){include_once('./view/payment/validation.php');}
 
     if($request == '/my-script'){include_once('./view/shop/cart-shopping.php');}
-    if($request == '/my-wish-script'){include_once('./view/shop/wish-list.php');}
+    if($request == '/my-wish-list'){include_once('./view/shop/wish-list.php');}
 
     if($request == '/profile-management'){include_once('./view/user/manage-profile.php');}
     if($request == '/profile'){include_once('./view/user/profile.php');}
