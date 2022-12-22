@@ -241,3 +241,6 @@ margin-bottom: 5% !important;
     display: flex !important;
     justify-content: end;
 }
+li{
+    list-style-type: none; 
+ }
