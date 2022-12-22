@@ -24,32 +24,29 @@
           <div class="center-tab">
               <h1 class="title spacebtw" id="home_section">Lorem Ipsum is simply dummy</h1>
           </div>
-          <div class="header-informations reveal center-tab">
-              <h1>Lorem Ipsum</h1>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-          </div>
+          
           <div class="row1-container reveal">
               <div class="box box-down cyan">
                 <h2>Objectif</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
-                <img src="./src/assets/img/objectif.png" alt="" class="img-information">
+                <img src="https://cdn-icons-png.flaticon.com/512/3787/3787796.png" alt="" class="img-information">
               </div>
               <div class="box red reveal">
                 <h2>Security</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
-                <img src="./src/assets/img/security.png" alt="" class="img-information">
+                <img src="https://www.pngall.com/wp-content/uploads/4/Cyber-Security-Logo-PNG.png" alt="" class="img-information">
               </div>
               <div class="box box-down blue reveal">
                 <h2>Free</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
-                <img src="./src/assets/img/free.png" alt="" class="img-information">
+                <img src="https://www.pngall.com/wp-content/uploads/2016/04/Free-Free-Download-PNG.png" alt="" class="img-information">
               </div>
             </div>
             <div class="row2-container reveal">
               <div class="box orange">
                 <h2>Privacy policy</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
-                <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="" class="img-information">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/health-sickness-organs/hide-private-hidden-icon.png" alt="" class="img-information">
               </div>
             </div>
       </section>
