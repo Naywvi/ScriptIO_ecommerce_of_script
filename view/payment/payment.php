@@ -223,5 +223,4 @@
       </div>
    </div>
    <script src="./assets/js/payment.js"></script>
-
 </div>
