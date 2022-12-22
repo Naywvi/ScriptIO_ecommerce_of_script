@@ -26,27 +26,27 @@
           </div>
           
           <div class="row1-container reveal">
-              <div class="box box-down cyan">
-                <h2>Objectif</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
-                <img src="https://cdn-icons-png.flaticon.com/512/3787/3787796.png" alt="" class="img-information">
+              <div class="box box-down cyan c-code">
+                <h2 class="green">Objectif</h2>
+                <p class="white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/800px-Sign-check-icon.png" alt="" class="img-information">
               </div>
-              <div class="box red reveal">
-                <h2>Security</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+              <div class="box red reveal c-code">
+                <h2 class="yellow">Security</h2>
+                <p class="white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
                 <img src="https://www.pngall.com/wp-content/uploads/4/Cyber-Security-Logo-PNG.png" alt="" class="img-information">
               </div>
-              <div class="box box-down blue reveal">
-                <h2>Free</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+              <div class="box box-down blue reveal c-code">
+                <h2 class="red bold">Free</h2>
+                <p class="white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
                 <img src="https://www.pngall.com/wp-content/uploads/2016/04/Free-Free-Download-PNG.png" alt="" class="img-information">
               </div>
             </div>
-            <div class="row2-container reveal">
-              <div class="box orange">
-                <h2>Privacy policy</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
-                <img src="https://uxwing.com/wp-content/themes/uxwing/download/health-sickness-organs/hide-private-hidden-icon.png" alt="" class="img-information">
+            <div class="row2-container reveal ">
+              <div class="box orange c-code">
+                <h2 class="cyan">Privacy policy</h2>
+                <p class="white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Circle-icons-document.svg/800px-Circle-icons-document.svg.png" alt="" class="img-information">
               </div>
             </div>
       </section>
