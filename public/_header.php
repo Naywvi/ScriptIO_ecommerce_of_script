@@ -65,7 +65,10 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color" href="/policy-privacy" tabindex="-1" aria-disabled="true">Privacy Policy</a>
+                            <a class="nav-link nav-color" href="privacy-policy" tabindex="-1" aria-disabled="true">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-color" href="new-item" tabindex="-1" aria-disabled="true">Publish your script</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav my-2 my-lg-0">

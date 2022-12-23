@@ -2,10 +2,6 @@ TO RUN THE PROJECT: php -S localhost:port -t your_folder/
 
 -----
 Designer:
-- Policy privacy style ?
-- historique des commandes
-- contact page
-- admin panel
 - page ajout de produit (que pour les marchands)
 
 -----

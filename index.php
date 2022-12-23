@@ -1,10 +1,7 @@
 <?php
-    $uri = $_SERVER['REQUEST_URI'];
-    $query = $_SERVER['QUERY_STRING'];
-    $uri = str_replace($query,"","$uri");
-    $uri = str_replace("?","","$uri");
-    $uri = str_replace("/","","$uri");
-    
+
+    include_once('./src/uri.php');
+
     include_once('./public/_header.php');
     
     if($uri == 'admin'){include_once('./public/admin/panel-home.php');}
@@ -12,6 +9,7 @@
 
     if($uri == 'audit'){include_once('./public/audit/audit-script.php');}
 
+    if($uri == 'new-item'){include_once('./public/items/new-item.php');}
     if($uri == 'item'){
         include_once('./public/items/item-profil.php');
         include_once('./public/comment/comment.php');
