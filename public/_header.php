@@ -65,14 +65,11 @@
                             </div>
                         </li>
                         <li class="nav-item">
-<<<<<<< HEAD
+
                             <a class="nav-link nav-color" href="privacy-policy" tabindex="-1" aria-disabled="true">Privacy Policy</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link nav-color" href="new-item" tabindex="-1" aria-disabled="true">Publish your script</a>
-=======
-                            <a class="nav-link nav-color" href="/privacy-policy" tabindex="-1" aria-disabled="true">Privacy Policy</a>
->>>>>>> dfd1cc6d6124a34a1704ef1bfc23d065d11798e5
                         </li>
                     </ul>
                     <ul class="navbar-nav my-2 my-lg-0">
