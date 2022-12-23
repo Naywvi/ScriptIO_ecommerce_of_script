@@ -21,6 +21,7 @@ a:hover {
 }
 .card p{
     color: rgb(194, 187, 187);
+	font-size: 12px !important;
 }
 .card h3{
     color: rgb(202, 202, 202);

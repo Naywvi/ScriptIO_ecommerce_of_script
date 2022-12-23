@@ -53,3 +53,9 @@
 
   <script src="./assets/js/reveal.js"></script>
 </body>
+<style>
+.debug{
+  left: -1px !important;
+  top: 14px !important;
+}
+</style>

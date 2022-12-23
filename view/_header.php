@@ -30,37 +30,37 @@
                                     <h6 class="dropdown-header nav-color bold">FREE</h6>
                                     <i class='fas fa-euro-sign navicon'></i>
                                 </div>
-                                <a class="dropdown-item nav-trans nav-trans nav-color" href="wrap-item/?rubric=free?field=free">Free</a>
+                                <a class="dropdown-item nav-trans nav-trans nav-color" href="wrap-item?rubric=free?field=free">Free</a>
                                 <div class="dropdown-divider"></div>
                                 <div class="nav-flex">
                                     <h6 class="dropdown-header nav-color nav-color">Fun </h6>
                                     <i class='far fa-hand-lizard navicon'></i>
                                 </div>
-                                <a class="dropdown-item nav-trans nav-color" href="wrap-item/?rubric=fun?field=social-networks">Social networks</a>
-                                <a class="dropdown-item nav-trans nav-color" href="wrap-item/?rubric=fun?field=scrapping">Scrapping</a>
+                                <a class="dropdown-item nav-trans nav-color" href="wrap-item?rubric=fun?field=social-networks">Social networks</a>
+                                <a class="dropdown-item nav-trans nav-color" href="wrap-item?rubric=fun?field=scrapping">Scrapping</a>
                                 <div class="dropdown-divider"></div>
                                 <div class="nav-flex">
                                     <h6 class="dropdown-header nav-color">Automating</h6>
                                     <i class='fas fa-list navicon'></i>
                                 </div>
-                                <a class="dropdown-item nav-trans nav-color" href="wrap-item/?rubric=automating?field=emailing">Emailing</a>
-                                <a class="dropdown-item nav-trans nav-color" href="wrap-item/?rubric=automating?field=macro">Macro</a>
-                                <a class="dropdown-item nav-trans nav-color" href="wrap-item/?rubric=automating?field=web">Web</a>
+                                <a class="dropdown-item nav-trans nav-color" href="wrap-item?rubric=automating?field=emailing">Emailing</a>
+                                <a class="dropdown-item nav-trans nav-color" href="wrap-item?rubric=automating?field=macro">Macro</a>
+                                <a class="dropdown-item nav-trans nav-color" href="wrap-item?rubric=automating?field=web">Web</a>
                                 <div class="dropdown-divider"></div>
                                 <div class="nav-flex">
                                     <h6 class="dropdown-header nav-color">OS </h6>
                                     <i class='fas fa-desktop navicon'></i>
                                 </div>
-                                <a class="dropdown-item nav-trans nav-color" href="wrap-item/?rubric=os?field=windows">Windows</a>
-                                <a class="dropdown-item nav-trans nav-color" href="wrap-item/?rubric=os?field=linux">Linux</a>
-                                <a class="dropdown-item nav-trans nav-color" href="wrap-item/?rubric=os?field=macos">MacOS</a>
-                                <a class="dropdown-item nav-trans nav-color" href="wrap-item/?rubric=os?field=mobile">Mobile</a>
+                                <a class="dropdown-item nav-trans nav-color" href="wrap-item?rubric=os?field=windows">Windows</a>
+                                <a class="dropdown-item nav-trans nav-color" href="wrap-item?rubric=os?field=linux">Linux</a>
+                                <a class="dropdown-item nav-trans nav-color" href="wrap-item?rubric=os?field=macos">MacOS</a>
+                                <a class="dropdown-item nav-trans nav-color" href="wrap-item?rubric=os?field=mobile">Mobile</a>
                                 <div class="dropdown-divider"></div>
                                 <div class="nav-flex">
                                     <h6 class="dropdown-header nav-color">Other </h6>
                                     <i class='fas fa-glasses navicon'></i>
                                 </div>
-                                <a class="dropdown-item nav-trans nav-color" href="wrap-item/?rubric=other?field=other">Other</a>
+                                <a class="dropdown-item nav-trans nav-color" href="wrap-item?rubric=other?field=other">Other</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -74,7 +74,7 @@
                         <li class="nav-item shop notification-shop">
                             <a href="my-scripts">
                             <span class="material-symbols-outlined icon-shop">shopping_bag</span>
-                                    <span class="badge badge-not">3</span>
+                                    <span class="badge badge-not debug">3</span>
                             </a>
                         </li>
                         <li class="nav-item shop notification-shop icon-header-space">
