@@ -22,12 +22,12 @@
 
             <div class="w-100"></div>
 
-            <div class="col-3 shadow space-expand column-wrap collapse multi-collapse filters-space background-code-font space-code-font" id="filters">
+            <div class="col-3 shadow space-expand column-wrap collapse multi-collapse filters-space background-white space-code-font" id="filters">
 
-                <section class="section background-code code">
+                <section class="section background-code-widget code">
                     <a href="#price" data-toggle="collapse" aria-expanded="false" aria-controls="#price" class="c-code">1 <span class="text-warning">Price</span></a>
                 </section>
-                <section class="section background-code code filter-center collapse multi-collapse" id="price">
+                <section class="section background-code-widget code filter-center collapse multi-collapse" id="price">
                     <ul class="ul-space">
                         <li class="item">
                             <a>2 <span class="green">increasing</span></a>
@@ -45,7 +45,7 @@
                     </ul>
                 </section>
 
-                <section class="section background-code code space-rubric">
+                <section class="section background-code-widget code space-rubric">
                     <a href="#rubrics" data-toggle="collapse" aria-expanded="false" aria-controls="#rubrics" class="c-code">5 <span class="cyan">Rubrics</span></a>
                 </section>
                 <section class="section background-code code filter-center collapse multi-collapse " id="rubrics">
@@ -73,7 +73,7 @@
                     </ul>
                 </section>
 
-                <section class="section background-code code space-rubric">
+                <section class="section background-code-widget code space-rubric">
                     <a href="#trust" data-toggle="collapse" aria-expanded="false" aria-controls="#trust" class="c-code">9 <span class="cyan-light">Trust</span></a>
                 </section>
                 <section class="section background-code code filter-center collapse multi-collapse " id="trust">
@@ -131,7 +131,7 @@
                     </ul>
                 </section>
 
-                <section class="section background-code code space-rubric">
+                <section class="section background-code-widget code space-rubric">
                     <a href="#difficulty-installation" data-toggle="collapse" aria-expanded="false" aria-controls="#difficulty-installation" class="c-code">15 <span class="green">Difficulty installation</span></a>
                 </section>
                 <section class="section background-code code filter-center collapse multi-collapse" id="difficulty-installation">
@@ -167,7 +167,7 @@
             </div>
             <div class="col w-auto shadow column-wrap space-card-col background-white">
 
-            <div class="card space-card background-code-font code">
+            <div class="card space-card background-code-widget code">
                         <div class="row">
                             <div class="col">
                                 <div class="card-body">
@@ -209,7 +209,7 @@
                             <!-- <div class="col col-1 retracte"></div> -->
                         </div>
                     </div>
-                    <div class="col w-100 background-code shadow-separator separator"></div>
+                    <!-- <div class="col w-100 background-code shadow-separator separator"></div> -->
                     
                     
 

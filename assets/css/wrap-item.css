@@ -4,6 +4,7 @@
 
 .c-code {
     color: #63686F !important;
+    /* color: #333 !important; */
 }
 
 .space {
@@ -144,7 +145,8 @@
 }
 
 .background-code h5 {
-    color: rgb(172, 172, 178);
+    /* color: rgb(172, 172, 178); */
+    color: #333 !important;
 }
 
 .filter-center {
@@ -178,8 +180,8 @@ a:hover {
     margin-right: 16px;
 }
 
-.background-code-font {
-    background-color: #4e5867 !important;
+.background-code-widget {
+    background-color: #333 !important;
 }
 
 .space-code-font {
