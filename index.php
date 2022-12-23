@@ -18,10 +18,10 @@
     }
     if($uri == 'wrap-item'){include_once('./public/items/wrap-item.php');}
 
-    if($uri == 'signin'){include_once('./public/connexion/login.php');}
-    if($uri == 'signup'){include_once('./public/connexion/register.php');}
-    if($uri == 'reset-password'){include_once('./public/connexion/reset-password.php');}
-    if($uri == 'link-verification-email'){include_once('./public/connexion/verification-email.php');}
+    if($uri == 'signin'){include_once('./public/auth/login.php');}
+    if($uri == 'signup'){include_once('./public/auth/register.php');}
+    if($uri == 'reset-password'){include_once('./public/auth/reset-password.php');}
+    if($uri == 'link-verification-email'){include_once('./public/auth/verification-email.php');}
 
     if($uri == 'my-scripts'){include_once('./public/shop/cart-shopping.php');}
     if($uri == 'my-wish-list'){include_once('./public/shop/wish-list.php');}
