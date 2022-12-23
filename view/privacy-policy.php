@@ -1,5 +1,5 @@
 <head>
-    <title>ScriptiO - Policy privacy</title>
+    <title>Privacy Policy</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="./assets/css/policy-privacy.css" />
   <link rel="stylesheet" href="./assets/css/policy-privacy-media.css" />
@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <a href="#policy">
-                    <h1 class="title spacebtw" id="Title">Policy privacy - Script'iO</h1>
+                    <h1 class="title spacebtw" id="Title">Privacy Policy - Script'iO</h1>
                 </a>
             </div>
         </div>

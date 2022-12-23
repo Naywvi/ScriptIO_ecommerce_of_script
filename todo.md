@@ -1,22 +1,11 @@
-S'organiser et être d'accord sur le design du site
-Trouver un nom
-Trouver un logo
+TO RUN THE PROJECT: php -S localhost:port -t your_folder/
 
 -----
 Designer:
-- Main page
-
-- page panier
-- profil utilisateur
+- Policy privacy style ?
 - historique des commandes
-- product page
 - contact page
 - admin panel
-- Best-seller (contenant les scripts les plus vendues)
-- page liste scripts
-- Policy privacy
-- popup cookie
-- Login / register
 - page ajout de produit (que pour les marchands)
 
 -----
@@ -31,15 +20,11 @@ Développeur:
 - Main page (affichage des scripts les plus vendus, affichage des scripts les plus récents, affichage des scripts les mieux notés)
 - Best-seller (affichage des scripts les plus vendus)
 - paiement (paypal, cb, crypto ?)
-
+- wishlist
+- search bar
+- notation de produit/utilisateur
 -----
 Optionnelles:
 
-- search bar 
-- + de moyens de paiement
-- wishlist
-- notation de produit/utilisateur
 - coupon de réduction
 - points de fidélité
-- 
-- php -S localhost:port -t your_folder/

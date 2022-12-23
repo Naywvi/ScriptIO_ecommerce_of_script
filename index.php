@@ -18,8 +18,8 @@
     }
     if($uri == 'wrap-item'){include_once('./view/items/wrap-item.php');}
 
-    if($uri == 'singin'){include_once('./view/connexion/login.php');}
-    if($uri == 'singup'){include_once('./view/connexion/register.php');}
+    if($uri == 'signin'){include_once('./view/connexion/login.php');}
+    if($uri == 'signup'){include_once('./view/connexion/register.php');}
     if($uri == 'reset-password'){include_once('./view/connexion/reset-password.php');}
     if($uri == 'link-verification-email'){include_once('./view/connexion/verification-email.php');}
 
@@ -29,7 +29,7 @@
     if($uri == 'profile-management'){include_once('./view/user/manage-profile.php');}
     if($uri == 'profile'){include_once('./view/user/profile.php');}
 
-    if($uri == 'policy-privacy'){include_once('./view/policy-privacy.php');}
+    if($uri == 'privacy-policy'){include_once('./view/privacy-policy.php');}
 
     if($uri == ''){include_once('./view/home.php');}
 

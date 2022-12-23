@@ -12,8 +12,9 @@
         </head>
         <header>
             <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-back-color">
-                <img src="./assets/img/Scriptio.png" alt="" class="logo-header"/>
-                <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="./assets/img/Scriptio.png" alt="" class="logo-header"/>
+
+            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div id="my-nav" class="collapse navbar-collapse">
@@ -64,12 +65,12 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color" href="/policy-privacy" tabindex="-1" aria-disabled="true">Policy privacy</a>
+                            <a class="nav-link nav-color" href="/policy-privacy" tabindex="-1" aria-disabled="true">Privacy Policy</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav my-2 my-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link nav-color icon-header-space" href="/admin">Admin panel<span class="sr-only">(current)</span></a>
+                            <a class="nav-link nav-color icon-header-space" href="/admin">Admin Panel<span class="sr-only">(current)</span></a>
                         </li>     
                         <li class="nav-item shop notification-shop">
                             <a href="my-scripts">
@@ -83,10 +84,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color disabled" href="singin" tabindex="-1" aria-disabled="true">Sign in</a>
+                            <a class="nav-link nav-color disabled" href="signin" tabindex="-1" aria-disabled="true">Sign in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-color disabled" href="singup" tabindex="-1" aria-disabled="true">Sign Up</a>
+                            <a class="nav-link nav-color disabled" href="signup" tabindex="-1" aria-disabled="true">Sign Up</a>
                         </li>
                                                 <li class="nav-item">
                             <a href="profile" class="notification nav-link nav-color disabled">
