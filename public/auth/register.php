@@ -1,7 +1,3 @@
-<?php
-include '../src/auth/register.php';
-?>
-
 <head>
     <title>ScriptiO - Sign up</title>
     <link rel="stylesheet" href="./assets/css/register.css" />
@@ -31,7 +27,7 @@ include '../src/auth/register.php';
         <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
-            <form>
+            <form method="post">
               <!-- 2 column grid layout with text inputs for the first and last names -->
               <div class="row">
                 <div class="col-md-6 mb-2">
@@ -65,6 +61,13 @@ include '../src/auth/register.php';
                 <input type="email" id="form3Example3" class="form-control"  placeholder="Email address"/>
                 <label class="form-label" for="form3Example3"></label>
               </div>
+
+              <!-- Phone number input -->
+              <div class="form-outline mb-2">
+                <input type="text" id="form3Example3" class="form-control" placeholder="Phone number"/>
+                <label class="form-label" for="form3Example3"></label>
+              </div>
+
 
               <!-- Password input -->
               <div class="form-outline mb-4">

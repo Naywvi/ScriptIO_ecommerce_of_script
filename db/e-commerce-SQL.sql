@@ -2,8 +2,12 @@ CREATE TABLE users(
 id_user INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
 first_name varchar(20) NOT NULL,
 last_name varchar(20) NOT NULL,
+username varchar(20) NOT NULL,
 email varchar(40) NOT NULL,
-phone_number INTEGER NOT NULL
+phone_number INTEGER NOT NULL,
+birthday date NOT NULL,
+user_password varchar(40) NOT NULL,
+user_role varchar(20) NOT NULL
 );
 
 -- CREATE TABLE address(

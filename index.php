@@ -1,9 +1,22 @@
 <?php
 
-    include_once('./src/uri.php');
+    // function debug_to_console($data) {
+    //     $output = $data;
+    //     if (is_array($output))
+    //         $output = implode(',', $output);
 
+    //     echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+    // }
+    // debug_to_console("Test");
+
+    include_once('./src/uri.php');
     include_once('./public/_header.php');
-    
+
+    if(isset($_POST['register'])) { // if register form was submitted
+        include_once('./src/auth/register.php');
+        register();
+    }
+
     if($uri == 'admin'){include_once('./public/admin/panel-home.php');}
     if($uri == 'admin-manage-item'){include_once('./public/admin/admin-manage-item.php');}
 
