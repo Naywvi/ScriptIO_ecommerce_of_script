@@ -26,16 +26,16 @@
         <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
-            <form>
+            <form method="post">
               <!-- Email input -->
               <div class="form-outline mb-2">
-                <input type="email" id="form3Example3" class="form-control"  placeholder="Email address"/>
+                <input type="email" id="form3Example3" class="form-control"  placeholder="Email address" name="email"/>
                 <label class="form-label" for="form3Example3"></label>
               </div>
 
               <!-- Password input -->
               <div class="form-outline mb-2">
-                <input type="password" id="form3Example4" class="form-control" placeholder="Password"/>
+                <input type="password" id="form3Example4" class="form-control" placeholder="Password" name="user_password"/>
                 <label class="form-label" for="form3Example4"></label>
               </div>
 
@@ -43,7 +43,7 @@
                 <a href="/reset-password"><p class="text-left italic">Forgot password</p></a>
 
               <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block mb-2">
+              <button type="submit" class="btn btn-primary btn-block mb-2" name="login">
                 Sign in
               </button>
 

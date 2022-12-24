@@ -1,5 +1,7 @@
 <?php
 
+include './src/auth/cookie.php';
+
 function register() {
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
 
@@ -9,7 +11,7 @@ function register() {
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $username = $_POST['username'];
-    $user_password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $user_password = password_hash($_POST['user_password'], PASSWORD_DEFAULT);
     $email = $_POST['email'];
     $birthday = $_POST['birthday'];
     $phone_number = $_POST['phone_number'];
@@ -35,7 +37,9 @@ function register() {
         $statement->bindParam(':phone_number', $phone_number);
         $statement->bindParam(':user_role', $user_role);
         $statement->execute();
-        header("Location: /signin");
+
+        //send cookie to user
+        sendCookie($email);
     }
 }
 

@@ -9,13 +9,19 @@
     // }
     // debug_to_console("Test");
 
-    include_once('./src/uri.php');
-    include_once('./public/_header.php');
-
     if(isset($_POST['register'])) { // if register form was submitted
         include_once('./src/auth/register.php');
         register();
     }
+
+    if (isset($_POST['login'])) { // if login form was submitted
+        include_once('./src/auth/login.php');
+        login();
+    }
+
+    // put these AFTER the login and register functions so that the cookie is set before the page loads IMPORTANT !!!!!
+    include_once('./src/uri.php');
+    include_once('./public/_header.php');
 
     if($uri == 'admin'){include_once('./public/admin/panel-home.php');}
     if($uri == 'admin-manage-item'){include_once('./public/admin/admin-manage-item.php');}
