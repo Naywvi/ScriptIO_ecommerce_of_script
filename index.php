@@ -19,6 +19,11 @@
         login();
     }
 
+    if (isset($_POST['new-script'])) {
+        include_once('./src/items/new-item.php');
+        new_item();
+    }
+
     // put these AFTER the login and register functions so that the cookie is set before the page loads IMPORTANT !!!!!
     include_once('./src/uri.php');
     include_once('./public/_header.php');

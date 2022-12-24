@@ -19,10 +19,7 @@ function getID($email) {
 }
 
 function sendCookie($email) {
-    $cookie_name = getUserRole($email);
-    // hash the id to make it harder to guess 
-    $cookie_value = password_hash(getID($email), PASSWORD_DEFAULT);
-    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+    setcookie($email, password_hash(getID($email), PASSWORD_DEFAULT), time() + (86400 * 30), "/"); // 86400 = 1 day, cookie name is email of user and value is hashed id of user
 }
 
 ?>

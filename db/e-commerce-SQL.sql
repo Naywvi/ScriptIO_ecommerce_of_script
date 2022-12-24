@@ -32,6 +32,7 @@ id_genre INTEGER NOT NULL,
 description TEXT NOT NULL,
 price Float NOT NULL,
 image BLOB NOT NULL,
+script BLOB NOT NULL,
 stock INTEGER NOT NULL,
 FOREIGN KEY (id_genre) REFERENCES Genre(id_genre)
 );

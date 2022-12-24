@@ -8,16 +8,16 @@
         <div class="row">
      
             <div class="col-md-6 offset-md-3 audit background-white">
-                <form >
-                    <!-- Name input -->
+                <form method="post">
+                    <!-- name input -->
                     <div class="form-outline mb-6">
-                        <input type="text" id="title" name="title" class="form-control" />
-                        <label class="form-label" for="title">Title</label>
+                        <input type="text" id="name" name="name" class="form-control" name="name"/>
+                        <label class="form-label" for="name">Name</label>
                     </div>
 
-                    <!-- Name input -->
+                    <!-- price input -->
                     <div class="form-outline mb-6">
-                        <input type="number" id="price" name="price" class="form-control" />
+                        <input type="number" id="price" name="price" class="form-control" name="price"/>
                         <label class="form-label" for="price">Price</label>
                         <figcaption class="blockquote-footer text-secondary italic">
                         If you want it to be free don't put anything
@@ -26,20 +26,14 @@
 
                     <!-- Message input -->
                     <div class="form-outline mb-4">
-                        <textarea class="form-control" id="desc-left" name="desc-left" rows="4" maxlength="250" placeholder="250 - characters max"></textarea>
+                        <textarea class="form-control" id="desc-left" name="desc-left" rows="4" maxlength="250" placeholder="250 - characters max" name="description"></textarea>
                         <label class="form-label" for="desc-left">A short description of your product</label>
                     </div>
 
                     <!-- Message input -->
                     <div class="form-outline mb-4">
-                        <textarea class="form-control" id="desc-right" name="desc-right" rows="4" maxlength="250" placeholder="250 - characters max"></textarea>
-                        <label class="form-label" for="desc-right">Second description of your product</label>
-                    </div>
-
-                    <!-- Message input -->
-                    <div class="form-outline mb-4">
-                        <textarea class="form-control" id="desc-step" name="desc-step" rows="4" maxlength="550" placeholder="550 - characters max"></textarea>
-                        <label class="form-label" for="desc-step">Step installation</label>
+                        <textarea class="form-control" id="desc-step" name="desc-step" rows="4" maxlength="550" placeholder="550 - characters max" name="installation_steps"></textarea>
+                        <label class="form-label" for="desc-step">Installation steps</label>
                         <figure>
                             <figcaption class="blockquote-footer green italic">
                                 You can implement effects in your description
@@ -49,12 +43,9 @@
                             </figcaption>
                         </figure>
                     </div>
-                        <input type="text" id="motz" name="motz" class="form-control" placeholder="This sentence will be put at the end of your explanations"/>
-                        <label class="form-label" for="motz">Motz</label>
-
                         
                         <input type="FILE" id="picture"name="picture" class="form-control" accept=".png,.jpeg,.jpg"/>
-                        <label class="form-label" for="picture" class="form-label">Picture product</label>
+                        <label class="form-label" for="picture" class="form-label">Product Image</label>
 
                         <input type="FILE" id="file"name="file" class="form-control"/>
                         <label class="form-label" for="file" class="form-label">Your script</label>
