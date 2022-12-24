@@ -3,8 +3,11 @@
 function register() {
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
 
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
+    //print data from form
+    // print_r(var_dump($_POST));
+
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
     $username = $_POST['username'];
     $user_password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $email = $_POST['email'];
@@ -22,9 +25,9 @@ function register() {
         echo "Invalid credentials";
         exit();
     } else {
-        $statement = $myPDO->prepare("INSERT INTO users (firstname, lastname, username, user_password, email, birthday, phone_number, user_role) VALUES (:firstname, :lastname, :username, :user_password, :email, :birthday, :phone_number, :user_role)");
-        $statement->bindParam(':firstname', $firstname);
-        $statement->bindParam(':lastname', $lastname);
+        $statement = $myPDO->prepare("INSERT INTO users (first_name, last_name, username, user_password, email, birthday, phone_number, user_role) VALUES (:first_name, :last_name, :username, :user_password, :email, :birthday, :phone_number, :user_role)");
+        $statement->bindParam(':first_name', $first_name);
+        $statement->bindParam(':last_name', $last_name);
         $statement->bindParam(':username', $username);
         $statement->bindParam(':user_password', $user_password);
         $statement->bindParam(':email', $email);

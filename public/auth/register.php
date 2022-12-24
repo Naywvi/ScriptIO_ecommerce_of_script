@@ -32,25 +32,25 @@
               <div class="row">
                 <div class="col-md-6 mb-2">
                   <div class="form-outline">
-                    <input type="text" id="form3Example1" class="form-control" placeholder="First name"/>
+                    <input type="text" id="form3Example1" class="form-control" placeholder="First name" name="first_name"/>
                     <label class="form-label" for="form3Example1"></label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-2">
                   <div class="form-outline">
-                    <input type="text" id="form3Example2" class="form-control" placeholder="Last name"/>
+                    <input type="text" id="form3Example2" class="form-control" placeholder="Last name" name="last_name"/>
                     <label class="form-label" for="form3Example2"></label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-2">
                   <div class="form-outline">
-                    <input type="text" id="form3Example2" class="form-control" placeholder="Username"/>
+                    <input type="text" id="form3Example2" class="form-control" placeholder="Username" name="username"/>
                     <label class="form-label" for="form3Example2"></label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-2">
                   <div class="form-outline">
-                    <input type="date" id="form3Example2" class="form-control" placeholder="Anniversary"/>
+                    <input type="date" id="form3Example2" class="form-control" placeholder="Anniversary" name="birthday"/>
                     <label class="form-label" for="form3Example2"></label>
                   </div>
                 </div>
@@ -58,20 +58,20 @@
 
               <!-- Email input -->
               <div class="form-outline mb-2">
-                <input type="email" id="form3Example3" class="form-control"  placeholder="Email address"/>
+                <input type="email" id="form3Example3" class="form-control"  placeholder="Email address" name="email"/>
                 <label class="form-label" for="form3Example3"></label>
               </div>
 
               <!-- Phone number input -->
               <div class="form-outline mb-2">
-                <input type="text" id="form3Example3" class="form-control" placeholder="Phone number"/>
+                <input type="text" id="form3Example3" class="form-control" placeholder="Phone number" name="phone_number"/>
                 <label class="form-label" for="form3Example3"></label>
               </div>
 
 
               <!-- Password input -->
               <div class="form-outline mb-4">
-                <input type="password" id="form3Example4" class="form-control" placeholder="Password"/>
+                <input type="password" id="form3Example4" class="form-control" placeholder="Password" name="user_password"/>
                 <label class="form-label" for="form3Example4"></label>
               </div>
 
