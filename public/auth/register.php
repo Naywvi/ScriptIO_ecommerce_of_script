@@ -1,5 +1,9 @@
+<?php
+include '../src/auth/register.php';
+?>
+
 <head>
-    <title>ScriptiO - Sing up</title>
+    <title>ScriptiO - Sign up</title>
     <link rel="stylesheet" href="./assets/css/register.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
@@ -77,7 +81,7 @@
               </div>
 
               <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block mb-4">
+              <button type="submit" class="btn btn-primary btn-block mb-4" name="register">
                 Sign up
               </button>
 
