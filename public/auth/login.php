@@ -34,14 +34,20 @@
               </div>
 
               <!-- Password input -->
-              <div class="form-outline mb-2">
+              <div class="form-outline mb-1">
                 <input type="password" id="form3Example4" class="form-control" placeholder="Password" name="user_password"/>
                 <label class="form-label" for="form3Example4"></label>
               </div>
 
+                <figure>
+                  <figcaption class="blockquote-footer red">
+                    wrong password or username
+                  </figcaption>
+                </figure>
+
               <!-- Forgot pass -->
                 <a href="/reset-password"><p class="text-left italic">Forgot password</p></a>
-
+                
               <!-- Submit button -->
               <button type="submit" class="btn btn-primary btn-block mb-2" name="login">
                 Sign in

@@ -41,8 +41,20 @@
                 <label class="form-label" for="form3Example3"></label>
               </div>
 
+              <figure>
+                <figcaption class="blockquote-footer green">
+                  Email was send successfully
+                </figcaption>
+              </figure>
+
+              <figure>
+                <figcaption class="blockquote-footer red">
+                  wrong username or email address
+                </figcaption>
+              </figure>
+
               <!-- Forgot pass -->
-                <a href="/singin"><p class="text-left italic">Return to sign in</p></a>
+                <a href="signin"><p class="text-left italic">Return to sign in</p></a>
 
               <!-- Submit button -->
               <button type="submit" class="btn btn-primary btn-block mb-2">

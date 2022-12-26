@@ -2,7 +2,7 @@
     <title>Script'iO - My scripts</title>
     <link rel="stylesheet" href="./assets/css/wish-list.css"/>
  </head>
- <section class="h-100 h-custom" style="margin-top: 4% !important;">
+ <section class="h-100 h-custom" style="margin-top: 4% !important; margin-bottom: 20% !important;">
    <div class="container py-5 h-100">
      <div class="row d-flex justify-content-center align-items-center h-100">
        <div class="col">

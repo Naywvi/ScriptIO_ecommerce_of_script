@@ -1,7 +1,10 @@
 .code{
     color: hsl(0, 0%, 38.8%) !important;
 }
-
+.red{
+    text-align: left;
+    color: rgb(229, 40, 40);
+}
 #radius-shape-1 {
     height: 220px;
     width: 220px;

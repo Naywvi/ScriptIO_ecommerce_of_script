@@ -70,11 +70,21 @@
 
 
               <!-- Password input -->
-              <div class="form-outline mb-4">
+              <div class="form-outline mb-2">
                 <input type="password" id="form3Example4" class="form-control" placeholder="Password" name="user_password"/>
                 <label class="form-label" for="form3Example4"></label>
               </div>
+              <!-- Password input -->
+              <div class="form-outline mb-1">
+                <input type="password" id="form3Example4" class="form-control" placeholder="Password verification" name="user_password"/>
+                <label class="form-label" for="form3Example4"></label>
+              </div>
 
+                <figure>
+                  <figcaption class="blockquote-footer red">
+                    wrong password or username
+                  </figcaption>
+                </figure>
               <!-- Checkbox -->
               <div class="form-check d-flex justify-content-left mb-4">
                 <input class="form-check-input me-2 form-check-input-no-absolute" type="checkbox" value="" id="form2Example33" checked />
