@@ -11,7 +11,7 @@
                 <form method="post">
                     <!-- name input -->
                     <div class="form-outline mb-6">
-                        <input type="text" id="name" name="name" class="form-control" name="name"/>
+                        <input type="text" id="name" name="name" class="form-control" name="product_name"/>
                         <label class="form-label" for="name">Name</label>
                     </div>
 
@@ -26,7 +26,7 @@
 
                     <!-- Message input -->
                     <div class="form-outline mb-4">
-                        <textarea class="form-control" id="desc-left" name="desc-left" rows="4" maxlength="250" placeholder="250 - characters max" name="description"></textarea>
+                        <textarea class="form-control" id="desc-left" name="desc-left" rows="4" maxlength="250" placeholder="250 - characters max" name="product_description"></textarea>
                         <label class="form-label" for="desc-left">A short description of your product</label>
                     </div>
 
@@ -44,10 +44,10 @@
                         </figure>
                     </div>
                         
-                        <input type="FILE" id="picture"name="picture" class="form-control" accept=".png,.jpeg,.jpg"/>
+                        <input type="FILE" id="picture"name="product_image" class="form-control" accept=".png,.jpeg,.jpg"/>
                         <label class="form-label" for="picture" class="form-label">Product Image</label>
 
-                        <input type="FILE" id="file"name="file" class="form-control"/>
+                        <input type="FILE" id="file"name="script" class="form-control"/>
                         <label class="form-label" for="file" class="form-label">Your script</label>
 
                         <figcaption class="blockquote-footer text-danger italic">
@@ -57,7 +57,7 @@
                     </figure>
                     <!-- Submit button -->
 
-                    <button type="submit" class="btn btn-primary btn-block mb-4">Send for audit</button>
+                    <button type="submit" name="new-item" class="btn btn-primary btn-block mb-4">Send for audit</button>
                 </form>
             </div>
             </div>

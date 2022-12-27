@@ -76,7 +76,7 @@
               </div>
               <!-- Password input -->
               <div class="form-outline mb-1">
-                <input type="password" id="form3Example4" class="form-control" placeholder="Password verification" name="user_password"/>
+                <input type="password" id="form3Example4" class="form-control" placeholder="Password verification" name="user_password_verification"/>
                 <label class="form-label" for="form3Example4"></label>
               </div>
 

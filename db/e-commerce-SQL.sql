@@ -27,13 +27,14 @@ name varchar(20) NOT NULL
 
 CREATE TABLE product(
 id_product INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-name varchar(50) NOT NULL,
-id_genre INTEGER NOT NULL,
-description TEXT NOT NULL,
-price Float NOT NULL,
-image BLOB NOT NULL,
+product_name varchar(50) NOT NULL,
+id_genre INTEGER,
+product_description TEXT,
+installation_steps TEXT,
+price Float,
+product_image BLOB,
 script BLOB NOT NULL,
-stock INTEGER NOT NULL,
+stock INTEGER,
 FOREIGN KEY (id_genre) REFERENCES Genre(id_genre)
 );
 

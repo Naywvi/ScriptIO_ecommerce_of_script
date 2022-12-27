@@ -1,29 +1,30 @@
 <?php
 
-function insertItem() {
+function newItem() {
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
 
-    //print data from form
+    // print data from form
     // print_r(var_dump($_POST));
 
-    $item_name = $_POST['item_name'];
-    $item_description = $_POST['item_description'];
-    $item_price = $_POST['item_price'];
-    $item_quantity = $_POST['item_quantity'];
-    $item_category = $_POST['item_category'];
-    $item_image = $_POST['item_image'];
-    $item_status = "available";
-    $id_user = $_POST['id_user'];
+    $product_name = $_POST['product_name'];
+    $product_description = $_POST['product_description'];
+    $price = $_POST['price'];
+    $installation_steps = $_POST['installation_steps'];
+    $product_image = $_POST['product_image'];
+    $script = $_POST['script'];
+    $stock = -1;
+    $id_genre = 0;
 
-    $statement = $myPDO->prepare("INSERT INTO items (item_name, item_description, item_price, item_quantity, item_category, item_image, item_status, id_user) VALUES (:item_name, :item_description, :item_price, :item_quantity, :item_category, :item_image, :item_status, :id_user)");
-    $statement->bindParam(':item_name', $item_name);
-    $statement->bindParam(':item_description', $item_description);
-    $statement->bindParam(':item_price', $item_price);
-    $statement->bindParam(':item_quantity', $item_quantity);
-    $statement->bindParam(':item_category', $item_category);
-    $statement->bindParam(':item_image', $item_image);
-    $statement->bindParam(':item_status', $item_status);
-    $statement->bindParam(':id_user', $id_user);
+    $statement = $myPDO->prepare("INSERT INTO product (product_name, id_genre, product_description, price, installation_steps, product_image, script, stock) VALUES (:product_name, :id_genre, :product_description, :price, :installation_steps, :product_image, :script, :stock)");
+    $statement->bindParam(':product_name', $product_name);
+    $statement->bindParam(':product_description', $product_description);
+    $statement->bindParam(':price', $price);
+    $statement->bindParam(':installation_steps', $installation_steps);
+    $statement->bindParam(':product_image', $product_image);
+    $statement->bindParam(':script', $script);
+    $statement->bindParam(':stock', $stock);
+    $statement->bindParam(':id_genre', $id_genre);
+
     $statement->execute();
 }
 
