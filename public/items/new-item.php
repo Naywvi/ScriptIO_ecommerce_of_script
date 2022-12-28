@@ -11,13 +11,13 @@
                 <form method="post">
                     <!-- name input -->
                     <div class="form-outline mb-6">
-                        <input type="text" id="name" name="name" class="form-control" name="product_name"/>
+                        <input type="text" id="name" class="form-control" name="product_name"/>
                         <label class="form-label" for="name">Name</label>
                     </div>
 
                     <!-- price input -->
                     <div class="form-outline mb-6">
-                        <input type="number" id="price" name="price" class="form-control" name="price"/>
+                        <input type="number" id="price" class="form-control" name="price"/>
                         <label class="form-label" for="price">Price</label>
                         <figcaption class="blockquote-footer text-secondary italic">
                         If you want it to be free don't put anything
@@ -26,13 +26,13 @@
 
                     <!-- Message input -->
                     <div class="form-outline mb-4">
-                        <textarea class="form-control" id="desc-left" name="desc-left" rows="4" maxlength="250" placeholder="250 - characters max" name="product_description"></textarea>
+                        <textarea class="form-control" id="desc-left" rows="4" maxlength="250" placeholder="250 - characters max" name="product_description"></textarea>
                         <label class="form-label" for="desc-left">A short description of your product</label>
                     </div>
 
                     <!-- Message input -->
                     <div class="form-outline mb-4">
-                        <textarea class="form-control" id="desc-step" name="desc-step" rows="4" maxlength="550" placeholder="550 - characters max" name="installation_steps"></textarea>
+                        <textarea class="form-control" id="desc-step" rows="4" maxlength="550" placeholder="550 - characters max" name="installation_steps"></textarea>
                         <label class="form-label" for="desc-step">Installation steps</label>
                         <figure>
                             <figcaption class="blockquote-footer green italic">

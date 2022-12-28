@@ -4,7 +4,7 @@ function newItem() {
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
 
     // print data from form
-    // print_r(var_dump($_POST));
+    print_r(var_dump($_POST));
 
 
     $product_name = $_POST['product_name'];
