@@ -6,6 +6,7 @@ function newItem() {
     // print data from form
     // print_r(var_dump($_POST));
 
+
     $product_name = $_POST['product_name'];
     $product_description = $_POST['product_description'];
     $price = $_POST['price'];
