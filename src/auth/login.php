@@ -4,7 +4,7 @@ include './src/auth/cookie.php';
 
 function login() {
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
-
+    
     //print data from form
     // print_r(var_dump($_POST));
 

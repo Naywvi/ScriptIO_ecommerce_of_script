@@ -18,8 +18,8 @@ function register() {
     $user_role = "user";
     
     //check if user exists
-    $statement = $myPDO->prepare("SELECT * FROM users WHERE username = :username");
-    $statement->bindParam(':username', $username);
+    $statement = $myPDO->prepare("SELECT * FROM users WHERE email = :email");
+    $statement->bindParam(':email', $email);
     $statement->execute();
     $result = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -37,7 +37,7 @@ function register() {
         $statement->bindParam(':phone_number', $phone_number);
         $statement->bindParam(':user_role', $user_role);
         $statement->execute();
-
+        
         //send cookie to user
         sendCookie($email);
     }

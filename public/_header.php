@@ -77,7 +77,7 @@
                             <a class="nav-link nav-color icon-header-space" href="/admin">Admin Panel<span class="sr-only">(current)</span></a>
                         </li>     
                         <li class="nav-item shop notification-shop">
-                            <a href="my-scripts">
+                            <a href="checkout">
                             <span class="material-symbols-outlined icon-shop">shopping_bag</span>
                                     <span class="badge badge-not debug">3</span>
                             </a>

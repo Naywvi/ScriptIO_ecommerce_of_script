@@ -27,6 +27,7 @@ name varchar(20) NOT NULL
 
 CREATE TABLE product(
 id_product INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+id_user INTEGER NOT NULL,
 product_name varchar(50) NOT NULL,
 id_genre INTEGER,
 product_description TEXT,

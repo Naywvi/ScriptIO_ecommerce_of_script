@@ -19,7 +19,8 @@ function getID($email) {
 }
 
 function sendCookie($email) {
-    setcookie($email, password_hash(getID($email), PASSWORD_DEFAULT), time() + (86400 * 30), "/"); // 86400 = 1 day, cookie name is email of user and value is hashed id of user
+    setcookie("id", password_hash(getID($email), PASSWORD_DEFAULT), time() + (86400 * 30), "/"); // 86400 = 1 day, cookie name is email of user and value is hashed id of user
+    setcookie("email", $email, time() + (86400 * 30), "/");
 }
 
 ?>

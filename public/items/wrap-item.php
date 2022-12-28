@@ -203,9 +203,14 @@
                         </figure>
 
                         <icon class="icon">
-                            <a href="#">
-                                <span class="material-symbols-outlined white icon-">shopping_basket</span>
-                            </a>
+
+                            <form action="/src/shop/cart-shopping.php" method="post">
+                                <input type="hidden" name="product_id" value="'.$row['id_product'].'">
+                                <input type="hidden" name="id_user" value="'.$row['id_user'].'">
+                                <button type="submit" class="">
+                                    <span class="material-symbols-outlined white icon-" name="shopping-cart">shopping_basket</span>
+                                </button>
+                            </form>
                             <a href="#">
                                 <span class="material-symbols-outlined white icon-">heart_plus</span>
                             </a>
