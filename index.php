@@ -24,6 +24,11 @@
         newItem();
     }
 
+    if (isset($_GET['wrap-items'])) {
+        include_once('./src/items/wrap-item.php');
+        printItems();
+    }
+
     // put these AFTER the login and register functions so that the cookie is set before the page loads IMPORTANT !!!!!
     include_once('./src/uri.php');
     include_once('./public/_header.php');
