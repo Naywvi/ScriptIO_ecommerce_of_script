@@ -8,7 +8,13 @@ phone_number INTEGER NOT NULL,
 birthday date NOT NULL,
 user_password varchar(40) NOT NULL,
 user_role varchar(20) NOT NULL,
-last_connexion date
+last_connexion date,
+trust INTEGER, 
+sale interger,
+view interger,
+lucky_phrase varchar(50),
+picture text,
+description text
 );
 
 -- CREATE TABLE address(

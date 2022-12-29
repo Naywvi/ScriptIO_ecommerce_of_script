@@ -119,7 +119,7 @@
                             </li> 
                             <script src="./assets/js/signout.js"></script>
                             <li class="nav-item">
-                                <a href="profile" class="notification nav-link nav-color disabled">
+                                <a href="profile?user=' . $user['username'] . '" class="notification nav-link nav-color disabled">
                                     <span>' . $user['username'] . '</span>
                                     <span class="badge">3</span>
                                 </a> 
