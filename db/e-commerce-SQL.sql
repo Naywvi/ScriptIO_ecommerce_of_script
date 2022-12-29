@@ -14,7 +14,8 @@ sale interger,
 view interger,
 lucky_phrase varchar(50),
 picture text,
-description text
+description text,
+compagny text
 );
 
 -- CREATE TABLE address(

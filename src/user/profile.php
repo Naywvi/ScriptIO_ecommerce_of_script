@@ -100,7 +100,7 @@ function echoHtmlProfileLeft($user){
             $count += 1;
         }
 
-        if($count == 5 || $value == '&#10;'){
+        if($count == 5 || $value == '#;'){
             $sentence += 1;
             echo'<li>' . $sentence . ' <span class="white">' . $descChar . '</span></li>';
             $descChar = '';
@@ -135,7 +135,7 @@ function right(){
 function left(){
     $query = htmlspecialchars($_GET["user"]);
     if($query == $user['username']){
-        //echoHtmlProfileLeft($user);
+        echoHtmlProfileLeft($user);
     }else{
         if($user_query = queryUser($query)){
             echoHtmlProfileLeft($user_query);

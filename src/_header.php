@@ -25,6 +25,9 @@ function connexion($user){
         <li class="nav-item">
             <a class="nav-link nav-color disabled" href="?signout" onclick="signout()" tabindex="-1" aria-disabled="true">Sign Out</a>
         </li> 
+        <li class="nav-item">
+            <a class="nav-link nav-color disabled" href="profile-management?profile=' . $user['username'] . '"  tabindex="-1" aria-disabled="true">Manage profil</a>
+        </li>
         <script src="./assets/js/signout.js"></script>
         <li class="nav-item">
             <a href="profile?user=' . $user['username'] . '" class="notification nav-link nav-color disabled">

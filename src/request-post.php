@@ -13,7 +13,10 @@
         include_once('./src/auth/reset-password.php');
         reset_password();
     }
-
+    if (isset($_POST['manage-profile'])) { // if login form was submitted
+        include_once('./src/user/manage-profile.php');
+        manage(htmlspecialchars($_GET["profile"]));
+    }
     if (isset($_POST['new-item'])) {
         include_once('./src/items/new-item.php');
         newItem();

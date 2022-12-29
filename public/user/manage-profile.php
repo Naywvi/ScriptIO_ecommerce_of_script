@@ -4,79 +4,41 @@
 </head>
 <body>
 <div class="container space background-white">
-<form>
-  <!-- 2 column grid layout with text inputs for the first and last names -->
-  <div class="row mb-4">
-    <div class="col">
-      <div class="form-outline">
-        <input type="text" id="form6Example1" class="form-control" />
-        <label class="form-label" for="form6Example1">First name</label>
-      </div>
-    </div>
-    <div class="col">
-      <div class="form-outline">
-        <input type="text" id="form6Example2" class="form-control" />
-        <label class="form-label" for="form6Example2">Last name</label>
-      </div>
-    </div>
-  </div>
-    <!-- Text input -->
-    <div class="form-outline mb-4">
-        <input type="text" id="username" class="form-control" />
-        <label class="form-label" for="username">Username</label>
-    </div>
-
-        <!-- Text input -->
-    <div class="form-outline mb-4">
-        <input type="text" id="birthday" class="form-control disable" placeholder="birthday"/>
-        <label class="form-label" for="birthday">Birthday</label>
-    </div>
-  <!-- Text input -->
-  <div class="form-outline mb-4">
-    <input type="text" id="company" class="form-control" />
-    <label class="form-label" for="company">Company name</label>
-  </div>
-
-  <!-- Text input -->
-  <div class="form-outline mb-4">
-    <input type="text" id="address" class="form-control" />
-    <label class="form-label" for="address">Address</label>
-  </div>
-
-  <!-- Email input -->
-  <div class="form-outline mb-4 ">
-    <div class="email">
-        <input type="email" class="form-control disable email-left" placeholder="Last-email"/>
-        <input type="email" id="email" class="form-control email-right" />
-    </div>
-  <label class="form-label" for="email">Email</label>
-  </div>
+<form method='post'>
   
-  <!-- Number input -->
-  <div class="form-outline mb-4">
-  <div class="number">
-    <input type="text" class="form-control disable number-left" placeholder="Last number"/>
-    <input type="text" id="phone" class="form-control number-right"/>
-    </div>
-    <label class="form-label" for="phone">Phone</label>
-  </div>
+  <!-- 2 column grid layout with text inputs for the first and last names -->
+  <?php
+    include_once('./src/user/manage-profile.php');
+    form($user);
+  ?>
+  
 
   <!-- Text input -->
   <div class="form-outline mb-4">
     
-    <input type="file" id="profil-picture" name="profil-picture" class="form-label">
+    <input type="file" id="profil-picture" name="profil-picture" class="form-label" name="picture">
     <label for="profil-picture">Profil picture</label>
 
   </div>
 
   <!-- Message input -->
   <div class="form-outline mb-4">
-    <textarea class="form-control" id="additional" rows="4"></textarea>
+    <textarea class="form-control" id="additional" rows="4" name="description"></textarea>
     <label class="form-label" for="additional">Additional information (visible only to staff)</label>
   </div>
-
+  
+  <figure>
+      <figcaption class="blockquote-footer green italic">
+          You can implement effects in your description
+          <p>Color available: !cyan !cyan-light !green !red !white !yellow</p>
+          Exemple: cyan! My product is very nice #;
+          <p>You can add effect with : !blink !comment</p>
+          <p style="font-weight:bold;color: #ea1a1a;">If you want to skip a line put (#;) at the end of your sentence</p>
+      </figcaption>
+  </figure>
   <!-- Submit button -->
-  <button type="submit" class="btn btn-primary btn-block mb-4">Edit my profile</button>
+
+  <button type="submit" class="btn btn-primary btn-block mb-4" name="manage-profile">Edit my profile</button>
 </form>
 </div>
 
