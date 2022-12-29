@@ -7,7 +7,8 @@ email varchar(40) NOT NULL,
 phone_number INTEGER NOT NULL,
 birthday date NOT NULL,
 user_password varchar(40) NOT NULL,
-user_role varchar(20) NOT NULL
+user_role varchar(20) NOT NULL,
+last_connexion date
 );
 
 -- CREATE TABLE address(

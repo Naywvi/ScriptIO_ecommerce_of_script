@@ -6,21 +6,22 @@ function getUserRole($email) {
     $statement->bindParam(':email', $email);
     $statement->execute();
     $result = $statement->fetch(PDO::FETCH_ASSOC);
+    $myPDO = null;
     return $result['user_role'];
 }
 
 function getID($email) {
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
-    $statement = $myPDO->prepare("SELECT id_user FROM users WHERE email = :email");
-    $statement->bindParam(':email', $email);
-    $statement->execute();
-    $result = $statement->fetch(PDO::FETCH_ASSOC);
-    return $result['id_user'];
+    $stmt = $myPDO->query("SELECT * FROM users WHERE email = '$email'");
+    $row = $stmt->fetch();
+    $stmt = null;
+    $myPDO = null;
+    return $row;
 }
 
-function sendCookie($email) {
-    setcookie("id", password_hash(getID($email), PASSWORD_DEFAULT), time() + (86400 * 30), "/"); // 86400 = 1 day, cookie name is email of user and value is hashed id of user
-    setcookie("email", $email, time() + (86400 * 30), "/");
+function sendCookie($row) {
+ setcookie($row['id_user'], hash('ripemd160', $row['id_user'])  . "-" . hash('ripemd160', $row['last_connexion'])); // 86400 = 1 day, cookie name is email of user and value is hashed id of user 
 }
+
 
 ?>
