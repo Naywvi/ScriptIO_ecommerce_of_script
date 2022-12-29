@@ -8,8 +8,8 @@ function login() {
     
     //print data from form
     // print_r(var_dump($_POST));
-    $email = $_POST['reset-email'];
-    $user_password = $_POST['reset-password'];
+    $email = $_POST['email'];
+    $user_password = $_POST['user_password'];
 
     //check if user exists
     $statement = $myPDO->prepare("SELECT * FROM users WHERE email = :email");
@@ -38,6 +38,8 @@ function login() {
             //**Forced to place last_connexion here -> bug 
             sendCookie($row);
             $pdo == null;
+            header("Location: /");
+            exit();
         } else {
             echo "<style>#message{display:unset !important;}</style>";
         }

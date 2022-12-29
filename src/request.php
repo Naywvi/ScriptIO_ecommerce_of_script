@@ -25,4 +25,5 @@
     if($uri == 'privacy-policy'){include_once('./public/privacy-policy.php');}
 
     if($uri == ''){include_once('./public/home.php');}
+    
 ?>

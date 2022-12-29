@@ -20,6 +20,7 @@ function reset_password(){
     
     if($row){
         if (password_verify($user_password, $row['user_password'])) {
+                //send email ? --->
                 echo "<style>#message_valid{display:unset !important;}</style>";
             } else {
                 echo "<style>#message_error{display:unset !important;}</style>";;
@@ -29,7 +30,7 @@ function reset_password(){
     }else{
         echo "<style>#message_error{display:unset !important;}</style>";
     }
-    //verification
+
     
 };
 

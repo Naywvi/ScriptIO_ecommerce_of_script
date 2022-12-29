@@ -40,7 +40,9 @@
               </div>
 
                 <figure id="message" style='display:none;'>
+   
                     <p class=" red">wrong password or username</p>
+
                 </figure>
 
               <!-- Forgot pass -->

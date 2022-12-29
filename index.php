@@ -12,7 +12,7 @@
     //request
     include_once('./src/request-post.php');
     include_once('./src/request-get.php');
-
+    include_once('./src/check-cookie.php');
     // put these AFTER the login and register functions so that the cookie is set before the page loads IMPORTANT !!!!!
     include_once('./src/uri.php');
     include_once('./public/_header.php');
@@ -25,7 +25,7 @@
     include_once('./public/_footer.php');
     include_once('./public/_script.php');
     include_once('./public/_end-page.php');
-    
+
     //https://bootsnipp.com/snippets/A3p9E
     
     ?>
