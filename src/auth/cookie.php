@@ -20,7 +20,7 @@ function getID($email) {
 }
 
 function sendCookie($row) {
- setcookie($row['id_user'], hash('ripemd160', $row['id_user'])  . "-" . hash('ripemd160', $row['last_connexion'])); // 86400 = 1 day, cookie name is email of user and value is hashed id of user 
+ setcookie($row['id_user'], hash('ripemd160', $row['id_user'])  . "-" . hash('ripemd160', $row['last_connexion'])); // 86400 = 1 day, cookie id - lastConnexion of user and value is hashed 
 }
 
 

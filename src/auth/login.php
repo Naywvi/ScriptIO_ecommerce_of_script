@@ -29,17 +29,17 @@ function login() {
             $pdo = new PDO('sqlite:./db/Scriptio.db');
             $sql = 'UPDATE users 
                     SET last_connexion=:lastC 
-                    WHERE id_user = 14';
+                    WHERE email =:email';
             $statement = $pdo->prepare($sql);
             $statement->bindParam(':lastC', $lastC, PDO::PARAM_STR);
-            $statement->bindParam(':lastC', $row['id_user'], PDO::PARAM_INT);
-
-            $pdo = null;
+            $statement->bindParam(':email', $row['email'], PDO::PARAM_STR);
+            $statement->execute();
+            $statement == null;
             //**Forced to place last_connexion here -> bug 
-            
+
             sendCookie($row);
 
-            $row = null;
+            $pdo == null;
         } else {
             echo "Invalid credentials";
             exit();
