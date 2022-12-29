@@ -36,17 +36,15 @@ function login() {
             $statement->execute();
             $statement == null;
             //**Forced to place last_connexion here -> bug 
-
             sendCookie($row);
-
             $pdo == null;
         } else {
-            echo "Invalid credentials";
-            exit();
+            echo "<style>#message{display:unset !important;}</style>";
+          
         }
     } else {
-        echo "Invalid credentials";
-        exit();
+        echo "<style>#message{display:unset !important;}</style>";
+        
     }
 }
 

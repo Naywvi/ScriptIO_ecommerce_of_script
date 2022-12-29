@@ -24,8 +24,7 @@ function register() {
     $result = $statement->fetch(PDO::FETCH_ASSOC);
 
     if ($result) {
-        echo "Invalid credentials";
-        exit();
+        echo "<style>#message{display:unset !important;}</style>";
     } else {
         $statement = $myPDO->prepare("INSERT INTO users (first_name, last_name, username, user_password, email, birthday, phone_number, user_role) VALUES (:first_name, :last_name, :username, :user_password, :email, :birthday, :phone_number, :user_role)");
         $statement->bindParam(':first_name', $first_name);

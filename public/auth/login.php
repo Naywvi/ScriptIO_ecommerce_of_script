@@ -39,10 +39,8 @@
                 <label class="form-label" for="form3Example4"></label>
               </div>
 
-                <figure>
-                  <figcaption class="blockquote-footer red">
-                    wrong password or username
-                  </figcaption>
+                <figure id="message" style='display:none;'>
+                    <p class=" red">wrong password or username</p>
                 </figure>
 
               <!-- Forgot pass -->

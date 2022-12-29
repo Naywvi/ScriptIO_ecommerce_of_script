@@ -80,10 +80,8 @@
                 <label class="form-label" for="form3Example4"></label>
               </div>
 
-                <figure>
-                  <figcaption class="blockquote-footer red">
-                    wrong password or username
-                  </figcaption>
+                <figure id="message" style='display:none;'>
+                    <p class=" red">username or email are already use</p>
                 </figure>
               <!-- Checkbox -->
               <div class="form-check d-flex justify-content-left mb-4">
