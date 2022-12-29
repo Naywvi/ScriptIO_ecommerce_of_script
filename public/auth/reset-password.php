@@ -27,37 +27,36 @@
         <div id="radius-shape-3" class="position-absolute shadow-5-strong"></div>
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
-            <form>
+            <form method="post">
 
-              <!-- Password input -->
-              <div class="form-outline mb-2">
-                <input type="password" id="form3Example4" class="form-control" placeholder="Username"/>
-                <label class="form-label" for="form3Example4"></label>
-              </div>
+              
 
               <!-- Email input -->
               <div class="form-outline mb-2">
-                <input type="email" id="form3Example3" class="form-control"  placeholder="Email address"/>
-                <label class="form-label" for="form3Example3"></label>
+                <input type="email" id="email" name="reset-email" class="form-control"  placeholder="Email address"/>
+                <label class="form-label" for="email"></label>
+              </div>
+              <!-- Password input -->
+              <div class="form-outline mb-2">
+                <input type="password" id="password" name="password" class="form-control" placeholder="Username"/>
+                <label class="form-label" for="password"></label>
               </div>
 
-              <figure>
-                <figcaption class="blockquote-footer green">
-                  Email was send successfully
-                </figcaption>
+              
+              <figure id="message_valid" style='display:none;'>
+                <p class="green">mail send successfully</p>
               </figure>
-
-              <figure>
-                <figcaption class="blockquote-footer red">
-                  wrong username or email address
-                </figcaption>
+              
+              <figure id="message_error" style='display:none;'>
+                <p class="red">username or email are already use</p>
               </figure>
+              
 
               <!-- Forgot pass -->
                 <a href="signin"><p class="text-left italic">Return to sign in</p></a>
 
               <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block mb-2">
+              <button type="submit" class="btn btn-primary btn-block mb-2" name="reset-password">
                 Reset password
               </button>
 

@@ -10,8 +10,8 @@
     // debug_to_console("Test");
 
     //request
-    include_once('./src/request_post.php');
-    include_once('./src/request_get.php');
+    include_once('./src/request-post.php');
+    include_once('./src/request-get.php');
 
     // put these AFTER the login and register functions so that the cookie is set before the page loads IMPORTANT !!!!!
     include_once('./src/uri.php');
