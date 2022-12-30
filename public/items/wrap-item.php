@@ -204,11 +204,11 @@
 
                         <icon class="icon">
 
-                            <form action="/src/shop/cart-shopping.php" method="post">
-                                <input type="hidden" name="product_id" value="'.$row['id_product'].'">
+                            <form method="post">
+                                <input type="hidden" name="id_product" value="'.$row['id_product'].'">
                                 <input type="hidden" name="id_user" value="'.$row['id_user'].'">
-                                <button type="submit" class="">
-                                    <span class="material-symbols-outlined white icon-" name="shopping-cart">shopping_basket</span>
+                                <button type="submit" class="" name="cart-add">
+                                    <span class="material-symbols-outlined white icon-" >shopping_basket</span>
                                 </button>
                             </form>
                             <a href="#">

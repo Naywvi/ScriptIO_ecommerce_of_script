@@ -71,11 +71,11 @@ FOREIGN KEY (id_user) REFERENCES Users(id_user)
 );
 
 CREATE TABLE cart_temp(
-id_cart_temp INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-id_cart INTEGER NOT NULL,
-id_product float NOT NULL,
-FOREIGN KEY (id_cart) REFERENCES Cart(id_cart),
+id_user INTEGER NOT NULL,
+id_product INTEGER NOT NULL,
+quantity INTEGER NOT NULL,
 FOREIGN KEY (id_product) REFERENCES Product(id_product)
+FOREIGN KEY (id_user) REFERENCES Users(id_user)
 );
 
 CREATE TABLE wishlist(

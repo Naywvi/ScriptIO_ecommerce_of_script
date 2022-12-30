@@ -1,6 +1,6 @@
 TO RUN THE PROJECT: php -S localhost:port -t your_folder/
 
-Lux: fix issue email cookie, - page panier (ajout de produit, suppression de produit, modification de quantité, calcul du prix total) 
+Lux: page panier (ajout de produit, suppression de produit, modification de quantité, calcul du prix total) 
 
 - admin panel (modification du compte utilisateur..)
 - search bar
