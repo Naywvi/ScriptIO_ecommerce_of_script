@@ -257,7 +257,8 @@ function luckyphrase($lk){
 }
 function form($user){
     $query = htmlspecialchars($_GET["profile"]);
-    if($query == $user['username']){
+    
+    if($query === $user['username']){
         $address = takeAdress($user['id_user']);
         password($user['password']);
         firstname($user['first_name']);
@@ -270,6 +271,7 @@ function form($user){
         phone($user['phone_number']);
         luckyphrase($user['lucky_phrase']);
     }else{
+        
         echo '<meta http-equiv="refresh" content="0; /" />';
     } 
 }
