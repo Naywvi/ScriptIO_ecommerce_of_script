@@ -37,13 +37,12 @@ function manage($user){
         'city',
         'country'
     );
-    settype($index,'integer');
     settype($indexX,'integer');
 
     foreach($row_user as $value){
         if(strlen($value) != 0 && $indexX <= 7){
             $index += 1;
-            $field = $row_user[$index+7];
+            $field = $row_user[8+$indexX];
             $myPDO = new PDO('sqlite:./db/Scriptio.db');
             $stmt = $myPDO->query("UPDATE users SET $field = '$value' WHERE username = '$user'");
             $stmt = null;
@@ -53,16 +52,17 @@ function manage($user){
     }
     $indexX =0;
     $id_user = getIdUser($user);
-    foreach($row_address as $value){
-        if(strlen($value) != 0 && $indexX <= 3){
+    foreach($row_address as $v){
+
+        if(strlen($v) != 0 && $indexX <= 3){
             $id = $id_user[0];
-            $index += 1;
-            $field = $row_address[$index+3];
+            $field = $row_address[$indexX+4];
+            
             $myPDO = new PDO('sqlite:./db/Scriptio.db');
             if($field == 'city' || $field == 'address'|| $field == 'country'){
-                $stmt = $myPDO->query("UPDATE address SET $field = '$value' WHERE id_user = $id");
+                $stmt = $myPDO->query("UPDATE address SET $field = '$v' WHERE id_user = $id");
             }else{
-                $stmt = $myPDO->query("UPDATE address SET $field = $value WHERE id_user = $id");
+                $stmt = $myPDO->query("UPDATE address SET $field = '$v' WHERE id_user = $id");
             }
             $stmt = null;
             $myPDO = null;
