@@ -15,7 +15,8 @@ view interger,
 lucky_phrase varchar(50),
 picture text,
 description text,
-compagny text
+compagny text,
+notification_count integer
 );
 
 -- CREATE TABLE address(
@@ -92,4 +93,13 @@ id_command INTEGER NOT NULL,
 payment_date date NOT NULL,
 payment_method varchar(20) NOT NULL,
 FOREIGN KEY (id_command) REFERENCES Command(id_command)
+);
+
+CREATE TABLE notification(
+id_notification INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+id_user integer,
+context varchar(30),
+description text,
+date date,
+FOREIGN KEY (id_user) REFERENCES users(id_user)
 );

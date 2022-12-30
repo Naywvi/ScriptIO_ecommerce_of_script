@@ -21,6 +21,7 @@
 
     if($uri == 'profile-management'){include_once('./public/user/manage-profile.php');}
     if($uri == 'profile'){include_once('./public/user/profile.php');}
+    if($uri == 'history'){include_once('./public/user/history.php');}
 
     if($uri == 'privacy-policy'){include_once('./public/privacy-policy.php');}
 
