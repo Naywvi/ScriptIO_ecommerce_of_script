@@ -18,3 +18,12 @@ OPTIONS:
 - ✔cookie data value regnerate timestamp
 - coupon de réduction
 - points de fidélité
+
+
+Pour les notifications:
+----> insert into notification values (id_user,context,description,date)
+les contexts:
+    Last order
+    Audit
+    Message from the staff
+    Customer feedback

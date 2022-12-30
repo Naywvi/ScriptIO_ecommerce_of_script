@@ -15,6 +15,8 @@ function connexion($user){
         ';
 
     }else{
+        include_once('./src/user/history.php');
+        $not = popup($user['id_user']);
         echo '
         <li class="nav-item shop notification-shop icon-header-space">
             <a href="my-wish-list">
@@ -31,8 +33,8 @@ function connexion($user){
         <li class="nav-item">
             <div id="not" class="btn-group">
                 <a class="notification nav-link nav-color dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Profile
-                    <span class="badge">3</span>
+                    Profileok
+                    '.$not.'
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navtab-back-color">
                 <a href="profile?user=' . $user['username'] . '" class="notification nav-link nav-color disabled">
@@ -41,7 +43,7 @@ function connexion($user){
                 <a class="nav-link nav-color disabled" href="profile-management?profile=' . $user['username'] . '"  tabindex="-1" aria-disabled="true">Manage profil</a>
                 <a class="nav-link nav-color disabled" href="history?profile=' . $user['username'] . '">
                     notifications
-                    <span class="badge">3</span>
+                    '.popup($user['id_user']).'
                 </a>
                 </div>
             </div>

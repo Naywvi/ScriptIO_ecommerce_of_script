@@ -59,5 +59,15 @@ function delete($id){
     $myPDO = null;
     $statement = null;
 }
+function popup($id_user){
+    $myPDO = new PDO('sqlite:./db/Scriptio.db');
+    $statement = $myPDO->query("SELECT COUNT(*) FROM notification WHERE id_user = $id_user");
+    $result = $statement->fetch();
+    
+    
+    $myPDO = null;
+    $statement = null;
+    return '<span class="badge badge-not">'.$result[0].'</span>';
+}//<span class="badge badge-not debug">3</span>
 //select count(*) from notification where id_user = 16
 ?>
