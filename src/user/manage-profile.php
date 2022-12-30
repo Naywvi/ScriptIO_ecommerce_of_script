@@ -1,12 +1,14 @@
 <?php
+
 function getIdUser($username){
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
-    $stmt = $myPDO->query("SELECT id_user FROM users WHERE username = '$username'");
+    $stmt = $myPDO->query("SELECT id_user,user_password FROM users WHERE username = '$username'");
     $row = $stmt->fetch();
     $stmt = null;
     $myPDO = null;
     return $row;
 }
+
 function manage($user){
     $row_user = array(
         $_POST['first-name'],
@@ -37,6 +39,14 @@ function manage($user){
         'city',
         'country'
     );
+
+    $row_password = array(
+        $_POST['last-password'],
+        $_POST['new-password'],
+        'last-password',
+        'new-password',
+    );
+    
     settype($indexX,'integer');
 
     foreach($row_user as $value){
@@ -50,14 +60,15 @@ function manage($user){
         }
         $indexX +=1;
     }
+
     $indexX =0;
     $id_user = getIdUser($user);
-    foreach($row_address as $v){
+    $id = $id_user[0];
+    $id_p = $id_user[1];
 
+    foreach($row_address as $v){
         if(strlen($v) != 0 && $indexX <= 3){
-            $id = $id_user[0];
             $field = $row_address[$indexX+4];
-            
             $myPDO = new PDO('sqlite:./db/Scriptio.db');
             if($field == 'city' || $field == 'address'|| $field == 'country'){
                 $stmt = $myPDO->query("UPDATE address SET $field = '$v' WHERE id_user = $id");
@@ -66,6 +77,29 @@ function manage($user){
             }
             $stmt = null;
             $myPDO = null;
+        }
+        $indexX +=1;
+    }
+    $indexX =0;
+    foreach($row_password as $p){
+        if(strlen($p) != 0 && $indexX <= 1){
+            $index += 1;
+            $field = $row_password[2+$indexX];
+            if($field == 'last-password'){
+                if(password_verify($p, $id_p)){
+                    $new_password = password_hash($row_password[1], PASSWORD_DEFAULT);
+                    $myPDO = new PDO('sqlite:./db/Scriptio.db');
+                    $stmt = $myPDO->query("UPDATE users SET user_password = '$new_password' WHERE id_user = '$id'");
+                    $stmt = null;
+                    $myPDO = null;
+                }else{
+                    echo '<script>alert("bad password")</script>';
+                }
+            }else{
+
+            }
+            
+            
         }
         $indexX +=1;
     }
@@ -88,7 +122,30 @@ function takeAdress($query){
     $myPDO = null;
     return $row;
 }
+function password($password){
+    echo'
+    <div class="row mb-4">
 
+        <div class="col">
+            <div class="form-outline">
+               <input type="password" id="form6Example1" class="form-control" placeholder="last password" name="last-password"/>
+               <label class="form-label" for="form6Example1" >Last password</label>
+               <figure id="message-last-password" style="display:none;">
+                    <p style="color:red !important;">wrong password or username</p>
+                </figure>            
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-outline">
+                <input type="password" id="form6Example2" class="form-control" placeholder="new password" name="new-password"/>
+                <label class="form-label" for="form6Example1" >New password</label>
+            </div>
+        </div>
+
+    </div>
+    ';
+}
 function firstname($fn){
     echo'
     <div class="row mb-4">
@@ -202,6 +259,7 @@ function form($user){
     $query = htmlspecialchars($_GET["profile"]);
     if($query == $user['username']){
         $address = takeAdress($user['id_user']);
+        password($user['password']);
         firstname($user['first_name']);
         lastname($user['last_name']);
         username($user['username']);
