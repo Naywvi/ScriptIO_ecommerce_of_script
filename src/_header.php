@@ -33,7 +33,7 @@ function connexion($user){
         <li class="nav-item">
             <div id="not" class="btn-group">
                 <a class="notification nav-link nav-color dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Profileok
+                    Profile
                     '.$not.'
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navtab-back-color">

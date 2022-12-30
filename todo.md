@@ -27,3 +27,17 @@ les contexts:
     Audit
     Message from the staff
     Customer feedback
+
+
+Pour send des popup:
+Tu choisis ce que tu souhaite et tu envoie à toats()
+<?php
+    include_once('./src/notify.php');
+
+    $a = blue("content","title");
+    $b = green("content","title");
+    $c = yellow("content","title");
+
+    toast($a,$b,$c);
+    
+?>

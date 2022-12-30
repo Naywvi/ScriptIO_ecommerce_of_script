@@ -9,10 +9,8 @@
       <ul class="timeline-3">
         <?php
             include_once('./src/user/history.php');
-            
             notification($user);
         ?>
-        
     </div>
   </div>
 </div>

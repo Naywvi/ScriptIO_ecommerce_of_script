@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
     <html>
         <head>
             <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -13,7 +14,7 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-back-color">
             <img src="./assets/img/Scriptio.png" alt="" class="logo-header"/>
-
+            
             <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
