@@ -84,6 +84,9 @@
                                 <span class="badge badge-not debug">3</span>
                             </a>
                         </li>
+                        
+                        
+                        
                         <?php 
                             include_once('./src/_header.php');
                             connexion($user);

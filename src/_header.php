@@ -25,15 +25,26 @@ function connexion($user){
         <li class="nav-item">
             <a class="nav-link nav-color disabled" href="?signout" onclick="signout()" tabindex="-1" aria-disabled="true">Sign Out</a>
         </li> 
-        <li class="nav-item">
-            <a class="nav-link nav-color disabled" href="profile-management?profile=' . $user['username'] . '"  tabindex="-1" aria-disabled="true">Manage profil</a>
-        </li>
         <script src="./assets/js/signout.js"></script>
+        
+
         <li class="nav-item">
-            <a href="profile?user=' . $user['username'] . '" class="notification nav-link nav-color disabled">
-                <span>' . $user['username'] . '</span>
-                <span class="badge">3</span>
-            </a> 
+            <div id="not" class="btn-group">
+                <a class="notification nav-link nav-color dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Profile
+                    <span class="badge">3</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navtab-back-color">
+                <a href="profile?user=' . $user['username'] . '" class="notification nav-link nav-color disabled">
+                    <span>' . $user['username'] . ' profile</span>
+                </a>
+                <a class="nav-link nav-color disabled" href="profile-management?profile=' . $user['username'] . '"  tabindex="-1" aria-disabled="true">Manage profil</a>
+                <a class="nav-link nav-color disabled" href="history?profile=' . $user['username'] . '">
+                    notifications
+                    <span class="badge">3</span>
+                </a>
+                </div>
+            </div>
         </li>
         ';
     }

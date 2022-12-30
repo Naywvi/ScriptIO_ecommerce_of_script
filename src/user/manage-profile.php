@@ -271,7 +271,6 @@ function form($user){
         phone($user['phone_number']);
         luckyphrase($user['lucky_phrase']);
     }else{
-        
         echo '<meta http-equiv="refresh" content="0; /" />';
     } 
 }

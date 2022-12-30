@@ -22,6 +22,9 @@
         max-height: 280px;
         overflow-y: auto;
     }
+    #not{
+        display: unset;
+    }
 }
 @media (min-width: 950px) {
     .header p {
