@@ -100,11 +100,10 @@ function echoHtmlProfileLeft($user){
             $count += 1;
         }
 
-        if($count == 5 || $value == '#;'){
+        if($value == '#;'){
             $sentence += 1;
-            echo'<li>' . $sentence . ' <span class="white">' . $descChar . '</span></li>';
+            echo'<li>' . $sentence . ' <span class="white">' . str_replace('#;', "",$descChar) . '</span></li>';
             $descChar = '';
-            $count = 0;
         }
     }
  
