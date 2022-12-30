@@ -4,7 +4,7 @@
 </head>
 <body>
 
-<div class="container-fluid ">
+<div class="container-fluid ">image.png
         <div class="row">
      
             <div class="col-md-6 offset-md-3 audit background-white">
@@ -12,7 +12,7 @@
                     <!-- name input -->
                     <div class="form-outline mb-6">
                         <input type="text" id="name" class="form-control" name="product_name"/>
-                        <label class="form-label" for="name">Name</label>
+                        <label class="form-label" for="name">Category</label>
                     </div>
 
                     <!-- price input -->
