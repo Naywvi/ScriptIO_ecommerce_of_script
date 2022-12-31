@@ -8,6 +8,14 @@ function takeProducts($id_user){
     $myPDO = null;
     return $row;
 }
+
+function deleteItem($id_product){
+    $myPDO = new PDO('sqlite:./db/Scriptio.db');
+    $stmt = $myPDO->query("DELETE FROM product WHERE id_product = $id_product");
+    $stmt = null;
+    $myPDO = null;
+}
+
 function lastPrice($product){
     if($product[13] === 'NULL'){
         return'
@@ -82,6 +90,9 @@ function imageProduct($product){
 function products($user){
     $query = htmlspecialchars($_GET["profile"]);
     if($user['username'] === $query){
+        if($deleteItem = htmlspecialchars($_GET["delete"])){
+            deleteItem($deleteItem);
+        }
         if($row_products = takeProducts($user['id_user'])){
             
             foreach($row_products as $v){
@@ -92,8 +103,10 @@ function products($user){
                     echo'
                     <div class="col-md-6 col-lg-4 mb-4 mb-md-0 space">
                         <div class="card">
+                        
                         <div class="d-flex justify-content-between p-3">
-                            <a href="modify-item?product='.$v[0].'&profile='.$user['username'].'"><p class="lead mb-0" style="color: #ed0c21;text-align: center !important;">Edit '.$v[2].'</p></a>
+                            
+                            <a href="item?product='.$v[0].'"><p class="lead mb-0" >'.$v[2].'</p></a>
                             <div
                             class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
                             style="width: 35px; height: 35px;">
@@ -103,6 +116,11 @@ function products($user){
 
                         '.$imageProduct.'
                         <div class="card-body">
+
+                        <div class="d-flex justify-content-between mb-2">
+                        <a href="modify-item?product='.$v[0].'&profile='.$user['username'].'"><p class="lead mb-0" style="color: rgb(43, 156, 71);text-align: center !important;font-size: 10px;">Edit '.$v[2].'</p></a>
+                        <a href="manage-product?profile='.$user['username'].'&delete='.$v[0].'"><p class="lead mb-0" style="color: #ed0c21;text-align: center !important;font-size: 10px;">Delete '.$v[2].'</p></a>
+                        </div>
 
                             <div class="d-flex justify-content-between">
                             <p class="small"><a href="item?product='.$v[0].'" class="text-muted">Last price</a></p>

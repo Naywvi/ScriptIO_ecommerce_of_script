@@ -20,10 +20,8 @@
     function edit($field,$value,$id_product){
         $myPDO = new PDO('sqlite:./db/Scriptio.db');
         $stmt = $myPDO->query("UPDATE product SET $field = $value WHERE id_product = $id_product");
-        $row = $stmt->fetch();
         $stmt = null;
         $myPDO = null;
-        return $row;
     }
 
     function modifyItem(){
