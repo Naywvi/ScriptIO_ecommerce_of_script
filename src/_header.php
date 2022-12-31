@@ -73,7 +73,7 @@ function publish($user){
     if(strlen($user['id_user']) != 0){  
     echo'
         <li class="nav-item">
-            <a class="nav-link nav-color" href="new-item" tabindex="-1" aria-disabled="true">Publish your script</a>
+            <a class="nav-link nav-color" href="new-item?profile='.$user['username'].'" tabindex="-1" aria-disabled="true">Publish your script</a>
         </li>
     '; 
 

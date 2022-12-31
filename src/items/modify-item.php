@@ -48,6 +48,7 @@
                 'short_description',
                 'product_description',
                 'installation_steps',
+                'motz_installation_steps',
                 'product_image',
                 'price',
                 'last_price',
