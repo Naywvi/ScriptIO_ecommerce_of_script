@@ -11,7 +11,12 @@ function connexion($user){
             <a class="nav-link nav-color disabled" href="signup" tabindex="-1" aria-disabled="true">Sign Up</a>
         </li> 
 
-        
+        <li class="nav-item shop notification-shop icon-header-space">
+            <a href="my-wish-list">
+                    <span class="material-symbols-outlined icon-wish-list badge-not-wish icon-header-space">heart_plus</span>
+            </a>
+        </li>
+
         ';
 
     }else{
@@ -77,6 +82,99 @@ function publish($user){
         </li>
     '; 
 
+    }
+}
+function dropDown($user){
+    if(strlen($user['id_user']) != 0){
+        echo'
+        <li class="nav-item dropdown ">
+            <a class="nav-link nav-color dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Items
+            </a>
+            <div class="dropdown-menu navtab-back-color nav-color" aria-labelledby="navbarDropdown">
+                <div class="bg-danger nav-color nav-flex">
+                    <h6 class="dropdown-header nav-color bold">FREE</h6>
+                    <i class=\'fas fa-euro-sign navicon\'></i>
+                </div>
+                <a class="dropdown-item nav-trans nav-trans nav-color" href="wrap-item?profile='.$user['id_user'].'&rubric=free&field=free">Free</a>
+                <div class="dropdown-divider"></div>
+                <div class="nav-flex">
+                    <h6 class="dropdown-header nav-color nav-color">Fun </h6>
+                    <i class=\'far fa-hand-lizard navicon\'></i>
+                </div>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile='.$user['id_user'].'&rubric=fun&field=social-networks">Social networks</a>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile='.$user['id_user'].'&rubric=fun&field=scrapping">Scrapping</a>
+                <div class="dropdown-divider"></div>
+                <div class="nav-flex">
+                    <h6 class="dropdown-header nav-color">Automating</h6>
+                    <i class=\'fas fa-list navicon\'></i>
+                </div>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile='.$user['id_user'].'&rubric=automating&field=emailing">Emailing</a>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile='.$user['id_user'].'&rubric=automating&field=macro">Macro</a>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile='.$user['id_user'].'&rubric=automating&field=web">Web</a>
+                <div class="dropdown-divider"></div>
+                <div class="nav-flex">
+                    <h6 class="dropdown-header nav-color">OS </h6>
+                    <i class=\'fas fa-desktop navicon\'></i>
+                </div>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile='.$user['id_user'].'&rubric=os&field=windows">Windows</a>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile='.$user['id_user'].'&rubric=os&field=linux">Linux</a>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile='.$user['id_user'].'&rubric=os&field=macos">MacOS</a>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile='.$user['id_user'].'&rubric=os&field=mobile">Mobile</a>
+                <div class="dropdown-divider"></div>
+                <div class="nav-flex">
+                    <h6 class="dropdown-header nav-color">Other </h6>
+                    <i class=\'fas fa-glasses navicon\'></i>
+                </div>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile='.$user['id_user'].'&rubric=other&field=other">Other</a>
+            </div>
+        </li>
+        ';
+    }else{
+        echo'
+        <li class="nav-item dropdown ">
+            <a class="nav-link nav-color dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Items
+            </a>
+            <div class="dropdown-menu navtab-back-color nav-color" aria-labelledby="navbarDropdown">
+                <div class="bg-danger nav-color nav-flex">
+                    <h6 class="dropdown-header nav-color bold">FREE</h6>
+                    <i class=\'fas fa-euro-sign navicon\'></i>
+                </div>
+                <a class="dropdown-item nav-trans nav-trans nav-color" href="wrap-item?profile=0&rubric=free&field=free">Free</a>
+                <div class="dropdown-divider"></div>
+                <div class="nav-flex">
+                    <h6 class="dropdown-header nav-color nav-color">Fun </h6>
+                    <i class=\'far fa-hand-lizard navicon\'></i>
+                </div>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile=0&rubric=fun&field=social-networks">Social networks</a>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile=0&rubric=fun&field=scrapping">Scrapping</a>
+                <div class="dropdown-divider"></div>
+                <div class="nav-flex">
+                    <h6 class="dropdown-header nav-color">Automating</h6>
+                    <i class=\'fas fa-list navicon\'></i>
+                </div>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile=0&rubric=automating&field=emailing">Emailing</a>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile=0&rubric=automating&field=macro">Macro</a>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile=0&rubric=automating&field=web">Web</a>
+                <div class="dropdown-divider"></div>
+                <div class="nav-flex">
+                    <h6 class="dropdown-header nav-color">OS </h6>
+                    <i class=\'fas fa-desktop navicon\'></i>
+                </div>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile=0&rubric=os&field=windows">Windows</a>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile=0&rubric=os&field=linux">Linux</a>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile=0&rubric=os&field=macos">MacOS</a>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile=0&rubric=os&field=mobile">Mobile</a>
+                <div class="dropdown-divider"></div>
+                <div class="nav-flex">
+                    <h6 class="dropdown-header nav-color">Other </h6>
+                    <i class=\'fas fa-glasses navicon\'></i>
+                </div>
+                <a class="dropdown-item nav-trans nav-color" href="wrap-item?profile=0&rubric=other&field=other">Other</a>
+            </div>
+        </li>
+        ';
     }
 }
 ?>

@@ -165,86 +165,14 @@
                 </div>
                 <a class="c-code code">20 <span class="comment italic ">// Our scripts published on the platform are completely verified, secure, and functional. Good research <span class="green bold">:-)</span></span></a>
             </div>
-            <div class="col w-auto shadow column-wrap space-card-col background-white">      
-                    
-            <?php
+            <div class="col w-auto shadow column-wrap space-card-col background-white">  
 
-            // print products from database
-
-            function printItems() {
-            $myPDO = new PDO('sqlite:./db/Scriptio.db');
-
-            $statement = $myPDO->prepare("SELECT * FROM product");
-            $statement->execute();
-
-            $result = $statement->fetchAll();
-
-            foreach ($result as $row) {
-                echo '
-                <div class="card space-card background-code-widget code">
-                <div class="row">
-                    <div class="col">
-                        <div class="card-body">
-                            <h5 class="card-title white"><span class="cc-code">1 </span>'.$row['product_name'].'</h5>
-                            <p class="card-text white"><span class="cc-code">2 </span>'.$row['product_description'].'</p>
-                            <span class="cc-code">3 </span>
-                            <i class="fa fa-star yellow"></i>
-                            <i class="fa fa-star yellow"></i> 
-                            <i class="fa fa-star yellow"></i> 
-                            <i class="fa fa-star yellow"></i> 
-                            <i class="fa fa-star text-secondary"></i>
-                            <span class="green bold">- 150 $</span>
-                        </div>
-
-                        <figure>
-                            <figcaption class="blockquote-footer code motz" style="color: #e5ce75 !important;">
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </figcaption>
-                        </figure>
-
-                        <icon class="icon">
-
-                            <form method="post">
-                                <input type="hidden" name="id_product" value="'.$row['id_product'].'">
-                                <input type="hidden" name="id_user" value="'.$row['id_user'].'">
-                                <button type="submit" class="" name="cart-add">
-                                    <span class="material-symbols-outlined white icon-" >shopping_basket</span>
-                                </button>
-                            </form>
-                            <a href="#">
-                                <span class="material-symbols-outlined white icon-">heart_plus</span>
-                            </a>
-                            <a href="#">
-                                <span class="material-symbols-outlined white icon-">share</span>
-                            </a>
-                            <a href="#">
-                                <span class="material-symbols-outlined red icon-">flag</span>
-                            </a>
-                        </icon>
-
-                    </div>
-                        
-                        <div class="col col-3 img-card">
-                            <div class="img-card">
-                                <img src="https://www.getquanty.com/wp-content/uploads/2017/09/emailing-1.jpg"></img>
-                            </div>
-                        </div>
-
-                </div>
-            </div>
-                    <div class="col w-100 background-code shadow-separator separator"></div>  
-            ';
-
-            }
-            }
-
-            printItems();
-            ?>  
+                <?php
+                    include_once('./src/items/wrap-item.php');
+                    wrapItems();
+                ?>  
 
             </div>
-
-
-
             <div class="w-100"></div>
 
             <div class="col shadow footer-wrap code background-white">
@@ -275,4 +203,8 @@
             </div>
         </div>
     </div>
+    <?php
+        include_once('./src/items/wrap-item.php');
+        pop();
+    ?>  
 </body>
