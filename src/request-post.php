@@ -26,4 +26,9 @@
         include_once('./src/shop/cart-shopping.php');
         addToCart();
     }
+
+    if (isset($_POST['edit-item'])) {
+        include_once('./src/items/modify-item.php');
+        modifyItem();
+    }
 ?>

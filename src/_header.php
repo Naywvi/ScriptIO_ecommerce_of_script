@@ -42,9 +42,18 @@ function connexion($user){
                 </a>
                 <a class="nav-link nav-color disabled" href="profile-management?profile=' . $user['username'] . '"  tabindex="-1" aria-disabled="true">Manage profil</a>
                 <a class="nav-link nav-color disabled" href="history?profile=' . $user['username'] . '">
-                    notifications
+                    News
                     '.popup($user['id_user']).'
                 </a>
+
+                <a class="nav-link nav-color disabled" href="manage-product?profile=' . $user['username'] . '">
+                    Manage products
+                </a>
+
+                <a class="nav-link nav-color disabled" href="last-orders?profile=' . $user['username'] . '">
+                    Last orders
+                </a>
+
                 </div>
             </div>
         </li>
@@ -58,6 +67,16 @@ function admin($user){
             <a class="nav-link nav-color icon-header-space" href="/admin">Admin Panel<span class="sr-only">(current)</span></a>
         </li>  
         ';
+    }
+}
+function publish($user){
+    if(strlen($user['id_user']) != 0){  
+    echo'
+        <li class="nav-item">
+            <a class="nav-link nav-color" href="new-item" tabindex="-1" aria-disabled="true">Publish your script</a>
+        </li>
+    '; 
+
     }
 }
 ?>

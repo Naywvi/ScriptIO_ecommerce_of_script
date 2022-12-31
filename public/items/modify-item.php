@@ -1,6 +1,6 @@
 <head>
-  <title>ScriptIO - new item</title>
-  <link rel="stylesheet" href="./assets/css/new-item.css" />
+    <title>Script'iO - <?php echo $user['username']; ?> edit item </title>
+    <link rel="stylesheet" href="./assets/css/modify-item.css" />
 </head>
 <body>
 
@@ -9,55 +9,81 @@
      
             <div class="col-md-6 offset-md-3 audit background-white">
                 <form method="post">
+                    
                     <!-- name input -->
-                    <div class="form-outline mb-6">
-                        <input type="text" id="name" class="form-control" name="product_name"/>
+                    <div class="form-outline mb-4">
+                        <input type="text" id="name" class="form-control" name="new-category"/>
                         <label class="form-label" for="name">Category</label>
                     </div>
 
+                    <div class="form-outline mb-4">
+                        <input type="text" id="name" class="form-control" name="new-product-name"/>
+                        <label class="form-label" for="name">Name of your product</label>
+                    </div>
+
                     <!-- price input -->
-                    <div class="form-outline mb-6">
-                        <input type="number" id="price" class="form-control" name="price"/>
-                        <label class="form-label" for="price">Price</label>
+                    <div class="form-outline mb-4">
+                        <input type="number" id="price" class="form-control" name="new-price"/>
+                        <label class="form-label" for="price">New price</label>
                         <figcaption class="blockquote-footer text-secondary italic">
                         If you want it to be free don't put anything
                         </figcaption>
+                        <br>
                     </div>
 
                     <!-- Message input -->
                     <div class="form-outline mb-4">
-                        <textarea class="form-control" id="desc-left" rows="4" maxlength="250" placeholder="250 - characters max" name="product_description"></textarea>
-                        <label class="form-label" for="desc-left">A short description of your product</label>
+                        <textarea class="form-control" id="desc-left" rows="4" maxlength="250" placeholder="250 - characters max" name="new-short-description-left"></textarea>
+                        <label class="form-label" for="desc-left">Change short description left</label>
+                        <br>
+                        
+                     
                     </div>
 
                     <!-- Message input -->
                     <div class="form-outline mb-4">
-                        <textarea class="form-control" id="desc-step" rows="4" maxlength="550" placeholder="550 - characters max" name="installation_steps"></textarea>
-                        <label class="form-label" for="desc-step">Installation steps</label>
+                        <textarea class="form-control" id="desc-left" rows="4" maxlength="250" placeholder="250 - characters max" name="new-short-description-right"></textarea>
+                        <label class="form-label" for="desc-left">Change large description right</label>
                         <figure>
                             <figcaption class="blockquote-footer green italic">
                                 You can implement effects in your description
                                 <p>Color available: !cyan !cyan-light !green !red !white !yellow</p>
-                                Exemple: white! My product is very nice
+                                Exemple: cyan! My product is very nice #;
                                 <p>You can add effect with : !blink !comment</p>
+                                <p style="font-weight:bold;color: #ea1a1a;">If you want to skip a line put (#;) at the end of your sentence</p>
                             </figcaption>
                         </figure>
                     </div>
+                    <!-- Message input -->
+                    <div class="form-outline mb-4">
+                        <textarea class="form-control" id="desc-step" rows="4" maxlength="550" placeholder="550 - characters max" name="new-installation-steps"></textarea>
+                        <label class="form-label" for="desc-step">Change steps installation</label>
+                        <figure>
+                            <figcaption class="blockquote-footer green italic">
+                                You can implement effects in your description
+                                <p>Color available: !cyan !cyan-light !green !red !white !yellow</p>
+                                Exemple: cyan! My product is very nice #;
+                                <p>You can add effect with : !blink !comment</p>
+                                <p style="font-weight:bold;color: #ea1a1a;">If you want to skip a line put (#;) at the end of your sentence</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <input type="text" id="name" class="form-control" name="new-motz-installation-steps"/>
+                        <label class="form-label" for="name">Change motz for steps installation</label>
+                    </div>
                         
-                        <input type="FILE" id="picture"name="product_image" class="form-control" accept=".png,.jpeg,.jpg"/>
-                        <label class="form-label" for="picture" class="form-label">Product Image</label>
-
-                        <input type="FILE" id="file"name="script" class="form-control"/>
-                        <label class="form-label" for="file" class="form-label">Your script</label>
-
+                        <input type="FILE" id="picture"name="product_image" class="form-control" accept=".png,.jpeg,.jpg" name="new-image"/>
+                        <label class="form-label" for="picture" class="form-label">Change product Image</label>
+                    <figure>
                         <figcaption class="blockquote-footer text-danger italic">
                             You will receive a notification when your product has been audited.
                         </figcaption>
                         <br>
                     </figure>
                     <!-- Submit button -->
-
-                    <button type="submit" name="new-item" class="btn btn-primary btn-block mb-4">Send for audit</button>
+                    <button type="submit" name="edit-item" class="btn btn-primary btn-block mb-4">Send for audit</button>
                 </form>
             </div>
             </div>

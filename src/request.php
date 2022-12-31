@@ -10,6 +10,7 @@
         include_once('./public/comment/comment.php');
     }
     if($uri == 'wrap-item'){include_once('./public/items/wrap-item.php');}
+    if($uri == 'modify-item'){include_once('./public/items/modify-item.php');}
 
     if($uri == 'signin'){include_once('./public/auth/login.php');}
     if($uri == 'signup'){include_once('./public/auth/register.php');}
@@ -22,9 +23,11 @@
     if($uri == 'profile-management'){include_once('./public/user/manage-profile.php');}
     if($uri == 'profile'){include_once('./public/user/profile.php');}
     if($uri == 'history'){include_once('./public/user/history.php');}
+    if($uri == 'manage-product'){include_once('./public/user/manage-product.php');}
 
     if($uri == 'privacy-policy'){include_once('./public/privacy-policy.php');}
 
     if($uri == ''){include_once('./public/home.php');}
+    
     
 ?>

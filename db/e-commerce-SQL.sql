@@ -45,6 +45,13 @@ price Float,
 product_image BLOB,
 script BLOB NOT NULL,
 stock INTEGER,
+trust integer,
+view integer,
+short_description integer,
+last_price integer,
+motz_installation_steps varchar,
+buy integer,
+on_cart integer,
 FOREIGN KEY (id_genre) REFERENCES Genre(id_genre)
 );
 
