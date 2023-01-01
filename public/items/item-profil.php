@@ -10,9 +10,5 @@
         include_once('./src/items/item-profil.php');
         item();
     ?>
-
-        
-
-        
     </div>
 </body>
