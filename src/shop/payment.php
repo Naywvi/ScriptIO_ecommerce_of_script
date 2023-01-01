@@ -1,6 +1,6 @@
 <?php
 
-function getID($email) {
+function getID($email) { // get user id from email
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
     $statement = $myPDO->prepare("SELECT id_user FROM users WHERE email = :email");
     $statement->bindParam(':email', $email);
@@ -9,7 +9,7 @@ function getID($email) {
     return $result;
 }
 
-function submitCart() {
+function submitCart() { // submit cart to db
 
     //check validity of cookie and get user id
     $id_user = $_POST['id_user'];
@@ -31,9 +31,9 @@ function submitCart() {
     $download = $result2['script'];
 
 
-
-
     $description = "Your order has been confirmed. Here is your <a>".$download."</a>\n\nYour order details: &#160; &#160;";
+
+    $price = 0; // price of cart
     foreach ($result as $key => $value) {
         // get product name and quantity and price from product table
         $statement2 = $myPDO->prepare("SELECT product_name, price, stock FROM product WHERE id_product = :id_product");
@@ -52,12 +52,14 @@ function submitCart() {
                 exit();
             }
         }
+        $price = $result2['price'] * $result[$key]['quantity']; // calculate price of cart
 
         $description .= $result2['product_name'] . " x" . $result[$key]['quantity'] . " - " . $result2['price'] . "€&#160;";
         
         //add link to download script
         $description .= "Download link: <p><a href='http://localhost:8080/".$download."'>".$download."</a></p>&#160;";
     }
+
     $description .= "\nTotal: " . $result['price'] . "€&#160; &#160;Thank you from the Scriptio Team";
     $statement->bindParam(':description', $description);
     $date = date("Y-m-d");
@@ -68,12 +70,44 @@ function submitCart() {
     $statement->bindParam(':id_user', $id_user);
     $statement->execute();
    
-    echo '<script>setTimeout(()=>{
-        validPayment()
-      },1)</script>';
+    echo '<script>setTimeout(()=>{validPayment()},1)</script>';
+
+    $price = $price / 2; // loyalty points are half the price of the cart
+
+    if ($price > 0) addLoyaltyPoints($id_user, $price); // add loyalty points to user
 }
 
-function decrementProductStock($id_product, $quantity) {
+function addLoyaltyPoints($id_user, $points) { // add loyalty points to user
+    
+    $pointsInDB = getLoyaltyPoints($id_user);
+
+    if($pointsInDB){
+        $myPDO = new PDO('sqlite:./db/Scriptio.db');
+        $points += $pointsInDB['point']+2;
+        $statement = $myPDO->prepare("update loyalty set point = :point where id_user = :id_user");
+        $statement->bindParam(':id_user', $id_user);
+        $statement->bindParam(':point', $points);
+        $statement->execute();
+     }else{
+        $myPDO = new PDO('sqlite:./db/Scriptio.db');
+        $statement = $myPDO->prepare("INSERT INTO loyalty (id_user, point) VALUES (:id_user, :point)");
+        $statement->bindParam(':id_user', $id_user);
+        $statement->bindParam(':point', $points);
+        $statement->execute();
+     }  
+    
+}
+
+function getLoyaltyPoints($id_user) { // get loyalty points of user
+    $myPDO = new PDO('sqlite:./db/Scriptio.db');
+    $statement = $myPDO->prepare("SELECT point FROM loyalty WHERE id_user = :id_user");
+    $statement->bindParam(':id_user', $id_user);
+    $statement->execute();
+    $result = $statement->fetch(PDO::FETCH_ASSOC);
+    return $result;
+}
+
+function decrementProductStock($id_product, $quantity) { // decrement product stock
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
     $statement = $myPDO->prepare("UPDATE product SET stock = :quantity WHERE id_product = :id_product");
     $statement->bindParam(':id_product', $id_product);
