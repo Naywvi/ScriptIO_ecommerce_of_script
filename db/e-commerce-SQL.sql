@@ -114,3 +114,10 @@ date date,
 FOREIGN KEY (id_user) REFERENCES users(id_user),
 FOREIGN KEY (id_product) REFERENCES product(id_product)
 );
+
+CREATE TABLE loyalty(
+id_loyalty INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+id_user integer NOT NULL,
+point integer,
+FOREIGN KEY (id_user) REFERENCES users(id_user)
+);
