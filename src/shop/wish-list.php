@@ -1,7 +1,5 @@
 <?php
 
-// fetch wishlist by user id
-
 function getWishList($id_user){
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
     $stmt = $myPDO->query("SELECT * FROM wishlist WHERE id_user = '$id_user'");
@@ -11,12 +9,15 @@ function getWishList($id_user){
     return $row;
 }
 
-function removeFromWishList($id_product,$id_user){
+function removeFromWishlist(){
+    $id_product = $_POST['id_product'];
+    $id_user = $_POST['id_user'];
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
-    $stmt = $myPDO->query("DELETE FROM wishlist WHERE id_product = $id_product AND id_user = $id_user");
-    $stmt -> execute();
-    $stmt = null;
-    $myPDO = null;
+    $stmt = $myPDO->prepare("DELETE FROM wishlist WHERE id_product = :id_product AND id_user = :id_user");
+    $stmt->bindParam(':id_product', $id_product);
+    $stmt->bindParam(':id_user', $id_user);
+    $stmt->execute();
+    header("Location: /my-wish-list");
 }
 
 function printWishList($id_user){

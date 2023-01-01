@@ -40,8 +40,8 @@
         deleteFromCart();
     }
 
-    // if (isset($_POST['wishlist-remove'])) {
-    //     include_once('./src/shop/wishlist.php');
-    //     removeFromWishList();
-    // }
+    if (isset($_POST['wishlist-delete'])) {
+        include_once('./src/shop/wish-list.php');
+        removeFromWishlist();
+    }
 ?>
