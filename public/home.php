@@ -22,30 +22,30 @@
       </section>
       <section class="container-fluid">
           <div class="center-tab">
-              <h1 class="title spacebtw" id="home_section">Lorem Ipsum is simply dummy</h1>
+              <h1 class="title spacebtw" id="home_section">Scriptio the website to share Scripts</h1>
           </div>
           
           <div class="row1-container reveal">
               <div class="box box-down cyan c-code">
                 <h2 class="green">Objectif</h2>
-                <p class="white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                <h5 class="white">The website to share and acquire scripts of all sorts ! </h5>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/800px-Sign-check-icon.png" alt="" class="img-information">
               </div>
               <div class="box red reveal c-code">
                 <h2 class="yellow">Security</h2>
-                <p class="white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                <h5 class="white">Scriptio has several administrators that check for malicious scripts </h5>
                 <img src="https://www.pngall.com/wp-content/uploads/4/Cyber-Security-Logo-PNG.png" alt="" class="img-information">
               </div>
               <div class="box box-down blue reveal c-code">
                 <h2 class="red bold">Free</h2>
-                <p class="white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                <h5 class="white">Free scripts are available in exchange for discounts </h5>
                 <img src="https://www.pngall.com/wp-content/uploads/2016/04/Free-Free-Download-PNG.png" alt="" class="img-information">
               </div>
             </div>
             <div class="row2-container reveal ">
               <div class="box orange c-code">
                 <h2 class="cyan">Privacy policy</h2>
-                <p class="white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                <h5 class="white">We have a script privacy policy to ensure are users are safe </h5>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Circle-icons-document.svg/800px-Circle-icons-document.svg.png" alt="" class="img-information">
               </div>
             </div>

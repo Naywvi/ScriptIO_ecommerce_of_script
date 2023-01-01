@@ -33,14 +33,14 @@ function submitCart() {
 
 
 
-    $description = "Your order has been confirmed. Here is your <a>".$download."</a>\n\nYour order details:\n\n";
+    $description = "Your order has been confirmed. Here is your <a>".$download."</a>\n\nYour order details: &#160; &#160;";
     foreach ($result as $key => $value) {
         // get product name and quantity and price from product table
         $statement2 = $myPDO->prepare("SELECT product_name, price, stock FROM product WHERE id_product = :id_product");
         $statement2->bindParam(':id_product', $result[$key]['id_product']);
         $statement2->execute();
         $result2 = $statement2->fetch(PDO::FETCH_ASSOC);
-
+       
         // check if product is in stock
         if ($result2['stock'] != "UNLIMITED") {
             if ($result2['stock'] - $result[$key]['quantity'] >= 0) {
@@ -48,16 +48,17 @@ function submitCart() {
             } else {
                 echo "<style>#message{display:unset !important;}</style>";
                 header("Location: /checkout");
+                
                 exit();
             }
         }
 
-        $description .= $result2['product_name'] . " x" . $result[$key]['quantity'] . " - " . $result2['price'] . "€\n";
-
+        $description .= $result2['product_name'] . " x" . $result[$key]['quantity'] . " - " . $result2['price'] . "€&#160;";
+        
         //add link to download script
-        $description .= "Download link: <a href='http://localhost:8080/".$download."'>".$download."</a>\n";
+        $description .= "Download link: <p><a href='http://localhost:8080/".$download."'>".$download."</a></p>&#160;";
     }
-    $description .= "\nTotal: " . $result['price'] . "€\n\nThank you from the Scriptio Team";
+    $description .= "\nTotal: " . $result['price'] . "€&#160; &#160;Thank you from the Scriptio Team";
     $statement->bindParam(':description', $description);
     $date = date("Y-m-d");
     $statement->bindParam(':date', $date);
@@ -66,6 +67,10 @@ function submitCart() {
     $statement = $myPDO->prepare("DELETE FROM cart_temp WHERE id_user = :id_user"); // delete cart_temp
     $statement->bindParam(':id_user', $id_user);
     $statement->execute();
+   
+    echo '<script>setTimeout(()=>{
+        validPayment()
+      },1)</script>';
 }
 
 function decrementProductStock($id_product, $quantity) {

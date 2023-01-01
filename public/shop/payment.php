@@ -219,7 +219,7 @@
                     </div>';
 
           echo '<form method="post">
-					<a hre="#" onclick="validPayment()">
+					<a hre="#">
           <input type="hidden" name="id_user" value="'.$id.'">
 						<button type="submit" class="btn btn-info btn-block btn-lg" name="cart-submit">
 						<div class="d-flex justify-content-between">

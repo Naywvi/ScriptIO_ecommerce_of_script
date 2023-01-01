@@ -1,5 +1,18 @@
 <?php
 
+function wishlistAddToCart(){
+    $id_product = $_POST['id_product'];
+    $id_user = $_POST['id_user'];
+    $quantity = 1;
+    $myPDO = new PDO('sqlite:./db/Scriptio.db');
+    $stmt = $myPDO->prepare("INSERT INTO cart_temp (id_product, id_user, quantity) VALUES (:id_product, :id_user, :quantity)");
+    $stmt->bindParam(':id_product', $id_product);
+    $stmt->bindParam(':id_user', $id_user);
+    $stmt->bindParam(':quantity', $quantity);
+    $stmt->execute();
+    header("Location: /my-wish-list");
+}
+
 function getWishList($id_user){
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
     $stmt = $myPDO->query("SELECT * FROM wishlist WHERE id_user = '$id_user'");
@@ -50,6 +63,13 @@ function printWishList($id_user){
               <input type="hidden" name="id_user" value="'.$item['id_user'].'">
               <button type="submit" name="wishlist-delete" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
               </form>
+
+              <form method="post">
+              <input type="hidden" name="id_product" value="'.$item['id_product'].'">
+              <input type="hidden" name="id_user" value="'.$item['id_user'].'">
+              <button type="submit" name="wishlist-add-to-cart" class="btn btn-success btn-sm"><i class="fas fa-cart-plus"></i></button>
+              </form>
+
             </div>
           </div>
         </div>

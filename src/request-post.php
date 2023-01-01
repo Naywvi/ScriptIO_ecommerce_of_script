@@ -52,6 +52,11 @@
         removeFromWishlist();
     }
 
+    if (isset($_POST['wishlist-add-to-cart'])) {
+        include_once('./src/shop/wish-list.php');
+        wishlistAddToCart();
+    }
+
     //admin panel
 
     if (isset($_POST['add-category'])) {
