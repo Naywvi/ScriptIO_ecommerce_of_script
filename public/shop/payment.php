@@ -53,7 +53,10 @@
 
                 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
+                $total = 0;
                 foreach ($result as $row) {
+
+                  $total += $row['quantity'] * $row['price'];
 
                   //get product information
 
@@ -101,9 +104,9 @@
                 }
 
                 
-                ?>
 
-                <!-- <div class="card mb-3">
+
+               echo '<!-- <div class="card mb-3">
                   <div class="card-body">
                     <div class="d-flex justify-content-between">
                       <div class="d-flex flex-row align-items-center">
@@ -153,8 +156,8 @@
                     <form class="mt-4">
                       <div class="form-outline form-white mb-4">
                         <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
-                          placeholder="Cardholder's Name" />
-                        <label class="form-label" for="typeName">Cardholder's Name</label>
+                          placeholder="Cardholder Name" />
+                        <label class="form-label" for="typeName">Cardholder Name</label>
                       </div>
 
                       <div class="form-outline form-white mb-4">
@@ -187,7 +190,7 @@
                     <div class="form-outline mb-6 reduction-code">
                         <input type="text" id="form4Example1" class="form-control" placeholder="Reduction code"/>
                     </div>
-
+<!-- 
                     <div class="d-flex justify-content-between">
                       <p class="mb-2">Subtotal</p>
                       <p class="mb-2">$4798.00</p>
@@ -196,19 +199,24 @@
                     <div class="d-flex justify-content-between">
                       <p class="mb-2">Shipping</p>
                       <p class="mb-2">$20.00</p>
-                    </div>
+                    </div> -->';
 
-                    <div class="d-flex justify-content-between mb-4">
-                      <p class="mb-2">Total(Incl. taxes)</p>
-                      <p class="mb-2">$4818.00</p>
-                    </div>
+                    function total($price, $quantity){
+                      $total = $price * $quantity;
+                      return $total;
+                    }
 
-          <form method="post">
+                    echo '<div class="d-flex justify-content-between mb-4">
+                      <p class="mb-2">Total</p>
+                      <p class="mb-2">'.$total.'</p>
+                    </div>';
+
+          echo '<form method="post">
 					<a hre="#" onclick="validPayment()">
 						<button type="submit" class="btn btn-info btn-block btn-lg" name="cart-submit">
 						<div class="d-flex justify-content-between">
-							<span>$4818.00</span>
-							
+							<span>'.$total.'</span>';
+          ?>
 							<span >Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
 							
 						</div>
