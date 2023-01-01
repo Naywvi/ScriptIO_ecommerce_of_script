@@ -40,12 +40,6 @@
                                 include_once('./src/_header.php');
                                 admin($user);
                             ?>
-                        <li class="nav-item shop notification-shop">
-                            <a href="checkout">
-                            <span class="material-symbols-outlined icon-shop">shopping_bag</span>
-                            <span class="badge badge-not debug">3</span>
-                            </a>
-                        </li>
                             <?php 
                                 include_once('./src/_header.php');
                                 connexion($user);

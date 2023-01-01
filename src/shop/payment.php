@@ -24,8 +24,6 @@ function submitCart() {
     $context = "Order";
     $statement->bindParam(':context', $context);
 
-    //get file download link
-
     $statement2 = $myPDO->prepare("SELECT * FROM product WHERE id_product = :id_product");
     $statement2->bindParam(':id_product', $result[0]['id_product']);
     $statement2->execute();

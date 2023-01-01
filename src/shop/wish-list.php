@@ -39,7 +39,7 @@ function printWishList($id_user){
               </div>
             </div>
             <div class="d-flex flex-row align-items-center">
-              <div style="width: 50px;">
+              <div style="width: 125px;">
                 <h5 class="fw-normal mb-0">'.$item['stock'].'</h5>
               </div>
               <div style="width: 80px;">

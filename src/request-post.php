@@ -13,10 +13,17 @@
         include_once('./src/auth/reset-password.php');
         reset_password();
     }
+
     if (isset($_POST['manage-profile'])) { // if login form was submitted
         include_once('./src/user/manage-profile.php');
         manage(htmlspecialchars($_GET["profile"]));
     }
+
+    if (isset($_POST['new-comment'])) { // if login form was submitted
+        include_once('./src/comment/comment.php');
+        addComment();
+    }
+
     if (isset($_POST['new-item'])) {
         include_once('./src/items/new-item.php');
         newItem();
@@ -44,4 +51,33 @@
         include_once('./src/shop/wish-list.php');
         removeFromWishlist();
     }
+
+    //admin panel
+
+    if (isset($_POST['add-category'])) {
+        include_once('./src/admin/admin.php');
+        addCategory();
+    }
+
+    if (isset($_POST['delete-category'])) {
+        include_once('./src/admin/admin.php');
+        deleteCategory();
+    }
+
+    if (isset($_POST['ban-user'])) {
+        include_once('./src/admin/admin.php');
+        banUser();
+    }
+
+    if (isset($_POST['delete-item'])) {
+        include_once('./src/admin/admin.php');
+        deleteItem();
+    }
+
+    if (isset($_POST['notification-send'])) {
+        include_once('./src/admin/admin.php');
+        notificationSend();
+    }
+
+
 ?>

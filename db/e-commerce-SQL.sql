@@ -102,3 +102,15 @@ id_product INTEGER NOT NULL,
 FOREIGN KEY (id_user) REFERENCES Users(id_user),
 FOREIGN KEY (id_product) REFERENCES Product(id_product)
 );
+
+CREATE TABLE comment(
+id_comment INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+id_user integer NOT NULL,
+title text,
+content text,
+trust,
+id_product,
+date date,
+FOREIGN KEY (id_user) REFERENCES users(id_user),
+FOREIGN KEY (id_product) REFERENCES product(id_product)
+);

@@ -56,8 +56,15 @@
                 $index = 0;
                 foreach ($result as $row) {
                   $index++;
-                  // get total price
-                  $total += $row['quantity'] * $row['price'];
+                  //get price from product table 
+                  $id_product = $row['id_product'];
+
+                  $product = $myPDO->prepare("SELECT price FROM product WHERE id_product = :id_product"); // get product data
+                  $product->bindParam(':id_product', $id_product);
+                  $product->execute();
+                  $product_data = $product->fetch(PDO::FETCH_ASSOC);
+
+                  $total += $row['quantity'] * $product_data['price']; // get total price
 
                   //get product information
 
