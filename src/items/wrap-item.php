@@ -53,9 +53,7 @@ function printItems($items,$query,$rubric,$user) {
                 </div>
                     
                 <div class="col col-3 img-card">
-                    <div class="img-card">
-                        <img src="https://www.getquanty.com/wp-content/uploads/2017/09/emailing-1.jpg"></img>
-                    </div>
+                    <img src="'.$value[7].'" class="card-img-top" alt="...">
                 </div>
             </div>
         </div>
@@ -67,7 +65,7 @@ function printItems($items,$query,$rubric,$user) {
 
 function getGenre($genre_name){
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
-    $stmt = $myPDO->query("SELECT * FROM genre WHERE name = $genre_name");
+    $stmt = $myPDO->query("SELECT * FROM genre WHERE name = '$genre_name'");
     $row = $stmt->fetch();
     $stmt = null;
     $myPDO = null;
@@ -125,8 +123,8 @@ function wrapItems(){
             if($user != '0'){
                 addCart($cart,$user);
                 $onCart = getItemStock($cart);
-                echo $onCart[0];
-                addFakeStock($onCart[0]+1,$cart);
+                // echo $onCart[0];
+                if ($onCart[0] != 'UNLIMITED') addFakeStock($onCart[0]+1,$cart);
             }else{
                 addCart($cart,0);
             }

@@ -1,5 +1,7 @@
 <?php
 
+include './src/items/new-item.php';
+
 function getIdUser($username){
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
     $stmt = $myPDO->query("SELECT id_user,user_password FROM users WHERE username = '$username'");
@@ -13,19 +15,17 @@ function manage($user){
     $row_user = array(
         $_POST['first-name'],
         $_POST['last-name'],
-        $_POST['compagny'],
+        $_POST['company'],
         $_POST['phone'],
         $_POST['email'],
         $_POST['lucky-phrase'],
-        $_POST['picture'],
         $_POST['description'],
         'first_name',
         'last_name',
-        'compagny',
+        'company',
         'phone_number',
         'email',
         'lucky_phrase',
-        'picture',
         'description'
     );
 
@@ -48,18 +48,19 @@ function manage($user){
     );
     
     settype($indexX,'integer');
-
     foreach($row_user as $value){
-        if(strlen($value) != 0 && $indexX <= 7){
-            $index += 1;
-            $field = $row_user[8+$indexX];
-            $myPDO = new PDO('sqlite:./db/Scriptio.db');
-            $stmt = $myPDO->query("UPDATE users SET $field = '$value' WHERE username = '$user'");
-            $stmt = null;
-            $myPDO = null;
-        }
+        
+    if(strlen($value) != 0 && $indexX <= 6){
+                $index += 1;
+                $field = $row_user[7+$indexX];
+                $myPDO = new PDO('sqlite:./db/Scriptio.db');
+                $stmt = $myPDO->query("UPDATE users SET $field = '$value' WHERE username = '$user'");
+                $stmt = null;
+                $myPDO = null;
+            }
         $indexX +=1;
     }
+
 
     $indexX =0;
     $id_user = getIdUser($user);
@@ -102,6 +103,15 @@ function manage($user){
             
         }
         $indexX +=1;
+    }
+
+    if ($value = $_FILES['profil-picture']){
+        $path = saveFile($value, './db/avatar/');
+        $field = $row_user[7+$indexX];
+        $myPDO = new PDO('sqlite:./db/Scriptio.db');
+        $stmt = $myPDO->query("UPDATE users SET 'picture' = '$path' WHERE username = '$user'");
+        $stmt = null;
+        $myPDO = null;
     }
 }
 
@@ -185,10 +195,10 @@ function birthday($bd){
     </div>
     ';
 }
-function compagny($cp){
+function company($cp){
     echo'
     <div class="form-outline mb-4">
-        <input type="text" id="company" class="form-control" placeholder="'.$cp.'" name="compagny"/>
+        <input type="text" id="company" class="form-control" placeholder="'.$cp.'" name="company"/>
         <label class="form-label" for="company">Company name</label>
     </div>
     ';
@@ -255,6 +265,7 @@ function luckyphrase($lk){
     </div>
     ';
 }
+
 function form($user){
     $query = htmlspecialchars($_GET["profile"]);
     
@@ -265,7 +276,7 @@ function form($user){
         lastname($user['last_name']);
         username($user['username']);
         birthday($user['birthday']);
-        compagny($user['compagny']);
+        company($user['company']);
         address($address);
         email($user['email']);
         phone($user['phone_number']);

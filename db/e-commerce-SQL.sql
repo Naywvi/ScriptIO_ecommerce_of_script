@@ -45,6 +45,16 @@ on_cart integer,
 FOREIGN KEY (id_genre) REFERENCES Genre(id_genre)
 );
 
+CREATE TABLE address(
+id_address INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+id_user INTEGER NOT NULL,
+address varchar(20) NOT NULL,
+city varchar(20) NOT NULL,
+country varchar(20) NOT NULL,
+postal_code varchar(20) NOT NULL,
+FOREIGN KEY (id_user) REFERENCES Users(id_user)
+);
+
 CREATE TABLE command(
 id_command INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
 id_user INTEGER NOT NULL,

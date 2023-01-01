@@ -32,6 +32,14 @@
         return $path; // return path to file
     }
 
+    function loadFile($path) {
+        if (!file_exists($path)) { // check if file exists
+            echo "File not found";
+            return false;
+        }
+        return file_get_contents($path); // return file content
+    }
+
     function GetIDGenre($genre_name){
         echo $genre_name;
         $myPDO = new PDO('sqlite:./db/Scriptio.db');

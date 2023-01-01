@@ -37,6 +37,6 @@
     }
     if (isset($_POST['cart-delete'])) {
         include_once('./src/shop/cart-shopping.php');
-        deleteCart();
+        deleteFromCart();
     }
 ?>

@@ -32,7 +32,7 @@
 
                 <?php
 
-                $email = $_COOKIE['email'];
+                $email = $user['email'];
                 $myPDO = new PDO('sqlite:./db/Scriptio.db');
 
                 $id_user = $myPDO->prepare("SELECT id_user FROM users WHERE email = :email");
@@ -98,6 +98,7 @@
                           </div>
                           <form method="post">
                             <input type="hidden" name="id_product" value="'.$product['id_product'].'">
+                            <input type="hidden" name="id_user" value="'.$id.'">
                             <button type="submit" name="cart-delete" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
                           </form>
                         </div>

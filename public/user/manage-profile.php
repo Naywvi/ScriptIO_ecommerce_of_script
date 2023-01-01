@@ -4,7 +4,7 @@
 </head>
 <body>
 <div class="container space background-white">
-<form method='post'>
+<form method='post' enctype="multipart/form-data">
   
   <!-- 2 column grid layout with text inputs for the first and last names -->
   <?php
@@ -16,7 +16,7 @@
   <!-- Text input -->
   <div class="form-outline mb-4">
     
-    <input type="file" id="profil-picture" name="profil-picture" class="form-label" name="picture">
+    <input type="file" id="profil-picture" name="profil-picture" class="form-label">
     <label for="profil-picture">Profil picture</label>
 
   </div>
