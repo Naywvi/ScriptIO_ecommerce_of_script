@@ -13,7 +13,7 @@
                     <a href="#item" >Item_Name</a>
                 </div>
                 <div class="header-card">
-                    <div>
+                    <div> 
                         <span class="c-code">RUBRIC</span>
                     </div>
                 </div>

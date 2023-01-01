@@ -8,13 +8,14 @@ function getUser($username){
     $myPDO = null;
     return $row;
 }
-function echoTrust($trust){
 
-    if(strlen($trust) != 0){
+function echoTrust($trust){ 
+  
+    if(gettype($trust) == 'integer'){
+        
+        $rest = 5-$trust;
 
-        $rest = 5-$user['trust'];
-
-        for ($i = 0; $i <= $user['trust']-1; $i++) {
+        for ($i = 0; $i <= $trust-1; $i++) {
             echo '<i class="fa fa-star yellow"></i>';
         }
         for ($i = 0; $i <= $rest-1; $i++) {
@@ -49,7 +50,7 @@ function printItems($items,$query,$rubric,$user) {
                         <p class="card-text white"><span class="cc-code">2 </span>'.$value[4].'</p>
                         <span class="cc-code">3 </span>
                         ';
-                         echoTrust($value[4]);
+                         echoTrust($value[10]);
                          echo '
                         <span class="green bold">- ';
                         price($value[6]);

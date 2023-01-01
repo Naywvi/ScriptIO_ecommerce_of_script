@@ -24,6 +24,12 @@ function login() {
             //send cookie to user
             $row = getID($email);
 
+            // password typechecking
+            // if (!passwordTypeChecking($user_password)) {
+            //     echo "<style>#message{display:unset !important;}</style>";
+            //     header("Location: /signin");
+            //     exit();
+            // }
             //**Forced to place last_connexion here -> bug 
             $lastC = date("j-n-Y");
             $pdo = new PDO('sqlite:./db/Scriptio.db');

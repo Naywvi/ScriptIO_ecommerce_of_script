@@ -32,11 +32,16 @@
         modifyItem();
     }
     if (isset($_POST['cart-submit'])) {
-        include_once('./src/items/payment.php');
+        include_once('./src/shop/payment.php');
         submitCart();
     }
     if (isset($_POST['cart-delete'])) {
         include_once('./src/shop/cart-shopping.php');
         deleteFromCart();
     }
+
+    // if (isset($_POST['wishlist-remove'])) {
+    //     include_once('./src/shop/wishlist.php');
+    //     removeFromWishList();
+    // }
 ?>

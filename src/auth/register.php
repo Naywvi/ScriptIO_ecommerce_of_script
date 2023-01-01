@@ -16,6 +16,12 @@ function register() {
     $birthday = $_POST['birthday'];
     $phone_number = $_POST['phone_number'];
     $user_role = "user";
+
+    // if (!passwordTypeChecking($user_password)) {
+    //     echo "<style>#message{display:unset !important;}</style>";
+    //     header("Location: /signup");
+    //     exit();
+    // }
     
     //check if user exists
     $statement = $myPDO->prepare("SELECT * FROM users WHERE email = :email");

@@ -9,33 +9,40 @@ function getID($email) {
     return $result;
 }
 
-function cartSubmit() {
+function submitCart() {
 
     //check validity of cookie and get user id
-
+    $id_user = $_POST['id_user'];
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
-    $statement = $myPDO->prepare("SELECT * FROM cart_temp WHERE id_user = :id_user");
-    $statement->bindParam(':id_user', $_SESSION['id_user']);
+    $statement = $myPDO->prepare("SELECT * FROM cart_temp WHERE id_user = :id_user"); // get cart_temp
+    $statement->bindParam(':id_user', $id_user);
     $statement->execute();
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-    $statement = $myPDO->prepare("SELECT * FROM users WHERE id_user = :id_user");
-    $statement->bindParam(':id_user', $_SESSION['id_user']);
-    $statement->execute();
-    $result2 = $statement->fetch(PDO::FETCH_ASSOC);
-
-    $statement = $myPDO->prepare("SELECT * FROM product WHERE id_product = :id_product");
-    $statement->bindParam(':id_product', $result['id_product']);
-    $statement->execute();
-    $result3 = $statement->fetch(PDO::FETCH_ASSOC);
-
-    $statement = $myPDO->prepare("INSERT INTO notification (id_user, context, description, date) VALUES (:id_user, :context, :description, :date)");
-    $statement->bindParam(':id_user', $_SESSION['id_user']);
+    $statement = $myPDO->prepare("INSERT INTO notification (id_user, context, description, date) VALUES (:id_user, :context, :description, :date)"); // insert notification in db (order history)
+    $statement->bindParam(':id_user', $id_user);
     $context = "Order";
     $statement->bindParam(':context', $context);
     $description = "Your order has been confirmed. You will receive your order in 3-5 business days.\n\nYour order details:\n\n";
     foreach ($result as $key => $value) {
-        $description .= $result3['name'] . " x" . $result['quantity'] . " - " . $result['price'] . "€\n";
+        // get product name and quantity and price from product table
+        $statement2 = $myPDO->prepare("SELECT product_name, price, stock FROM product WHERE id_product = :id_product");
+        $statement2->bindParam(':id_product', $result[$key]['id_product']);
+        $statement2->execute();
+        $result2 = $statement2->fetch(PDO::FETCH_ASSOC);
+
+        // check if product is in stock
+        if ($result2['stock'] != "UNLIMITED") {
+            if ($result2['stock'] - $result[$key]['quantity'] >= 0) {
+                decrementProductStock($result[$key]['id_product'], $result[$key]['quantity']);
+            } else {
+                echo "<style>#message{display:unset !important;}</style>";
+                header("Location: /checkout");
+                exit();
+            }
+        }
+
+        $description .= $result2['product_name'] . " x" . $result[$key]['quantity'] . " - " . $result2['price'] . "€\n";
     }
     $description .= "\nTotal: " . $result['price'] . "€\n\nThank you from the Scriptio Team";
     $statement->bindParam(':description', $description);
@@ -43,17 +50,17 @@ function cartSubmit() {
     $statement->bindParam(':date', $date);
     $statement->execute();
 
-    $statement = $myPDO->prepare("DELETE FROM cart_temp WHERE id_user = :id_user");
-    $statement->bindParam(':id_user', $_SESSION['id_user']);
+    $statement = $myPDO->prepare("DELETE FROM cart_temp WHERE id_user = :id_user"); // delete cart_temp
+    $statement->bindParam(':id_user', $id_user);
     $statement->execute();
+}
 
-    $to = $result2['email'];
-    $subject = "Order confirmation";
-    $message = "Hello " . $result2['first_name'] . " " . $result2['last_name'] . ",\n\nYour order has been confirmed. You will receive your order in 3-5 business days.\n\nYour order details:\n\n";
-    foreach ($result as $key => $value) {
-        $message .= $result3['name'] . " x" . $result['quantity'] . " - " . $result['price'] . "€\n";
-    }
-    $message .= "\nTotal: " . $result['price'] . "€\n\nThank you from the Scriptio Team";
+function decrementProductStock($id_product, $quantity) {
+    $myPDO = new PDO('sqlite:./db/Scriptio.db');
+    $statement = $myPDO->prepare("UPDATE product SET stock = :quantity WHERE id_product = :id_product");
+    $statement->bindParam(':id_product', $id_product);
+    $statement->bindParam(':quantity', $quantity);
+    $statement->execute();
 }
 
 ?>

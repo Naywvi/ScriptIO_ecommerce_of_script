@@ -1,5 +1,5 @@
 <head>
-   <title>Script'iO - My scripts</title>
+   <title>Script'iO - Checkout</title>
    <link rel="stylesheet" href="./assets/css/cart.css"/>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/>
@@ -50,12 +50,13 @@
 
                 $statement->execute();
 
-
                 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
                 $total = 0;
+                $index = 0;
                 foreach ($result as $row) {
-
+                  $index++;
+                  // get total price
                   $total += $row['quantity'] * $row['price'];
 
                   //get product information
@@ -72,15 +73,13 @@
 
                   $name = $product_data['product_name'];
                   $price = $product_data['price'];
-                  $image = $product_data['image'];
+                  $image = $product_data['product_image'];
                     echo '<div class="card mb-3">
                     <div class="card-body">
                       <div class="d-flex justify-content-between">
                         <div class="d-flex flex-row align-items-center">
                           <div>
-                            <img
-                              src="'.$product_data['image'].'"
-                              class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                            <img src="'.$image.'" class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                           </div>
                           <div class="ms-3">
                             <h5>'.$product_data['product_name'].'</h5>
@@ -204,11 +203,6 @@
                       <p class="mb-2">$20.00</p>
                     </div> -->';
 
-                    function total($price, $quantity){
-                      $total = $price * $quantity;
-                      return $total;
-                    }
-
                     echo '<div class="d-flex justify-content-between mb-4">
                       <p class="mb-2">Total</p>
                       <p class="mb-2">'.$total.'</p>
@@ -216,6 +210,7 @@
 
           echo '<form method="post">
 					<a hre="#" onclick="validPayment()">
+          <input type="hidden" name="id_user" value="'.$id.'">
 						<button type="submit" class="btn btn-info btn-block btn-lg" name="cart-submit">
 						<div class="d-flex justify-content-between">
 							<span>'.$total.'</span>';
