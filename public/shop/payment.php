@@ -96,7 +96,10 @@
                             <h5 class="mb-0">$'.$product['price'].'
                             </h5>
                           </div>
-                          <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                          <form method="post">
+                            <input type="hidden" name="id_product" value="'.$product['id_product'].'">
+                            <button type="submit" name="cart-delete" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
+                          </form>
                         </div>
                       </div>
                     </div>

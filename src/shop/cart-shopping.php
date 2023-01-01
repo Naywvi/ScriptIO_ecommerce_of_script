@@ -34,6 +34,19 @@ function addToCart() {
 
 }
 
+function deleteFromCart(){
+    $id_product = $_POST['id_product'];
+    $id_user = $_POST['id_user'];
+
+    $myPDO = new PDO('sqlite:./db/Scriptio.db');
+    $statement = $myPDO->prepare("DELETE FROM cart_temp WHERE id_product = :id_product AND id_user = :id_user");
+    $statement->bindParam(':id_product', $id_product);
+    $statement->bindParam(':id_user', $id_user);
+    $statement->execute();
+    header("Location: /checkout");
+    exit();
+}
+
 function PurgeCart($id_user) {
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
     $statement = $myPDO->prepare("DELETE FROM cart_temp WHERE id_user = :id_user");

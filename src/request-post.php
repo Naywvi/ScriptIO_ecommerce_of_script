@@ -35,4 +35,8 @@
         include_once('./src/items/payment.php');
         submitCart();
     }
+    if (isset($_POST['cart-delete'])) {
+        include_once('./src/shop/cart-shopping.php');
+        deleteCart();
+    }
 ?>
