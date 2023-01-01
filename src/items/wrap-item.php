@@ -47,7 +47,7 @@ function printItems($items,$query,$rubric,$user) {
                 <div class="col">
                     <div class="card-body">
                         <a href="item?item='.$value[0].'"><h5 style="color: #697de8 !important;" class="card-title white"><span class="cc-code">1 </span >'.$value[2].'</h5></a>
-                        <p class="card-text white"><span class="cc-code">2 </span>'.$value[4].'</p>
+                        <p class="card-text white"><span class="cc-code">2 </span>'.$value[12].'</p>
                         <span class="cc-code">3 </span>
                         ';
                          echoTrust($value[10]);

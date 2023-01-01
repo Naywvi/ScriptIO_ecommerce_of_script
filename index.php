@@ -25,6 +25,5 @@
     include_once('./public/_script.php');
     include_once('./public/_end-page.php');
 
-    //https://bootsnipp.com/snippets/A3p9E
     
     ?>
