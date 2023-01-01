@@ -23,7 +23,19 @@ function submitCart() {
     $statement->bindParam(':id_user', $id_user);
     $context = "Order";
     $statement->bindParam(':context', $context);
-    $description = "Your order has been confirmed. You will receive your order in 3-5 business days.\n\nYour order details:\n\n";
+
+    //get file download link
+
+    $statement2 = $myPDO->prepare("SELECT * FROM product WHERE id_product = :id_product");
+    $statement2->bindParam(':id_product', $result[0]['id_product']);
+    $statement2->execute();
+    $result2 = $statement2->fetch(PDO::FETCH_ASSOC);
+    $download = $result2['script'];
+
+
+
+
+    $description = "Your order has been confirmed. Here is your <a>".$download."</a>\n\nYour order details:\n\n";
     foreach ($result as $key => $value) {
         // get product name and quantity and price from product table
         $statement2 = $myPDO->prepare("SELECT product_name, price, stock FROM product WHERE id_product = :id_product");
