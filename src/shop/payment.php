@@ -21,7 +21,7 @@ function submitCart() {
 
     $statement = $myPDO->prepare("INSERT INTO notification (id_user, context, description, date) VALUES (:id_user, :context, :description, :date)"); // insert notification in db (order history)
     $statement->bindParam(':id_user', $id_user);
-    $context = "Order";
+    $context = "Last order";
     $statement->bindParam(':context', $context);
 
     $statement2 = $myPDO->prepare("SELECT * FROM product WHERE id_product = :id_product");
@@ -53,6 +53,9 @@ function submitCart() {
         }
 
         $description .= $result2['product_name'] . " x" . $result[$key]['quantity'] . " - " . $result2['price'] . "€\n";
+
+        //add link to download script
+        $description .= "Download link: <a href='http://localhost:8080/".$download."'>".$download."</a>\n";
     }
     $description .= "\nTotal: " . $result['price'] . "€\n\nThank you from the Scriptio Team";
     $statement->bindParam(':description', $description);

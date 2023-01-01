@@ -64,7 +64,10 @@
                   $product->execute();
                   $product_data = $product->fetch(PDO::FETCH_ASSOC);
 
-                  $total += $row['quantity'] * $product_data['price']; // get total price
+                  if ($product_data['price'] != 0 && $product_data['price'] != 'FREE') {
+                    $total += $row['quantity'] * $product_data['price']; // get total price
+                  }
+
 
                   //get product information
 
