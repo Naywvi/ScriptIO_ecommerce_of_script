@@ -11,10 +11,30 @@
                 <form method="post" enctype="multipart/form-data">
                     
                     <!-- name input -->
-                    <div class="form-outline mb-4">
+                    
+                    <!-- <div class="form-outline mb-4">
                         <input type="text" id="name" class="form-control" name="category"/>
                         <label class="form-label" for="name">Category</label>
+                    </div> -->
+
+                    <div class="form-outline mb-4">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="category">
+                        <option>FREE</option>
+                        <option>Social networks</option>
+                        <option>Scrapping</option>
+                        <option>Emailing</option>
+                        <option>Web</option>
+                        <option>Windows</option>
+                        <option>Linux</option>
+                        <option>MacOS</option>
+                        <option>Mobile</option>
+                        <option>other</option>
+                        </select>
                     </div>
+                   
+                        
+                    
 
                     <div class="form-outline mb-4">
                         <input type="text" id="name" class="form-control" name="product-name"/>

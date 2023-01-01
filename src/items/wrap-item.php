@@ -97,7 +97,7 @@ function addWishList($wishlist,$id_user){
 
 function getItemStock($id_product){
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
-    $stmt = $myPDO->query("SELECT on_cart FROM product WHERE id_product = $id_product");
+    $stmt = $myPDO->query("SELECT stock FROM product WHERE id_product = $id_product");
     $row = $stmt->fetch();
     $stmt = null;
     $myPDO = null;
@@ -123,10 +123,11 @@ function wrapItems(){
             if($user != '0'){
                 addCart($cart,$user);
                 $onCart = getItemStock($cart);
-                // echo $onCart[0];
-                if ($onCart[0] != 'UNLIMITED') addFakeStock($onCart[0]+1,$cart);
+                if ($onCart[0] === 'UNLIMITED'){}else{
+                    addFakeStock($onCart[0]+1,$cart);
+                }
             }else{
-                addCart($cart,0);
+                echo '<script>You must log in to be able to add a product to your basket</script>';
             }
             
         }
@@ -136,7 +137,7 @@ function wrapItems(){
             if($user != '0'){
                 addWishList($wishlist,$user);
             }else{
-                addWishList($wishlist,0);
+                echo '<script>You must log in to be able to add a product to your wishlist</script>';
             }
         }
         

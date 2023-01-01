@@ -156,7 +156,7 @@ function products($user){
             }
                     
         }else{
-            echo '<scipt>alert("You have no products listed")</script><meta http-equiv="refresh" content="2; /" />';
+            echo '<script>alert("You have no products listed")</script><meta http-equiv="refresh" content="2; /" />';
         }
         
     }else{

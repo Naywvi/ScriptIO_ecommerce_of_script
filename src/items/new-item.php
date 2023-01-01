@@ -24,7 +24,7 @@
         }
         $path = $path . md5(rand(0,1000)); // generate random name for file and add it to path
         if (!move_uploaded_file($file["tmp_name"], $path)) { // save file
-            echo "Error saving file";
+            //echo "Error saving file";
             return false;
         }
 
@@ -54,7 +54,6 @@
         $myPDO = new PDO('sqlite:./db/Scriptio.db');
         $product_image = saveFile($product_image, './db/images/');
         $script = saveFile($script, './db/scripts/');
-        $id_genre = GetIDGenre($id_genre)['id_genre'];
         $stmt = $myPDO->query("INSERT INTO product ('id_user','product_name','id_genre','product_description','installation_steps','price','product_image','script','stock','trust','view','short_description','last_price','motz_installation_steps','buy','on_cart') VALUES ('$id_user','$product_name','$id_genre','$product_description','$installation_steps','$price','$product_image','$script','$stock','$trust','$view','$short_description','$last_price','$motz_installation_steps','$buy','$on_cart')");
         $row = $stmt->fetch();
         $stmt = null;
@@ -67,7 +66,6 @@
         $query = htmlspecialchars($_GET["profile"]);
         $user = getUser($query);
         if($user['username'] === $query){
-            echo 'ok';
             $r = array(
                 $_POST['product-name'],
                 $_POST['category'],
@@ -84,22 +82,59 @@
             if($r[7] === '-1'){
                 $r[7] = 'UNLIMITED';
             }
+
+            if($r[1] === 'FREE'){
+                
+                $r[1] = 1;
+            }else if($r[1] === 'Social networks'){
+                
+                $r[1] = 2;
+            }else if($r[1] === 'Scrapping'){
+                $r[1] = 3;
+            }else if($r[1] === 'Emailing'){
+                $r[1] = 4;
+            }else if($r[1] === 'Web'){
+                $r[1] = 5;
+            }else if($r[1] === 'Windows'){
+                $r[1] = 6;
+            }else if($r[1] === 'Linux'){
+                $r[1] = 7;
+            }else if($r[1] === 'MacOS'){
+                $r[1] = 8;
+            }else if($r[1] === 'Mobile'){
+                $r[1] = 9;
+            }else if($r[1] === 'other'){
+                $r[1] = 10;
+            }else if($r[1] === 'Macro'){
+                $r[1] = 11;
+            }else{
+                $r[1] = NULL;
+            }
+            
+            if($r[4] === '-1'){
+                $r[4] = 'FREE';
+                $r[1] = '1';
+            }
+          
             settype($verification,'boolean');
             $verification = true;
+            
+            foreach($r as $value){
+                if($_FILES['image'] || $_FILES['script']){
 
-            foreach($row_post as $value){
-                if(strlen($value) == 0){
+                }else if(strlen($value) == 0){
                     $verification = false;
                     break;
                 }
             }
-
+           
             if($verification){
                 sendItem($user['id_user'],$r[0],$r[1],$r[2],$r[3],$r[4],$r[5],$r[6],$r[7],'NULL','NULL',$r[8],'NULL',$r[9],'NULL','NULL');
             }else{
-                //echo '<script>alert("Please fill in all required fields")</script>';
+                echo '<script>alert("Please fill in all required fields")</script>';
+                return;
             }
-            echo '<script>alert("Publication successful, you will be redirected to the main page in 5 seconds")</script><meta http-equiv="refresh" content="5; /" />';
+            //echo '<script>alert("Publication successful, you will be redirected to the main page in 5 seconds")</script><meta http-equiv="refresh" content="5; /" />';
             
         }else{ 
             echo '<meta http-equiv="refresh" content="0; /" />';
