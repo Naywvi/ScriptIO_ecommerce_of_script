@@ -8,7 +8,7 @@
         <div class="row">
      
             <div class="col-md-6 offset-md-3 audit background-white">
-                <form method="post">
+                <form method="post" enctype="multipart/form-data">
                     
                     <!-- name input -->
                     <div class="form-outline mb-4">
@@ -26,7 +26,7 @@
                         <input type="number" id="price" class="form-control" name="price"/>
                         <label class="form-label" for="price">Price</label>
                         <figcaption class="blockquote-footer text-secondary italic">
-                        If you want it to be free don't put anything
+                        If you want it to be free put 0
                         </figcaption>
                         <br>
                     </div>
@@ -34,7 +34,7 @@
                     <!-- Message input -->
                     <div class="form-outline mb-4">
                         <input type="number" id="name" class="form-control" name="stock"/>
-                        <label class="form-label" for="name">Quantity - 0 for unlimitted</label>
+                        <label class="form-label" for="name">Quantity -1 for unlimitted</label>
                     </div>
 
                     <!-- Message input -->
@@ -77,11 +77,11 @@
                         <input type="text" id="name" class="form-control" name="motz-installation-steps"/>
                         <label class="form-label" for="name">Motz for steps installation</label>
                     </div>
-                        <input type="FILE" id="picture"name="product_image" class="form-control" accept=".zip,.rar" name="script"/>
-                        <label class="form-label" for="picture" class="form-label">Your script in zip/rar folder</label>
+                        <input type="file" id="script" class="form-control" accept=".zip,.rar" name="script"/>
+                        <label class="form-label" for="script" class="form-label">Your script in zip/rar folder</label>
                         
-                        <input type="FILE" id="picture"name="product_image" class="form-control" accept=".png,.jpeg,.jpg" name="image"/>
-                        <label class="form-label" for="picture" class="form-label">Product Image</label>
+                        <input type="file" id="image" class="form-control" accept=".png,.jpeg,.jpg" name="image"/>
+                        <label class="form-label" for="image" class="form-label">Product Image</label>
                     <figure>
                         <figcaption class="blockquote-footer text-danger italic">
                             You will receive a notification when your product has been audited.

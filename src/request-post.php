@@ -31,4 +31,8 @@
         include_once('./src/items/modify-item.php');
         modifyItem();
     }
+    if (isset($_POST['cart-submit'])) {
+        include_once('./src/items/payment.php');
+        submitCart();
+    }
 ?>

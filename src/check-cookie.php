@@ -3,9 +3,7 @@ function Vhash($value, $comparison):bool{
     $value = hash('ripemd160', $value);
     if($value == $comparison){
         return true;
-    }else{
-        return false;
-    }
+    } return false;
 }
 function informationAboutUser($id_user){
     $db = new PDO('sqlite:./db/Scriptio.db');

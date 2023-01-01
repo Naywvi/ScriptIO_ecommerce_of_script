@@ -67,7 +67,7 @@ function printItems($items,$query,$rubric,$user) {
 
 function getGenre($genre_name){
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
-    $stmt = $myPDO->query("SELECT * FROM genre WHERE name = '$genre_name'");
+    $stmt = $myPDO->query("SELECT * FROM genre WHERE name = $genre_name");
     $row = $stmt->fetch();
     $stmt = null;
     $myPDO = null;

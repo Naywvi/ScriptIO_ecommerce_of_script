@@ -82,7 +82,7 @@
                           </div>
                           <div class="ms-3">
                             <h5>'.$product['product_name'].'</h5>
-                            <p class="small mb-0">256GB, Navy Blue</p>
+                            <p class="small mb-0"></p>
                           </div>
                         </div>
                         <div class="d-flex flex-row align-items-center">
@@ -203,8 +203,9 @@
                       <p class="mb-2">$4818.00</p>
                     </div>
 
+          <form method="post">
 					<a hre="#" onclick="validPayment()">
-						<button type="button" class="btn btn-info btn-block btn-lg">
+						<button type="submit" class="btn btn-info btn-block btn-lg" name="cart-submit">
 						<div class="d-flex justify-content-between">
 							<span>$4818.00</span>
 							
@@ -213,6 +214,7 @@
 						</div>
 						</button>
 					<a>
+              </form>
 						
                   </div>
                 </div>

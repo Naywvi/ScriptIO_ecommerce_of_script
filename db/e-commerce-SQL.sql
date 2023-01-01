@@ -19,16 +19,6 @@ compagny text,
 notification_count integer
 );
 
--- CREATE TABLE address(
--- id_address INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
--- id_user INTEGER NOT NULL,
--- country varchar(20) NOT NULL,
--- address varchar(50) NOT NULL,
--- city varchar(20) NOT NULL,
--- postal_code INTEGER NOT NULL,
--- FOREIGN KEY (id_user) REFERENCES Users(id_user)
--- );
-
 CREATE TABLE genre(
 id_genre INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
 name varchar(20) NOT NULL
@@ -41,9 +31,9 @@ product_name varchar(50) NOT NULL,
 id_genre INTEGER,
 product_description TEXT,
 installation_steps TEXT,
-price Float,
-product_image BLOB,
-script BLOB NOT NULL,
+price Float NOT NULL,
+product_image TEXT,
+script TEXT NOT NULL,
 stock INTEGER,
 trust integer,
 view integer,
@@ -70,28 +60,12 @@ FOREIGN KEY (id_command) REFERENCES Command(id_command),
 FOREIGN KEY (id_product) REFERENCES Product(id_product)
 );
 
-CREATE TABLE cart(
-id_cart INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-id_user INTEGER NOT NULL,
-cart_date date NOT NULL,
-total float NOT NULL,
-FOREIGN KEY (id_user) REFERENCES Users(id_user)
-);
-
 CREATE TABLE cart_temp(
 id_user INTEGER NOT NULL,
 id_product INTEGER NOT NULL,
 quantity INTEGER NOT NULL,
 FOREIGN KEY (id_product) REFERENCES Product(id_product)
 FOREIGN KEY (id_user) REFERENCES Users(id_user)
-);
-
-CREATE TABLE wishlist(
-id_wishlist INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-id_user INTEGER NOT NULL,
-id_product INTEGER NOT NULL,
-FOREIGN KEY (id_user) REFERENCES Users(id_user),
-FOREIGN KEY (id_product) REFERENCES Product(id_product)
 );
 
 CREATE TABLE payment(
@@ -109,4 +83,12 @@ context varchar(30),
 description text,
 date date,
 FOREIGN KEY (id_user) REFERENCES users(id_user)
+);
+
+CREATE TABLE wishlist(
+id_wishlist INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+id_user INTEGER NOT NULL,
+id_product INTEGER NOT NULL,
+FOREIGN KEY (id_user) REFERENCES Users(id_user),
+FOREIGN KEY (id_product) REFERENCES Product(id_product)
 );

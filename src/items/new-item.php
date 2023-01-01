@@ -17,8 +17,36 @@
         return $row;
     }
 
+    function saveFile($file, $path) {
+        if ($file['size'] > 10000000) { // check for file size (10MB)
+            echo "File is too large";
+            return false;
+        }
+        $path = $path . md5(rand(0,1000)); // generate random name for file and add it to path
+        if (!move_uploaded_file($file["tmp_name"], $path)) { // save file
+            echo "Error saving file";
+            return false;
+        }
+
+
+        return $path; // return path to file
+    }
+
+    function GetIDGenre($genre_name){
+        echo $genre_name;
+        $myPDO = new PDO('sqlite:./db/Scriptio.db');
+        $stmt = $myPDO->query("SELECT id_genre FROM genre WHERE name = '$genre_name'");
+        $row = $stmt->fetch();
+        $stmt = null;
+        $myPDO = null;
+        return $row;
+    }
+
     function sendItem($id_user,$product_name,$id_genre,$product_description,$installation_steps,$price,$product_image,$script,$stock,$trust,$view,$short_description,$last_price,$motz_installation_steps,$buy,$on_cart){
         $myPDO = new PDO('sqlite:./db/Scriptio.db');
+        $product_image = saveFile($product_image, './db/images/');
+        $script = saveFile($script, './db/scripts/');
+        $id_genre = GetIDGenre($id_genre)['id_genre'];
         $stmt = $myPDO->query("INSERT INTO product ('id_user','product_name','id_genre','product_description','installation_steps','price','product_image','script','stock','trust','view','short_description','last_price','motz_installation_steps','buy','on_cart') VALUES ('$id_user','$product_name','$id_genre','$product_description','$installation_steps','$price','$product_image','$script','$stock','$trust','$view','$short_description','$last_price','$motz_installation_steps','$buy','$on_cart')");
         $row = $stmt->fetch();
         $stmt = null;
@@ -38,18 +66,14 @@
                 $_POST['short-description-right'],
                 $_POST['installation-steps'],
                 $_POST['price'],
-                $_POST['image'],
-                $_POST['script'],
+                $_FILES['image'],
+                $_FILES['script'],
                 $_POST['stock'],
                 $_POST['short-description-left'],
                 $_POST['motz-installation-steps']
             );
-            
-            if($r[4] === '0'){
-                $r[4] = 'FREE';
-            }
 
-            if($r[7] === '0'){
+            if($r[7] === '-1'){
                 $r[7] = 'UNLIMITED';
             }
             settype($verification,'boolean');
