@@ -68,23 +68,22 @@
 
                   $product->execute();
 
-                  $product = $product->fetch(PDO::FETCH_ASSOC);
+                  $product_data = $product->fetch(PDO::FETCH_ASSOC);
 
-                  $name = $product['product_name'];
-                  $price = $product['price'];
-                  $image = $product['image'];
-              
+                  $name = $product_data['product_name'];
+                  $price = $product_data['price'];
+                  $image = $product_data['image'];
                     echo '<div class="card mb-3">
                     <div class="card-body">
                       <div class="d-flex justify-content-between">
                         <div class="d-flex flex-row align-items-center">
                           <div>
                             <img
-                              src="'.$product['image'].'"
+                              src="'.$product_data['image'].'"
                               class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                           </div>
                           <div class="ms-3">
-                            <h5>'.$product['product_name'].'</h5>
+                            <h5>'.$product_data['product_name'].'</h5>
                             <p class="small mb-0"></p>
                           </div>
                         </div>
@@ -93,11 +92,11 @@
                             <h5 class="fw-normal mb-0">'.$row['quantity'].'</h5>
                           </div>
                           <div style="width: 80px;">
-                            <h5 class="mb-0">$'.$product['price'].'
+                            <h5 class="mb-0">$'.$product_data['price'].'
                             </h5>
                           </div>
                           <form method="post">
-                            <input type="hidden" name="id_product" value="'.$product['id_product'].'">
+                            <input type="hidden" name="id_product" value="'.$product_data['id_product'].'">
                             <input type="hidden" name="id_user" value="'.$id.'">
                             <button type="submit" name="cart-delete" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
                           </form>

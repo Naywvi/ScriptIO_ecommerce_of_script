@@ -8,6 +8,32 @@ function getUser($username){
     $myPDO = null;
     return $row;
 }
+function echoTrust($trust){
+
+    if(strlen($trust) != 0){
+
+        $rest = 5-$user['trust'];
+
+        for ($i = 0; $i <= $user['trust']-1; $i++) {
+            echo '<i class="fa fa-star yellow"></i>';
+        }
+        for ($i = 0; $i <= $rest-1; $i++) {
+            echo '<i class="fa fa-star text-secondary"></i>';
+        }
+
+    }else{
+        for ($i = 0; $i <= 4; $i++) {
+            echo '<i class="fa fa-star text-secondary"></i>';
+        }
+    }
+}
+function price($price){
+    if($price == '0'){
+        echo 'FREE';
+    }else{
+        echo $price,'$';
+    }
+}
 
 function printItems($items,$query,$rubric,$user) {
     
@@ -19,19 +45,19 @@ function printItems($items,$query,$rubric,$user) {
 
                 <div class="col">
                     <div class="card-body">
-                        <h5 class="card-title white"><span class="cc-code">1 </span>'.$value[2].'</h5>
+                        <a href="item?item='.$value[0].'"><h5 style="color: #697de8 !important;" class="card-title white"><span class="cc-code">1 </span >'.$value[2].'</h5></a>
                         <p class="card-text white"><span class="cc-code">2 </span>'.$value[4].'</p>
                         <span class="cc-code">3 </span>
-                        <i class="fa fa-star yellow"></i>
-                        <i class="fa fa-star yellow"></i> 
-                        <i class="fa fa-star yellow"></i> 
-                        <i class="fa fa-star yellow"></i> 
-                        <i class="fa fa-star text-secondary"></i>
-                        <span class="green bold">- 150 $</span>
+                        ';
+                         echoTrust($value[4]);
+                         echo '
+                        <span class="green bold">- ';
+                        price($value[6]);
+                         echo'</span>
                     </div>
                     <figure>
                         <figcaption class="blockquote-footer code motz" style="color: #e5ce75 !important;">
-                            Someone famous in <cite title="Source Title">Source Title</cite>
+                            '.$value[14].'
                         </figcaption>
                     </figure>
 
