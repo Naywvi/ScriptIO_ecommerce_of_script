@@ -43,6 +43,7 @@ function submitCart() { // submit cart to db
        
         // check if product is in stock
         if ($result2['stock'] != "UNLIMITED") {
+            $price = $result2['price'] * $result[$key]['quantity']; // calculate price of cart
             if ($result2['stock'] - $result[$key]['quantity'] >= 0) {
                 decrementProductStock($result[$key]['id_product'], $result[$key]['quantity']);
             } else {
@@ -52,7 +53,6 @@ function submitCart() { // submit cart to db
                 exit();
             }
         }
-        $price = $result2['price'] * $result[$key]['quantity']; // calculate price of cart
 
         $description .= $result2['product_name'] . " x" . $result[$key]['quantity'] . " - " . $result2['price'] . "€&#160;";
         
