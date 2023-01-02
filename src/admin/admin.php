@@ -1,16 +1,16 @@
 <?php
 
-function addCategory() { // Add category to database
+function addCategory() { // Add category to database 
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
-    $category = $_POST['category'];
-    $statement = $myPDO->prepare("INSERT INTO genre (name) VALUES (:category)");
-    $statement->bindParam(':category', $category);
+    $name = $_POST['category-name'];
+    $statement = $myPDO->prepare("INSERT INTO genre (name) VALUES (:name)");
+    $statement->bindParam(':name', $name);
     $statement->execute();
 }
 
 function deleteCategory() { // Delete category from database
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
-    $category = $_POST['category'];
+    $category = $_POST['category-name'];
     $statement = $myPDO->prepare("DELETE FROM genre WHERE name = :category");
     $statement->bindParam(':category', $category);
     $statement->execute();
@@ -19,7 +19,7 @@ function deleteCategory() { // Delete category from database
 function deleteItem() { // Delete item from user's cart
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
     $product_name = $_POST['product_name'];
-    $statement = $myPDO->prepare("DELETE FROM product WHERE name = :product_name");
+    $statement = $myPDO->prepare("DELETE FROM product WHERE product_name = :product_name");
     $statement->bindParam(':product_name', $product_name);
     $statement->execute();
 }
@@ -32,23 +32,24 @@ function banUser() { // Ban user from website NEED TO ADD BANNED COLUMN TO USER 
     $statement->execute();
 }
 
-function sendNotification() { // NEED TO CHECK
+function sendNotification() { // Send notification to user
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
-    $item = $_POST['item'];
-    $statement = $myPDO->prepare("SELECT * FROM item WHERE name = :item");
-    $statement->bindParam(':item', $item);
+    $description = $_POST['notification'];
+    $context = "Message from admin:";
+    $username = $_POST['username'];
+
+    $statement = $myPDO->prepare("SELECT id_user FROM users WHERE username = :username"); // get id_user from username
+    $statement->bindParam(':username', $username);
     $statement->execute();
     $result = $statement->fetch(PDO::FETCH_ASSOC);
-    $id = $result['id'];
-    $statement = $myPDO->prepare("SELECT * FROM user");
+    $id_user = $result['id_user'];
+
+    $statement = $myPDO->prepare("INSERT INTO notification (id_user, description, context) VALUES (:id_user, :description, :context)");
+    $statement->bindParam(':id_user', $id_user);
+    $statement->bindParam(':description', $description);
+    $statement->bindParam(':context', $context);
     $statement->execute();
-    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($result as $row) {
-        $statement = $myPDO->prepare("INSERT INTO notification (user_id, item_id) VALUES (:user_id, :item_id)");
-        $statement->bindParam(':user_id', $row['id']);
-        $statement->bindParam(':item_id', $id);
-        $statement->execute();
-    }
+
 }
 
 ?>

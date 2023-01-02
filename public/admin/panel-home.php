@@ -16,7 +16,7 @@
                 <form method="post">
                     <h5 class="card-title">Add new category</h5>
                     <p class="card-text">Add a new category to the shop</p>
-                    <input type="text" class="form-control" placeholder="Category name" name="category"/>
+                    <input type="text" class="form-control" placeholder="Category name" name="category-name"/>
                     <button type="submit" class="btn btn-primary" name="add-category">Add new category</button>
                 <form>
             </div>
@@ -28,7 +28,7 @@
             <div class="card-body">
                 <h5 class="card-title">Delete category</h5>
                 <p class="card-text">Delete a category from the shop</p>
-                <input type="text" class="form-control" placeholder="Category name" name="category"/>
+                <input type="text" class="form-control" placeholder="Category name" name="category-name"/>
                 <button type="submit" class="btn btn-primary" name="delete-category">Delete category</button>
             </div>
             </div>

@@ -81,7 +81,7 @@
 
     if (isset($_POST['notification-send'])) {
         include_once('./src/admin/admin.php');
-        notificationSend();
+        sendNotification();
     }
 
 

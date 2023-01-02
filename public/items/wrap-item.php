@@ -174,7 +174,6 @@
 
             </div>
             <div class="w-100"></div>
-            <p><a href="download.php?path=horizon.zip">Download ZIP file</a></p>
             <div class="col shadow footer-wrap code background-white">
                     <nav aria-label="...">
                         <ul class="pagination">
