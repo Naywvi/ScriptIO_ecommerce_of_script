@@ -39,11 +39,22 @@
             <div class="card-body">
                 <h5 class="card-title">Ban user</h5>
                 <p class="card-text">Ban a user from the shop</p>
-                <input type="text" class="form-control" placeholder="User name" name="username"/>
+                <input type="text" class="form-control" placeholder="User name" name="ban-username"/>
                 <button type="submit" class="btn btn-primary" name="ban-user">Ban user</button>
             </div>
             </div>
         </div>
+
+        <div class="col-md-6">
+            <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Unban user</h5>
+                <p class="card-text">Unban a user from the shop</p>
+                <input type="text" class="form-control" placeholder="User name" name="unban-username"/>
+                <button type="submit" class="btn btn-primary" name="unban-user">Unban user</button>
+            </div>
+            </div>
+        </div>  
 
         <div class="col-md-6">
             <div class="card">

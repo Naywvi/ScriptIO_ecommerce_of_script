@@ -26,9 +26,17 @@ function deleteItem() { // Delete item from user's cart
 
 function banUser() { // Ban user from website NEED TO ADD BANNED COLUMN TO USER TABLE and add to login.php to check if banned
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
-    $user = $_POST['username'];
-    $statement = $myPDO->prepare("UPDATE user SET banned = 1 WHERE username = :user");
-    $statement->bindParam(':user', $user);
+    $username = $_POST['ban-username'];
+    $statement = $myPDO->prepare("UPDATE users SET banned = 1 WHERE username = :username");
+    $statement->bindParam(':username', $username);
+    $statement->execute();
+}
+
+function unbanUser() { // Unban user from website NEED TO ADD BANNED COLUMN TO USER TABLE and add to login.php to check if banned
+    $myPDO = new PDO('sqlite:./db/Scriptio.db');
+    $username = $_POST['unban-username'];
+    $statement = $myPDO->prepare("UPDATE users SET banned = 0 WHERE username = :username");
+    $statement->bindParam(':username', $username);
     $statement->execute();
 }
 

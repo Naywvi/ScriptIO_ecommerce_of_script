@@ -32,7 +32,8 @@ function register() {
     if ($result) {
         echo "<style>#message{display:unset !important;}</style>";
     } else {
-        $statement = $myPDO->prepare("INSERT INTO users (first_name, last_name, username, user_password, email, birthday, phone_number, user_role) VALUES (:first_name, :last_name, :username, :user_password, :email, :birthday, :phone_number, :user_role)");
+        $banned = 0;
+        $statement = $myPDO->prepare("INSERT INTO users (first_name, last_name, username, user_password, email, birthday, phone_number, user_role, banned) VALUES (:first_name, :last_name, :username, :user_password, :email, :birthday, :phone_number, :user_role, :banned)");
         $statement->bindParam(':first_name', $first_name);
         $statement->bindParam(':last_name', $last_name);
         $statement->bindParam(':username', $username);
@@ -41,6 +42,7 @@ function register() {
         $statement->bindParam(':birthday', $birthday);
         $statement->bindParam(':phone_number', $phone_number);
         $statement->bindParam(':user_role', $user_role);
+        $statement->bindParam(':banned', $banned);
         $statement->execute();
         
         //send cookie to user

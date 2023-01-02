@@ -1,5 +1,6 @@
 CREATE TABLE users(
 id_user INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+banned integer NOT NULL,
 first_name varchar(20) NOT NULL,
 last_name varchar(20) NOT NULL,
 username varchar(20) NOT NULL,

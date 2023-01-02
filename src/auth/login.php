@@ -24,6 +24,12 @@ function login() {
             //send cookie to user
             $row = getID($email);
 
+            if ($row['banned'] == 1) { // if user is banned 
+                echo "<style>#message{display:unset !important;}</style>";
+                header("Location: /signin");
+                exit(); // exit the script
+            }
+
             // password typechecking
             // if (!passwordTypeChecking($user_password)) {
             //     echo "<style>#message{display:unset !important;}</style>";
