@@ -116,7 +116,7 @@ function listComment($user){
             </div>
 
             <div class="row text-left">
-                <p class="content">If you really enjoy spending your vacation "on water" or would like to try something new and exciting for the first time.</p>
+                <p class="content">'.$v[3].'</p>
             </div>
         
         ';
@@ -203,7 +203,7 @@ function addComment(){
     $trust = $_POST['trust'];
     $date = date("F j, Y, g:i a");
     $trust = strlen($trust)/3;
-
+    
     $myPDO = new PDO('sqlite:./db/Scriptio.db');
     $stmt = $myPDO->query("INSERT INTO comment ('id_user','title','content','trust','id_product','date') VALUES ($id_user[0],'$title','$content',$trust,$id_product,'$date')");
     $stmt = null;

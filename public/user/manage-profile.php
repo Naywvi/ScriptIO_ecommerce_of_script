@@ -24,7 +24,7 @@
   <!-- Message input -->
   <div class="form-outline mb-4">
     <textarea class="form-control" id="additional" rows="4" name="description"></textarea>
-    <label class="form-label" for="additional">Additional information (visible only to staff)</label>
+    <label class="form-label" for="additional">Description</label>
   </div>
   
   <figure>
