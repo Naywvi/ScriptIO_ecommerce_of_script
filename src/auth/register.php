@@ -44,9 +44,22 @@ function register() {
         $statement->bindParam(':user_role', $user_role);
         $statement->bindParam(':banned', $banned);
         $statement->execute();
-        
-        //send cookie to user
-        sendCookie($email);
+        $myPDO == null;
+        $row = getID($email);
+        $lastC = date("j-n-Y");
+        $pdo = new PDO('sqlite:./db/Scriptio.db');
+        $sql = 'UPDATE users 
+                SET last_connexion=:lastC 
+                WHERE email =:email';
+        $statement = $pdo->prepare($sql);
+        $statement->bindParam(':lastC', $lastC, PDO::PARAM_STR);
+        $statement->bindParam(':email', $row['email'], PDO::PARAM_STR);
+        $statement->execute();
+        $statement == null;
+        $pdo == null;
+        sendCookie($row);
+        header("Location: /");
+        exit();
     }
 }
 
