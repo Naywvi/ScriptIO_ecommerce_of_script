@@ -5,39 +5,31 @@ Welcome to Script'IO, an e-commerce platform specializing in the sale of legal s
 ## Key Features
 
 ### 👩‍💼 Admin Access
-
 - Administrators have special access to manage audit requests and maintain platform integrity.
 
 ### 🛒 User Section
-
 - Users can publish legal scripts for sale.
 - They can browse and purchase legal products available on the platform.
 - Full management of listings, including editing and deletion.
 
 ### 📊 User Profile
-
 - Each user has a personal profile.
 - Profiles display an overall trust rating based on past transaction ratings.
 - Sales and purchase history is available for review.
 
 ### 💳 Payment Methods
-
 - Script'IO supports various secure payment methods to facilitate transactions.
 
 ## Getting Started
 
-1. Clone this repository to your local machine.
-2. Install the necessary dependencies using `npm install`.
-3. Configure environment variables for payment handling and other settings.
-4. Run the application using `npm start`.
-5. Access the application in your browser at `http://localhost:3000`.
+1. Run php server on ./
 
 Feel free to contribute, report issues, or suggest improvements. We are happy to collaborate with the community to make Script'IO even better!
 
 ## Authors
 
-- Your Name
-- Another Contributor (if applicable)
+- Naywvi
+- Lux
 
 ## License
 
@@ -45,4 +37,4 @@ This project is licensed under the MIT License. Please see the [LICENSE](LICENSE
 
 ---
 
-_Note: Be sure to customize this README to fit your project's specific needs. Happy coding!_
+*Note: Be sure to customize this README to fit your project's specific needs. Happy coding!*
